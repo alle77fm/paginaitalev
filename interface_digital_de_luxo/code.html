@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Italev Sistemas | Luxury Technology Partner</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-secondary-container": "#b4b5b5",
+                "outline": "#aa8a7d",
+                "surface-bright": "#393939",
+                "secondary-fixed": "#e2e2e2",
+                "error": "#ffb4ab",
+                "on-primary-fixed": "#360f00",
+                "on-tertiary-fixed": "#1c1b1b",
+                "secondary": "#c6c6c7",
+                "surface-container": "#1f2020",
+                "on-secondary": "#2f3131",
+                "primary-container": "#ff6600",
+                "on-secondary-fixed-variant": "#454747",
+                "tertiary-container": "#989696",
+                "primary-fixed-dim": "#ffb596",
+                "surface": "#131313",
+                "on-surface-variant": "#e3bfb1",
+                "on-surface": "#e4e2e1",
+                "on-tertiary-container": "#2f2f2f",
+                "primary-fixed": "#ffdbcd",
+                "outline-variant": "#5a4136",
+                "primary": "#ffb596",
+                "surface-tint": "#ffb596",
+                "secondary-container": "#454747",
+                "surface-dim": "#131313",
+                "inverse-on-surface": "#303030",
+                "surface-container-highest": "#353535",
+                "tertiary-fixed": "#e5e2e1",
+                "on-primary-container": "#561d00",
+                "on-tertiary-fixed-variant": "#474646",
+                "background": "#131313",
+                "surface-container-low": "#1b1c1c",
+                "inverse-primary": "#a33e00",
+                "on-background": "#e4e2e1",
+                "tertiary": "#c8c6c5",
+                "on-error-container": "#ffdad6",
+                "secondary-fixed-dim": "#c6c6c7",
+                "surface-variant": "#353535",
+                "on-primary": "#581e00",
+                "inverse-surface": "#e4e2e1",
+                "on-tertiary": "#313030",
+                "surface-container-lowest": "#0e0e0e",
+                "on-error": "#690005",
+                "error-container": "#93000a",
+                "on-primary-fixed-variant": "#7c2e00",
+                "on-secondary-fixed": "#1a1c1c",
+                "tertiary-fixed-dim": "#c8c6c5",
+                "surface-container-high": "#2a2a2a"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "margin-mobile": "24px",
+                "section-gap-mobile": "80px",
+                "gutter": "32px",
+                "unit": "8px",
+                "container-max": "1280px",
+                "section-gap-desktop": "160px"
+            },
+            "fontFamily": {
+                "label-caps": ["Inter"],
+                "display-lg-mobile": ["Inter"],
+                "headline-xl": ["Inter"],
+                "headline-lg": ["Inter"],
+                "body-lg": ["Inter"],
+                "display-lg": ["Inter"],
+                "body-md": ["Inter"]
+            },
+            "fontSize": {
+                "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                "headline-xl": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0em", "fontWeight": "400"}],
+                "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body {
+            background-color: #121212;
+            color: #e4e2e1;
+            scroll-behavior: smooth;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .ghost-border {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .orange-glow:hover {
+            box-shadow: 0 0 25px rgba(255, 102, 0, 0.4);
+        }
+        .ambient-glow {
+            background: radial-gradient(circle, rgba(255, 102, 0, 0.05) 0%, rgba(18, 18, 18, 0) 70%);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex items-center justify-center p-4">
+<div class="max-w-container mx-auto px-margin-mobile md:px-gutter w-full flex justify-between items-center py-4 bg-surface/40 backdrop-blur-xl rounded-full border-b border-white/10 glass-nav">
+<span class="text-body-lg font-bold text-on-surface tracking-tight">Italev Sistemas</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-primary font-bold transition-all text-label-caps font-label-caps" href="#">Serviços</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="#">Sobre</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="#">Planos</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors text-label-caps font-label-caps" href="#">Contato</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-label-caps font-label-caps transition-all active:scale-95 hover:bg-primary-container/90 orange-glow">
+                Ver planos
+            </button>
+</div>
+</nav>
+<main class="relative pt-32">
+<!-- Hero Section -->
+<section class="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-desktop relative overflow-hidden">
+<div class="absolute -top-40 -right-40 w-[600px] h-[600px] ambient-glow pointer-events-none"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="z-10">
+<div class="flex items-center gap-2 mb-6 text-primary-container">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span class="text-label-caps font-label-caps uppercase tracking-widest">Transforme seu comércio</span>
+</div>
+<h1 class="text-display-lg-mobile md:text-display-lg font-display-lg mb-6 text-on-surface">
+                        Seu app próprio.<br/>
+<span class="text-primary-container">Mais vendas.</span><br/>
+                        Zero comissões.
+                    </h1>
+<p class="text-body-lg font-body-lg text-on-secondary-container mb-10 max-w-lg">
+                        Tenha o seu próprio aplicativo para vender mais, fidelizar clientes e aumentar sua lucratividade sem depender de taxas abusivas de terceiros.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md font-body-md orange-glow transition-all">Quero meu app agora</button>
+<button class="bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-body-md font-body-md hover:bg-white/5 transition-all">Ver como funciona</button>
+</div>
+</div>
+<div class="relative mt-12 md:mt-0">
+<div class="absolute inset-0 bg-primary-container/10 blur-[100px] rounded-full"></div>
+<img alt="App Showcase" class="relative z-10 w-full max-w-[450px] mx-auto drop-shadow-[0_35px_35px_rgba(0,0,0,0.5)] transform rotate-3 hover:rotate-0 transition-transform duration-700" data-alt="A premium close-up of a sleek smartphone displaying a high-tech e-commerce mobile application. The screen features vibrant food photography and clean UI elements on a dark mode background. The lighting is dramatic and cinematic, highlighting the polished glass and metallic edges of the device against a deep charcoal setting with subtle orange glows. The overall aesthetic is ultra-modern, luxury tech, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAWxfyg-4WQZDAt70wevcLJUcMxAG-vGpOJnpzwL5dU6lYnLHnJBOKKNwy315BG0o9XMIUJitRE5dIB9S11liDAZarJgFnj5Y9Movmvp5SxUc6T7H7FbWXOK1Gk2sGIFxH8ZXI_jIMjIZC7uAlCYWo1AuWBtl7tV2uyyvYyeHwU69rXN-N0iE98UYhU-TPQ7cuwaGw5b2q4Fow0xAC8mfg8I03eqF-aTZ0FZZd3ox8UVrt5bloN_nbflZCDprRkfR_Ypa2T8CvrzM"/>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="bg-surface-container-lowest py-20 mb-section-gap-desktop">
+<div class="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col">
+<span class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-primary-container mb-2">+27%</span>
+<span class="text-label-caps font-label-caps text-on-secondary-container">Aumento médio nas vendas</span>
+</div>
+<div class="flex flex-col">
+<span class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-primary-container mb-2">-35%</span>
+<span class="text-label-caps font-label-caps text-on-secondary-container">Redução nos custos com taxas</span>
+</div>
+<div class="flex flex-col">
+<span class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-primary-container mb-2">+1.200</span>
+<span class="text-label-caps font-label-caps text-on-secondary-container">Apps entregues com sucesso</span>
+</div>
+<div class="flex flex-col">
+<span class="text-display-lg-mobile md:text-headline-xl font-headline-xl text-primary-container mb-2">+98%</span>
+<span class="text-label-caps font-label-caps text-on-secondary-container">Satisfação dos nossos clientes</span>
+</div>
+</div>
+</section>
+<!-- Benefits Bento Grid -->
+<section class="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-desktop">
+<div class="text-center mb-16">
+<h2 class="text-headline-xl font-headline-xl text-on-surface mb-4">O que muda com seu app próprio</h2>
+<p class="text-on-secondary-container text-body-lg">Mais autonomia, profissionalismo e resultado para o seu negócio.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Autonomia total</h3>
+<p class="text-on-secondary-container">Seus dados, seus clientes, suas regras. Nada de depender de algoritmos de terceiros.</p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">payments</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Fim da comissão</h3>
+<p class="text-on-secondary-container">Chega de perder até 27% em taxas. Com a Italev, 100% do que é seu, fica com você.</p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">brand_awareness</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Marca própria</h3>
+<p class="text-on-secondary-container">Seu app com sua identidade, no celular do seu cliente. Gere reconhecimento e recorrência.</p>
+</div>
+<!-- Card 4 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">rocket_launch</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Vendas inteligentes</h3>
+<p class="text-on-secondary-container">Cupons, ofertas e campanhas automáticas para vender mais, sem depender de sorte.</p>
+</div>
+<!-- Card 5 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">hub</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Estrutura que cresce</h3>
+<p class="text-on-secondary-container">Do pequeno ao grande, nossa plataforma escala com você. Sem travar, sem complicar.</p>
+</div>
+<!-- Card 6 -->
+<div class="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group">
+<div class="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+<span class="material-symbols-outlined">support_agent</span>
+</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Atendimento VIP</h3>
+<p class="text-on-secondary-container">Comunique-se melhor, acompanhe pedidos e fidelize clientes com facilidade.</p>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-desktop">
+<div class="bg-surface-container-high rounded-[40px] p-12 md:p-24 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-1/3 h-full ambient-glow opacity-20 pointer-events-none"></div>
+<h2 class="text-headline-xl font-headline-xl text-on-surface mb-16 text-center">Como funciona</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+<!-- Step 1 -->
+<div class="text-center">
+<div class="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">01</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Conversamos</h3>
+<p class="text-on-secondary-container">Entendemos seu negócio e seus objetivos para desenhar a melhor estratégia.</p>
+</div>
+<!-- Step 2 -->
+<div class="text-center">
+<div class="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">02</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Criamos seu app</h3>
+<p class="text-on-secondary-container">Desenvolvemos seu aplicativo com sua identidade visual e todas as funções necessárias.</p>
+</div>
+<!-- Step 3 -->
+<div class="text-center">
+<div class="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">03</div>
+<h3 class="text-headline-lg font-headline-lg mb-4">Você começa a vender</h3>
+<p class="text-on-secondary-container">Divulgamos, recebemos pedidos e aumentamos suas vendas desde o primeiro dia.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-desktop">
+<div class="text-center mb-16">
+<span class="text-label-caps font-label-caps text-primary-container mb-4 block uppercase">Nossos Planos</span>
+<h2 class="text-headline-xl font-headline-xl text-on-surface">Escolha o plano ideal para seu momento</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Plan 1 -->
+<div class="bg-surface-container-low p-10 rounded-[32px] ghost-border flex flex-col">
+<h3 class="text-headline-lg font-headline-lg mb-2">Start</h3>
+<p class="text-on-secondary-container mb-8">Para quem está começando</p>
+<div class="mb-8">
+<span class="text-headline-xl font-headline-xl">R$149</span>
+<span class="text-on-secondary-container">/mês</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> App com sua marca</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Pedidos via WhatsApp</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Pagamento via PIX</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Suporte via WhatsApp</li>
+</ul>
+<button class="w-full py-4 rounded-xl border border-white/20 hover:bg-white/5 transition-all text-label-caps font-label-caps uppercase">Escolher Plano</button>
+</div>
+<!-- Plan 2 (PRO) -->
+<div class="bg-surface-container-high p-10 rounded-[32px] border-2 border-primary-container relative flex flex-col transform md:scale-105 z-10 shadow-2xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-white px-4 py-1 rounded-full text-label-caps font-label-caps">MAIS VENDIDO</div>
+<h3 class="text-headline-lg font-headline-lg mb-2">Pro</h3>
+<p class="text-on-secondary-container mb-8">Para quem quer crescer</p>
+<div class="mb-8">
+<span class="text-headline-xl font-headline-xl">R$219</span>
+<span class="text-on-secondary-container">/mês</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Tudo do plano Start</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Cupons automáticos</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Relatórios avançados</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Notificações Push</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Atendimento Prioritário</li>
+</ul>
+<button class="w-full py-4 rounded-xl bg-primary-container text-white font-bold orange-glow transition-all text-label-caps font-label-caps uppercase">Começar Agora</button>
+</div>
+<!-- Plan 3 -->
+<div class="bg-surface-container-low p-10 rounded-[32px] ghost-border flex flex-col">
+<h3 class="text-headline-lg font-headline-lg mb-2">Growth</h3>
+<p class="text-on-secondary-container mb-8">Para quem não quer parar</p>
+<div class="mb-8">
+<span class="text-headline-xl font-headline-xl">R$379</span>
+<span class="text-on-secondary-container">/mês</span>
+</div>
+<ul class="space-y-4 mb-10 flex-grow">
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Tudo do plano Pro</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Domínio próprio</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Integrações avançadas</li>
+<li class="flex gap-3 text-on-surface"><span class="material-symbols-outlined text-primary-container">check_circle</span> Gestor de conta dedicado</li>
+</ul>
+<button class="w-full py-4 rounded-xl border border-white/20 hover:bg-white/5 transition-all text-label-caps font-label-caps uppercase">Escolher Plano</button>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-desktop">
+<div class="bg-gradient-to-br from-primary-container to-[#b34700] rounded-[48px] p-12 md:p-24 text-center text-white relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+<div class="relative z-10">
+<h2 class="text-headline-xl md:text-display-lg font-display-lg mb-8">Pronto para transformar<br/>seu comércio?</h2>
+<p class="text-body-lg mb-12 max-w-2xl mx-auto opacity-90">Dê o próximo passo e leve seu negócio para o próximo nível com um app que é só seu. Sem taxas, sem amarras, só lucro.</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<button class="bg-white text-primary-container px-10 py-5 rounded-2xl font-bold text-body-lg hover:scale-105 transition-all shadow-xl">Quero começar agora</button>
+<button class="bg-transparent border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-body-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">forum</span> Falar no WhatsApp
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-section-gap-mobile md:py-section-gap-desktop border-t border-white/5">
+<div class="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div>
+<span class="text-body-lg font-bold text-on-surface mb-6 block">Italev Sistemas</span>
+<p class="text-on-secondary-container text-body-md mb-8">Transformando o comércio local com tecnologia, autonomia e suporte de verdade.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">public</span></a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">groups</span></a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined text-sm">alternate_email</span></a>
+</div>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-on-surface mb-6 block uppercase">Navegação</span>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Início</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Serviços</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Sobre nós</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Planos</a></li>
+</ul>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-on-surface mb-6 block uppercase">Serviços</span>
+<ul class="space-y-4">
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">App próprio</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">WhatsApp integrado</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Painel administrativo</a></li>
+<li><a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Consultoria</a></li>
+</ul>
+</div>
+<div>
+<span class="text-label-caps font-label-caps text-on-surface mb-6 block uppercase">Contato</span>
+<ul class="space-y-4">
+<li class="text-on-secondary-container flex gap-2"><span class="material-symbols-outlined text-primary">phone</span> (35) 99979-0411</li>
+<li class="text-on-secondary-container flex gap-2"><span class="material-symbols-outlined text-primary">mail</span> contato@italev.com.br</li>
+<li class="text-on-secondary-container flex gap-2"><span class="material-symbols-outlined text-primary">location_on</span> Itajubá - MG</li>
+</ul>
+</div>
+</div>
+<div class="max-w-container mx-auto px-margin-mobile md:px-gutter mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="text-on-secondary-container text-body-md">© 2024 Italev Sistemas. Todos os direitos reservados.</span>
+<div class="flex gap-8">
+<a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Privacidade</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Termos</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors text-body-md" href="#">Suporte</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll Reveal effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

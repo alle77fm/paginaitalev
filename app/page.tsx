@@ -1,28 +1,11 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import HeroVerFuncionandoBtn from '@/components/ui/HeroVerFuncionandoBtn';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
-import DefinitionBlock from '@/components/content/DefinitionBlock';
-import AnswerBlock from '@/components/content/AnswerBlock';
-import SolutionCard from '@/components/content/SolutionCard';
-import Steps from '@/components/content/Steps';
-import ProductTeaser from '@/components/content/ProductTeaser';
-import ComparisonTable from '@/components/content/ComparisonTable';
-import FaqAccordion from '@/components/content/FaqAccordion';
-import Testimonials from '@/components/content/Testimonials';
-import YouTubeFacade from '@/components/content/YouTubeFacade';
-import { italev, produtos } from '@/lib/entities';
+import { italev } from '@/lib/entities';
 import { serviceSchema, faqPageSchema } from '@/lib/schema';
 import { faqInstitucional } from '@/content/faq/institucional';
-import {
-  doresMercado,
-  solucoes,
-  beneficios,
-  comoFunciona,
-} from '@/content/answer-blocks/mercado';
-import { comparativoPropriaVsMarketplace } from '@/content/comparisons/propria-vs-marketplace';
 
 export const metadata: Metadata = {
   title: 'App de delivery e e-commerce para comércios locais | Italev Sistemas',
@@ -37,6 +20,108 @@ export const metadata: Metadata = {
   },
 };
 
+// Estatísticas
+const stats = [
+  { value: '+27%', label: 'Aumento médio nas vendas' },
+  { value: '-35%', label: 'Redução nos custos com taxas' },
+  { value: '+1.200', label: 'Apps entregues com sucesso' },
+  { value: '+98%', label: 'Satisfação dos clientes' },
+];
+
+// Benefícios
+const beneficios = [
+  {
+    icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z',
+    title: 'Autonomia total',
+    descricao: 'Seus dados, seus clientes, suas regras. Nada de depender de algoritmos de terceiros.',
+  },
+  {
+    icon: 'M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.375m-1.5-5.625v.75c0 .414.336.75.75.75h.75m-6-1.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008z',
+    title: 'Fim da comissão',
+    descricao: 'Chega de perder até 27% em taxas. Com a Italev, 100% do que é seu, fica com você.',
+  },
+  {
+    icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z',
+    title: 'Marca própria',
+    descricao: 'Seu app com sua identidade, no celular do seu cliente. Gere reconhecimento e recorrência.',
+  },
+  {
+    icon: 'M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z',
+    title: 'Vendas inteligentes',
+    descricao: 'Cupons, ofertas e campanhas automáticas para vender mais, sem depender de sorte.',
+  },
+  {
+    icon: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z',
+    title: 'Estrutura que cresce',
+    descricao: 'Do pequeno ao grande, nossa plataforma escala com você. Sem travar, sem complicar.',
+  },
+  {
+    icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z',
+    title: 'Atendimento VIP',
+    descricao: 'Comunique-se melhor, acompanhe pedidos e fidelize clientes com facilidade.',
+  },
+];
+
+// Processo
+const processo = [
+  {
+    numero: '01',
+    titulo: 'Conversamos',
+    descricao: 'Entendemos seu negócio e seus objetivos para desenhar a melhor estratégia.',
+  },
+  {
+    numero: '02',
+    titulo: 'Criamos seu app',
+    descricao: 'Desenvolvemos seu aplicativo com sua identidade visual e todas as funções necessárias.',
+  },
+  {
+    numero: '03',
+    titulo: 'Você começa a vender',
+    descricao: 'Divulgamos, recebemos pedidos e aumentamos suas vendas desde o primeiro dia.',
+  },
+];
+
+// Planos
+const planos = [
+  {
+    nome: 'Start',
+    descricao: 'Para quem está começando',
+    preco: 'R$149',
+    destaque: false,
+    features: [
+      'App com sua marca',
+      'Pedidos via WhatsApp',
+      'Pagamento via PIX',
+      'Suporte via WhatsApp',
+    ],
+  },
+  {
+    nome: 'Pro',
+    descricao: 'Para quem quer crescer',
+    preco: 'R$219',
+    destaque: true,
+    features: [
+      'Tudo do plano Start',
+      'Cupons automáticos',
+      'Relatórios avançados',
+      'Notificações Push',
+      'Atendimento Prioritário',
+    ],
+  },
+  {
+    nome: 'Growth',
+    descricao: 'Para quem não quer parar',
+    preco: 'R$379',
+    destaque: false,
+    features: [
+      'Tudo do plano Pro',
+      'Domínio próprio',
+      'Integrações avançadas',
+      'Gestor de conta dedicado',
+    ],
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -45,269 +130,228 @@ export default function HomePage() {
 
       <Header />
 
-      <main>
-        {/* ── 1. HERO ─────────────────────────────────────────────────────── */}
-        <section
-          aria-label="Apresentação da Italev Sistemas"
-          className="border-b-2 border-black bg-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-16 md:py-24">
-            <div className="max-w-3xl">
-              <span className="inline-block mb-4 rounded-full border-2 border-black bg-[#FF5A00] px-4 py-1 text-xs font-black text-white shadow-[2px_2px_0_#000]">
-                Software house brasileira
-              </span>
-              <h1 className="font-space-grotesk text-4xl font-black leading-tight text-gray-900 md:text-5xl lg:text-6xl text-balance">
-                Transforme seu comércio em um app próprio e venda mais todos os dias
+      <main className="relative pt-32">
+        {/* ── HERO ─────────────────────────────────────────── */}
+        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
+          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] ambient-glow pointer-events-none" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+            <div className="z-10">
+              <div className="flex items-center gap-2 mb-6 text-primary-container">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                </svg>
+                <span className="text-label-caps uppercase tracking-widest">
+                  Transforme seu comércio
+                </span>
+              </div>
+              <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-on-surface text-balance">
+                Seu app próprio.
+                <br />
+                <span className="text-primary-container">Mais vendas.</span>
+                <br />
+                Zero comissões.
               </h1>
-              <p className="mt-5 text-lg text-gray-600 leading-relaxed max-w-2xl">
-                Catálogo digital, pedidos no WhatsApp, PIX, promoções automáticas e sua marca na mão do cliente.
+              <p className="text-body-lg text-on-secondary-container mb-10 max-w-lg">
+                Tenha o seu próprio aplicativo para vender mais, fidelizar clientes e
+                aumentar sua lucratividade sem depender de taxas abusivas de terceiros.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href="/planos"
-                  className="inline-flex items-center rounded-lg border-2 border-black bg-[#FF5A00] px-6 py-3 font-bold text-white shadow-[4px_4px_0_#000] transition-all duration-150 hover:shadow-[2px_2px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none"
+                  className="inline-flex items-center justify-center bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md orange-glow transition-all"
                 >
-                  Ver planos
+                  Quero meu app agora
                 </Link>
-                {/* "Ver funcionando" — Client Component isolado que aciona o FloatingButton */}
-                <HeroVerFuncionandoBtn />
+                <Link
+                  href="/contato"
+                  className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-body-md hover:bg-white/5 transition-all"
+                >
+                  Ver como funciona
+                </Link>
               </div>
-              <p className="mt-5 text-sm text-gray-500">
-                App pronto em até 15 dias úteis · Sem taxa por pedido · Suporte incluído
-              </p>
+            </div>
+            <div className="relative mt-12 md:mt-0">
+              <div className="absolute inset-0 bg-primary-container/10 blur-[100px] rounded-full" />
+              {/* Mockup de celular */}
+              <div className="relative z-10 w-full max-w-[380px] mx-auto aspect-[9/16] bg-gradient-to-br from-surface-container-high to-surface-container rounded-[40px] border-4 border-surface-bright shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 flex items-center justify-center overflow-hidden">
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-surface rounded-b-2xl" />
+                <div className="text-center px-6">
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary-container/20 flex items-center justify-center">
+                    <svg className="w-12 h-12 text-primary-container" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.05,11.97 C17.0563,14.7308 19.2998,16.94 22.04,16.94 C22.04,16.94 22.04,16.94 22.05,16.94 L22.05,11.97 L17.05,11.97 Z M22.04,2.05 C22.04,2.05 22.04,2.05 22.04,2.05 L17.05,2.05 L17.05,7 L22.05,7 L22.05,2.05 L22.04,2.05 Z M2,11.97 C2.00626,14.7308 4.24979,16.94 6.99,16.94 C6.99,16.94 6.99,16.94 7,16.94 L7,11.97 L2,11.97 Z M7,2.05 L2,2.05 L2,7 L7,7 L7,2.05 Z M9.5,2.05 L9.5,16.94 C9.5063,19.7008 11.7498,21.91 14.49,21.91 C14.49,21.91 14.49,21.91 14.5,21.91 L14.5,2.05 L9.5,2.05 Z" />
+                    </svg>
+                  </div>
+                  <p className="text-body-md font-bold text-on-surface mb-1">
+                    {italev.brandName}
+                  </p>
+                  <p className="text-label-caps text-on-secondary-container uppercase tracking-widest">
+                    Seu app próprio
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
 
-        {/* ── 2. ENTITY INTRODUCTION ──────────────────────────────────────── */}
-        <section
-          aria-label="O que é a Italev Sistemas"
-          className="border-b-2 border-black bg-gray-50"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-6">
-              O que é a Italev Sistemas
-            </h2>
-            <div className="max-w-3xl space-y-5">
-              <DefinitionBlock
-                termo="Italev Sistemas"
-                definicao={italev.entityStatement}
-              />
-              <p className="text-gray-600 leading-relaxed">
-                Fundada em Itajubá-MG, a Italev Sistemas atende supermercados, restaurantes,
-                açougues, padarias e outros comércios locais que desejam vender online com
-                identidade própria — sem depender de marketplaces que cobram comissão por pedido
-                e retêm os dados dos clientes.
-              </p>
-              <p className="text-gray-600 leading-relaxed">
-                Os aplicativos desenvolvidos pela Italev integram catálogo digital, pagamento via
-                PIX, pedidos automatizados pelo WhatsApp e ferramentas de promoção — tudo sob a
-                marca do próprio estabelecimento.
-              </p>
-            </div>
+        {/* ── STATS ─────────────────────────────────────────── */}
+        <section className="bg-surface-container-lowest py-20 mb-section-gap-mobile md:mb-section-gap-desktop">
+          <div className="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+            {stats.map((stat, i) => (
+              <div key={i} className="flex flex-col">
+                <span className="text-display-lg-mobile md:text-headline-xl text-primary-container mb-2">
+                  {stat.value}
+                </span>
+                <span className="text-label-caps uppercase tracking-widest text-on-secondary-container">
+                  {stat.label}
+                </span>
+              </div>
+            ))}
           </div>
         </section>
 
-        {/* ── 3. DORES DO MERCADO ─────────────────────────────────────────── */}
-        <section
-          aria-label="Problemas que a Italev Sistemas resolve"
-          className="border-b-2 border-black bg-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Por que comércios locais perdem dinheiro vendendo por marketplace
+        {/* ── BENEFÍCIOS BENTO GRID ─────────────────────────── */}
+        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+          <div className="text-center mb-16">
+            <h2 className="text-headline-xl text-on-surface mb-4">
+              O que muda com seu app próprio
             </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Cada um destes problemas tem solução com um app próprio da Italev Sistemas.
-            </p>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {doresMercado.map((bloco) => (
-                <AnswerBlock
-                  key={bloco.id}
-                  heading={bloco.heading}
-                  resposta={bloco.resposta}
-                  fato={bloco.fato}
-                  headingLevel="h3"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 4. SOLUÇÕES ─────────────────────────────────────────────────── */}
-        <section
-          aria-label="Soluções da Italev Sistemas"
-          className="border-b-2 border-black bg-gray-50"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              O que a Italev Sistemas desenvolve para o seu comércio
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Cada solução é pensada para comércios locais que querem crescer com tecnologia própria.
-            </p>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {solucoes.map((s) => (
-                <SolutionCard
-                  key={s.id}
-                  icone={s.icone}
-                  titulo={s.titulo}
-                  descricao={s.descricao}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 5. COMO FUNCIONA ────────────────────────────────────────────── */}
-        <section
-          aria-label="Como funciona a Italev Sistemas"
-          className="border-b-2 border-black bg-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Como funciona: do contrato ao app no ar
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Cinco passos simples. A equipe da Italev cuida de toda a parte técnica.
-            </p>
-            <div className="max-w-3xl">
-              <Steps passos={comoFunciona} />
-            </div>
-          </div>
-        </section>
-
-        {/* ── 6. BENEFÍCIOS ───────────────────────────────────────────────── */}
-        <section
-          aria-label="Benefícios de ter um app próprio com a Italev"
-          className="border-b-2 border-black bg-gray-50"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              O que muda quando você tem um app próprio
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Cada benefício tem uma consequência concreta para o faturamento e a autonomia do negócio.
-            </p>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-              {beneficios.map((b) => (
-                <AnswerBlock
-                  key={b.id}
-                  heading={b.heading}
-                  resposta={b.resposta}
-                  fato={b.fato}
-                  headingLevel="h3"
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 7. ECOSSISTEMA (TEASER) ─────────────────────────────────────── */}
-        <section
-          aria-label="Produtos do ecossistema Italev Sistemas"
-          className="border-b-2 border-black bg-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Ecossistema de produtos Italev Sistemas
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              A Italev Sistemas desenvolve aplicativos próprios para diferentes perfis de comércio local.
-            </p>
-            <div className="grid gap-5 sm:grid-cols-2 max-w-2xl">
-              {produtos.map((p) => (
-                <ProductTeaser
-                  key={p.slug}
-                  nome={p.nome}
-                  categoria={p.categoria}
-                  descricao={p.descricao}
-                  tag={p.tag}
-                  status={p.status}
-                />
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── 8. TABELA COMPARATIVA ───────────────────────────────────────── */}
-        <section
-          aria-label="Comparativo app próprio vs marketplace"
-          className="border-b-2 border-black bg-gray-50"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              App próprio com a Italev vs. vender por marketplace
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Uma comparação factual entre os dois modelos de venda online para comércios locais.
-            </p>
-            <ComparisonTable linhas={comparativoPropriaVsMarketplace} />
-            <p className="mt-3 text-xs text-gray-400">
-              * Comissão de marketplace: dado a ser validado com fonte datada antes de publicar. [INSERIR]
+            <p className="text-on-secondary-container text-body-lg">
+              Mais autonomia, profissionalismo e resultado para o seu negócio.
             </p>
           </div>
-        </section>
-
-        {/* ── 9. FAQ ──────────────────────────────────────────────────────── */}
-        <section
-          aria-label="Perguntas frequentes sobre a Italev Sistemas"
-          className="border-b-2 border-black bg-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Perguntas frequentes sobre a Italev Sistemas
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Dúvidas sobre planos, funcionamento, integração e como começar.
-            </p>
-            <div className="max-w-3xl">
-              <FaqAccordion items={faqInstitucional} />
-            </div>
-          </div>
-        </section>
-
-        {/* ── 10. PROVA SOCIAL ────────────────────────────────────────────── */}
-        <section
-          aria-label="Depoimentos de clientes da Italev Sistemas"
-          className="border-b-2 border-black bg-gray-50"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Comércios que já vendem com app próprio da Italev
-            </h2>
-            <p className="text-gray-500 mb-8">
-              App pronto em até 15 dias úteis — veja o que dizem os clientes.
-            </p>
-            <Testimonials />
-          </div>
-        </section>
-
-        {/* ── 11. CTA FINAL ───────────────────────────────────────────────── */}
-        <section
-          aria-label="Comece agora com a Italev Sistemas"
-          className="bg-gray-950 text-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 py-16 text-center">
-            <h2 className="font-space-grotesk text-3xl font-black leading-tight md:text-4xl text-balance">
-              Pronto para ter seu app próprio e vender sem pagar comissão?
-            </h2>
-            <p className="mt-4 text-gray-400 max-w-xl mx-auto">
-              Fale com a equipe da Italev Sistemas. Atendimento de segunda a sexta, das 9h às 18h.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              <Link
-                href="/planos"
-                className="inline-flex items-center rounded-lg border-2 border-black bg-[#FF5A00] px-6 py-3 font-bold text-white shadow-[4px_4px_0_#000] transition-all duration-150 hover:shadow-[2px_2px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px] active:shadow-none"
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {beneficios.map((b, i) => (
+              <div
+                key={i}
+                className="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group"
               >
-                Ver planos e preços
-              </Link>
-              <Link
-                href="/contato"
-                className="inline-flex items-center rounded-lg border-2 border-white bg-transparent px-6 py-3 font-bold text-white transition-all duration-150 hover:bg-white hover:text-gray-900"
+                <div className="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d={b.icon} />
+                  </svg>
+                </div>
+                <h3 className="text-headline-lg mb-4 text-on-surface">{b.title}</h3>
+                <p className="text-on-secondary-container">{b.descricao}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── PROCESSO ──────────────────────────────────────── */}
+        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+          <div className="bg-surface-container-high rounded-[40px] p-8 md:p-24 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/3 h-full ambient-glow opacity-20 pointer-events-none" />
+            <h2 className="text-headline-xl text-on-surface mb-16 text-center">
+              Como funciona
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+              {processo.map((p, i) => (
+                <div key={i} className="text-center">
+                  <div className="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">
+                    {p.numero}
+                  </div>
+                  <h3 className="text-headline-lg mb-4 text-on-surface">{p.titulo}</h3>
+                  <p className="text-on-secondary-container">{p.descricao}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── PRICING ───────────────────────────────────────── */}
+        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+          <div className="text-center mb-16">
+            <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
+              Nossos Planos
+            </span>
+            <h2 className="text-headline-xl text-on-surface">
+              Escolha o plano ideal para seu momento
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+            {planos.map((plano, i) => (
+              <div
+                key={i}
+                className={`
+                  p-10 rounded-[32px] flex flex-col relative
+                  ${
+                    plano.destaque
+                      ? 'bg-surface-container-high border-2 border-primary-container md:scale-105 z-10 shadow-2xl'
+                      : 'bg-surface-container-low ghost-border'
+                  }
+                `}
               >
-                Falar com a equipe
-              </Link>
+                {plano.destaque && (
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-white px-4 py-1 rounded-full text-label-caps uppercase tracking-widest whitespace-nowrap">
+                    MAIS VENDIDO
+                  </div>
+                )}
+                <h3 className="text-headline-lg mb-2 text-on-surface">{plano.nome}</h3>
+                <p className="text-on-secondary-container mb-8">{plano.descricao}</p>
+                <div className="mb-8">
+                  <span className="text-headline-xl text-on-surface">{plano.preco}</span>
+                  <span className="text-on-secondary-container">/mês</span>
+                </div>
+                <ul className="space-y-4 mb-10 flex-grow">
+                  {plano.features.map((feature, j) => (
+                    <li key={j} className="flex gap-3 text-on-surface items-start">
+                      <svg className="w-5 h-5 text-primary-container flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                      </svg>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/planos"
+                  className={`
+                    w-full py-4 rounded-xl text-center font-bold text-label-caps uppercase tracking-widest transition-all
+                    ${
+                      plano.destaque
+                        ? 'bg-primary-container text-white orange-glow'
+                        : 'border border-white/20 text-on-surface hover:bg-white/5'
+                    }
+                  `}
+                >
+                  {plano.destaque ? 'Começar Agora' : 'Escolher Plano'}
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* ── CTA FINAL ─────────────────────────────────────── */}
+        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
+          <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-[48px] p-12 md:p-24 text-center text-white relative overflow-hidden">
+            <div className="relative z-10">
+              <h2 className="text-headline-xl md:text-display-lg mb-8 text-balance">
+                Pronto para transformar
+                <br />
+                seu comércio?
+              </h2>
+              <p className="text-body-lg mb-12 max-w-2xl mx-auto opacity-90">
+                Dê o próximo passo e leve seu negócio para o próximo nível com um app
+                que é só seu. Sem taxas, sem amarras, só lucro.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Link
+                  href="/planos"
+                  className="bg-white text-primary-container px-10 py-5 rounded-2xl font-bold text-body-lg hover:scale-105 transition-all shadow-xl"
+                >
+                  Quero começar agora
+                </Link>
+                <a
+                  href={`https://wa.me/${italev.whatsapp}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-transparent border-2 border-white text-white px-10 py-5 rounded-2xl font-bold text-body-lg hover:bg-white/10 transition-all flex items-center justify-center gap-2"
+                >
+                  <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                  </svg>
+                  Falar no WhatsApp
+                </a>
+              </div>
             </div>
           </div>
         </section>

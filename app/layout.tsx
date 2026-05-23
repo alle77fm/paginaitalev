@@ -29,6 +29,9 @@ export const metadata: Metadata = {
   },
   description: italev.entityStatement,
   metadataBase: new URL(italev.domain),
+  icons: {
+    icon: '/favicon.ico',
+  },
   openGraph: {
     siteName: italev.brandName,
     locale: 'pt_BR',
@@ -55,9 +58,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${spaceGrotesk.variable} ${inter.variable}`}
+      className={`${spaceGrotesk.variable} ${inter.variable} dark`}
     >
-      <body className="font-inter antialiased bg-white text-gray-900">
+      <body className="font-inter antialiased bg-surface text-on-surface">
         {/* JSON-LD da entidade — presente em todas as páginas */}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
