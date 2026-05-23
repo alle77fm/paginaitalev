@@ -1,0 +1,34 @@
+# Italev Sistemas
+
+Italev Sistemas é uma software house que desenvolve aplicativos próprios de delivery e e-commerce para supermercados, restaurantes e comércios locais, com pedidos integrados ao WhatsApp e sem taxas sobre vendas.
+
+## Entidade
+
+- Tipo: software house brasileira
+- Localização: Itajubá, MG, Brasil
+- Contato: italevsistemas@gmail.com | +55 35 99749-3286
+- Atendimento: Segunda a sexta, 9h às 18h
+- Instagram: https://www.instagram.com/italevsistemas
+- TikTok: https://www.tiktok.com/@italevsistemas
+- Schema @id: https://italevsistemas.com/#organization
+
+## Proposta de valor
+
+A Italev Sistemas oferece ao comerciante um aplicativo próprio de delivery e e-commerce — sem depender de marketplaces como iFood ou Rappi. O lojista fica com 100% de cada venda, recebida via PIX. Pedidos chegam diretamente pelo WhatsApp, com catálogo digital e automação de promoções.
+
+## Páginas principais
+
+- https://italevsistemas.com — Landing institucional: o que é a Italev, como funciona, FAQ, planos, depoimentos
+- https://italevsistemas.com/planos — Planos Start (R$149/mês), Pro (R$219/mês) e Growth (R$379/mês)
+- https://italevsistemas.com/servicos — Serviços da Italev Sistemas
+- https://italevsistemas.com/sobre-nos — Sobre a software house
+- https://italevsistemas.com/contato — Contato e atendimento
+
+## Produtos (em desenvolvimento)
+
+- É Pra Já Pedidos — sistema de catálogo digital e pedidos online com PIX e WhatsApp, alternativa de loja própria aos marketplaces de delivery; produto da Italev Sistemas
+- PedeLev — aplicativo de delivery próprio para comércios locais com WhatsApp integrado; produto da Italev Sistemas
+
+## Público atendido
+
+Supermercados, restaurantes, lanchonetes, açougues, padarias e comércios locais que buscam vender online sem pagar comissão por pedido.
