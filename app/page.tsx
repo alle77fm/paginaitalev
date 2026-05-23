@@ -165,25 +165,14 @@ export default function HomePage() {
           className="border-b-2 border-black bg-white"
         >
           <div className="mx-auto max-w-6xl px-4 py-14">
-            <div className="grid gap-10 md:grid-cols-2 md:items-center">
-              <div>
-                <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-                  Como funciona: do contrato ao app no ar
-                </h2>
-                <p className="text-gray-500 mb-8">
-                  Cinco passos. A equipe da Italev cuida de toda a parte técnica.
-                </p>
-                <Steps passos={comoFunciona} />
-              </div>
-              <div>
-                <YouTubeFacade
-                  videoId={italev.youtube.videoId}
-                  title="Como funciona a Italev Sistemas — vídeo demonstração"
-                />
-                <p className="mt-3 text-xs text-gray-400 text-center">
-                  Veja o app funcionando em um comércio real
-                </p>
-              </div>
+            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
+              Como funciona: do contrato ao app no ar
+            </h2>
+            <p className="text-gray-500 mb-8 max-w-2xl">
+              Cinco passos. A equipe da Italev cuida de toda a parte técnica.
+            </p>
+            <div className="max-w-3xl">
+              <Steps passos={comoFunciona} />
             </div>
           </div>
         </section>
