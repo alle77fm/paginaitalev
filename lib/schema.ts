@@ -169,8 +169,9 @@ export function offerCatalogSchema() {
           priceCurrency: 'BRL',
           billingDuration: 'P1M',
         },
+        // multi-loja omitido do schema até estar disponível (não declarar InStock nem ComingSoon)
         description:
-          'Tudo do Pro + suporte prioritário + onboarding assistido + multi-loja.',
+          'Tudo do Pro + suporte prioritário + onboarding assistido.',
         availability: 'https://schema.org/InStock',
         seller: { '@id': ORG_ID },
       },
