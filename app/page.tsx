@@ -169,7 +169,7 @@ export default function HomePage() {
               Como funciona: do contrato ao app no ar
             </h2>
             <p className="text-gray-500 mb-8 max-w-2xl">
-              Cinco passos. A equipe da Italev cuida de toda a parte técnica.
+              Cinco passos simples. A equipe da Italev cuida de toda a parte técnica.
             </p>
             <div className="max-w-3xl">
               <Steps passos={comoFunciona} />
