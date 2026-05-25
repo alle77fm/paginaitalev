@@ -141,7 +141,7 @@ export default function HomePage() {
                 height={560}
                 priority
                 sizes="(max-width: 768px) 80vw, 420px"
-                className="relative z-10 w-full max-w-[320px] md:max-w-[420px] h-auto rounded-3xl"
+                className="relative z-10 w-full max-w-[320px] md:max-w-[420px] h-auto rounded-3xl overflow-hidden"
               />
             </div>
           </div>
