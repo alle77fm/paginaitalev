@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Header from '@/components/layout/Header';
+import Navbar from '@/components/layout/Navbar';
+import PageHero from '@/components/layout/PageHero';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import DefinitionBlock from '@/components/content/DefinitionBlock';
@@ -31,31 +32,36 @@ export default function ServicosPage() {
         { name: 'Serviços', url: `${italev.domain}/servicos` },
       ])} />
 
-      <Header />
+      <Navbar />
 
       <main>
-        <section aria-label="Serviços da Italev Sistemas" className="border-b-2 border-black bg-white">
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h1 className="font-space-grotesk text-4xl font-black text-gray-900 mb-6 md:text-5xl text-balance">
-              O que a Italev Sistemas desenvolve para o seu comércio
-            </h1>
-            <div className="max-w-3xl">
-              <DefinitionBlock
-                termo="Italev Sistemas"
-                definicao={italev.entityStatement}
-              />
-            </div>
+        <PageHero
+          title="O que a Italev Sistemas desenvolve para o seu comércio"
+          subtitle="Aplicativos próprios de delivery, catálogo digital e e-commerce — sem dependência de marketplace."
+          badge="Serviços"
+        />
+
+        {/* Definição da entidade */}
+        <section aria-label="Definição — Italev Sistemas" className="section">
+          <div className="mx-auto max-w-3xl px-6">
+            <DefinitionBlock
+              termo="Italev Sistemas"
+              definicao={italev.entityStatement}
+            />
           </div>
         </section>
 
-        <section aria-label="Soluções disponíveis" className="border-b-2 border-black bg-gray-50">
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-2">
-              Soluções desenvolvidas pela Italev Sistemas
-            </h2>
-            <p className="text-gray-500 mb-8 max-w-2xl">
-              Cada solução é desenvolvida sob a marca do comércio — sem dependência de marketplace.
-            </p>
+        {/* Soluções */}
+        <section aria-label="Soluções disponíveis" className="section">
+          <div className="mx-auto max-w-6xl px-6">
+            <div className="text-center mb-12">
+              <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-4">
+                Soluções desenvolvidas pela Italev Sistemas
+              </h2>
+              <p className="text-[#94A3B8] max-w-2xl mx-auto">
+                Cada solução é desenvolvida sob a marca do comércio — sem dependência de marketplace.
+              </p>
+            </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
               {solucoes.map((s) => (
                 <SolutionCard key={s.id} icone={s.icone} titulo={s.titulo} descricao={s.descricao} />
@@ -64,12 +70,13 @@ export default function ServicosPage() {
           </div>
         </section>
 
-        <section aria-label="Como a Italev entrega os projetos" className="border-b-2 border-black bg-white">
-          <div className="mx-auto max-w-6xl px-4 py-14">
-            <h2 className="font-space-grotesk text-2xl font-black text-gray-900 mb-8">
+        {/* Como entrega */}
+        <section aria-label="Como a Italev entrega os projetos" className="section">
+          <div className="mx-auto max-w-6xl px-6">
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-10 text-center">
               Como a Italev Sistemas entrega cada projeto
             </h2>
-            <div className="grid gap-5 sm:grid-cols-2 max-w-3xl">
+            <div className="grid gap-5 sm:grid-cols-2 max-w-3xl mx-auto">
               <AnswerBlock
                 heading="App pronto em até 15 dias úteis"
                 resposta="A Italev Sistemas cuida de toda a configuração: catálogo, identidade visual, domínio e integração com WhatsApp. O comerciante não precisa de conhecimento técnico — apenas fornece as informações do negócio."
@@ -97,20 +104,29 @@ export default function ServicosPage() {
           </div>
         </section>
 
-        <section aria-label="Comece agora" className="bg-gray-950 text-white">
-          <div className="mx-auto max-w-6xl px-4 py-14 text-center">
-            <h2 className="font-space-grotesk text-2xl font-black mb-4">
-              Pronto para ter seu app próprio?
-            </h2>
-            <p className="text-gray-400 mb-8 max-w-xl mx-auto">
-              Conheça os planos e comece com a Italev Sistemas hoje.
-            </p>
-            <Link
-              href="/planos"
-              className="inline-flex items-center rounded-lg border-2 border-black bg-[#FF5A00] px-6 py-3 font-bold text-white shadow-[4px_4px_0_#000] transition-all hover:shadow-[2px_2px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px]"
+        {/* CTA */}
+        <section aria-label="Comece agora" className="section">
+          <div className="mx-auto max-w-4xl px-6 text-center">
+            <div
+              className="rounded-[40px] border border-[#4F7CFF]/20 p-12 md:p-16"
+              style={{
+                background:
+                  'linear-gradient(135deg, rgba(79,124,255,0.1) 0%, rgba(108,140,255,0.05) 100%)',
+              }}
             >
-              Ver planos e preços
-            </Link>
+              <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-4">
+                Pronto para ter seu app próprio?
+              </h2>
+              <p className="text-[#94A3B8] mb-8 max-w-xl mx-auto">
+                Conheça os planos e comece com a Italev Sistemas hoje.
+              </p>
+              <Link
+                href="/planos"
+                className="inline-flex items-center justify-center bg-[#4F7CFF] hover:bg-[#6C8CFF] text-white px-8 py-4 rounded-[10px] font-semibold transition-all duration-200 shadow-[0_0_24px_rgba(79,124,255,0.35)]"
+              >
+                Ver planos e preços
+              </Link>
+            </div>
           </div>
         </section>
       </main>

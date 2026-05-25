@@ -1,0 +1,35 @@
+interface PageHeroProps {
+  title: string;
+  subtitle?: string;
+  badge?: string;
+}
+
+export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
+  return (
+    <section className="relative pt-40 pb-16 text-center overflow-hidden">
+      {/* Glow azul difuso */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] pointer-events-none"
+        aria-hidden="true"
+        style={{
+          background: 'radial-gradient(ellipse, rgba(79,124,255,0.1) 0%, transparent 70%)',
+        }}
+      />
+      <div className="relative z-10 max-w-[760px] mx-auto px-6">
+        {badge && (
+          <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-[#4F7CFF]/30 bg-[#4F7CFF]/10 text-[#4F7CFF] text-sm font-semibold">
+            {badge}
+          </span>
+        )}
+        <h1 className="font-sora text-4xl md:text-6xl font-bold text-[#F8FAFC] mb-6 text-balance leading-tight">
+          {title}
+        </h1>
+        {subtitle && (
+          <p className="text-[#94A3B8] text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+            {subtitle}
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}

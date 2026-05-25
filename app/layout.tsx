@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Space_Grotesk, Inter } from 'next/font/google';
+import { Space_Grotesk, Inter, Sora } from 'next/font/google';
 import './globals.css';
 import { italev } from '@/lib/entities';
 import {
@@ -13,6 +13,12 @@ import FloatingButton from '@/components/ui/FloatingButton';
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-space-grotesk',
+  display: 'swap',
+});
+
+const sora = Sora({
+  subsets: ['latin'],
+  variable: '--font-sora',
   display: 'swap',
 });
 
@@ -58,9 +64,9 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${spaceGrotesk.variable} ${inter.variable} dark`}
+      className={`${spaceGrotesk.variable} ${sora.variable} ${inter.variable} dark`}
     >
-      <body className="font-inter antialiased bg-surface text-on-surface">
+      <body className="font-inter antialiased">
         {/* JSON-LD da entidade — presente em todas as páginas */}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />

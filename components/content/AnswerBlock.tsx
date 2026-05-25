@@ -1,7 +1,3 @@
-/**
- * Átomo de conteúdo GEO — responde uma pergunta/intenção isoladamente.
- * RSC. Texto sempre no HTML do servidor.
- */
 interface AnswerBlockProps {
   heading: string;
   resposta: string;
@@ -16,13 +12,16 @@ export default function AnswerBlock({
   headingLevel: Tag = 'h2',
 }: AnswerBlockProps) {
   return (
-    <article className="border-2 border-black rounded-xl p-6 bg-white shadow-[4px_4px_0_#000]">
-      <Tag className="font-space-grotesk text-lg font-bold leading-snug text-gray-900 mb-3">
+    <article
+      className="rounded-2xl border border-white/[0.08] p-6 transition-all duration-300 hover:border-[#4F7CFF]/40 hover:shadow-[0_8px_32px_rgba(79,124,255,0.12)]"
+      style={{ background: 'rgba(255,255,255,0.03)' }}
+    >
+      <Tag className="font-sora text-lg font-bold leading-snug text-[#F8FAFC] mb-3">
         {heading}
       </Tag>
-      <p className="text-gray-700 leading-relaxed">{resposta}</p>
+      <p className="text-[#94A3B8] leading-relaxed">{resposta}</p>
       {fato && (
-        <p className="mt-3 text-sm text-gray-500 border-l-4 border-[#FF5A00] pl-3 italic">
+        <p className="mt-3 text-sm text-[#94A3B8] border-l-4 border-[#FF6600] pl-3 italic">
           {fato}
         </p>
       )}

@@ -11,6 +11,7 @@ const config: Config = {
     extend: {
       fontFamily: {
         'space-grotesk': ['var(--font-space-grotesk)', 'sans-serif'],
+        sora: ['var(--font-sora)', 'sans-serif'],
         inter: ['var(--font-inter)', 'sans-serif'],
       },
       colors: {

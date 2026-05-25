@@ -8,7 +8,12 @@
   }
 
   body {
-    @apply font-inter text-on-surface bg-surface overflow-x-hidden;
+    @apply font-inter overflow-x-hidden;
+    color: #F8FAFC;
+    background: radial-gradient(ellipse at 20% 50%, rgba(79, 124, 255, 0.04) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 20%, rgba(108, 140, 255, 0.03) 0%, transparent 60%),
+      #070B14;
+    min-height: 100vh;
   }
 
   h1,
@@ -17,12 +22,11 @@
   h4,
   h5,
   h6 {
-    @apply font-inter;
+    @apply font-sora;
   }
 
-  /* Foco acessível consistente */
   :focus-visible {
-    @apply outline-none ring-2 ring-primary-container ring-offset-2 ring-offset-surface;
+    @apply outline-none ring-2 ring-[#4F7CFF] ring-offset-2 ring-offset-[#070B14];
   }
 }
 
@@ -37,7 +41,7 @@
   }
 
   .ghost-border {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .orange-glow:hover {
@@ -46,5 +50,36 @@
 
   .ambient-glow {
     background: radial-gradient(circle, rgba(255, 102, 0, 0.05) 0%, rgba(18, 18, 18, 0) 70%);
+  }
+
+  .blue-glow {
+    background: radial-gradient(ellipse, rgba(79, 124, 255, 0.12) 0%, transparent 70%);
+  }
+
+  .card-dark {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 28px;
+    transition: all 0.3s ease;
+  }
+
+  .card-dark:hover {
+    border-color: rgba(79, 124, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(79, 124, 255, 0.12);
+  }
+
+  .section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding-top: 72px;
+    padding-bottom: 72px;
   }
 }

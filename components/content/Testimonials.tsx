@@ -1,9 +1,3 @@
-/**
- * Depoimentos reais — APENAS os 3 confirmados.
- * Não inventar nem adicionar sem dado real verificado.
- * RSC.
- */
-
 const depoimentos = [
   {
     id: 'carlos-mendes',
@@ -35,13 +29,14 @@ export default function Testimonials() {
         {depoimentos.map((d) => (
           <li
             key={d.id}
-            className="rounded-xl border-2 border-black bg-white p-5 shadow-[4px_4px_0_#000]"
+            className="rounded-2xl border border-white/[0.08] p-5 transition-all duration-300 hover:border-[#4F7CFF]/40 hover:shadow-[0_8px_32px_rgba(79,124,255,0.12)]"
+            style={{ background: 'rgba(255,255,255,0.03)' }}
           >
             <blockquote>
-              <p className="text-sm text-gray-700 leading-relaxed">&ldquo;{d.texto}&rdquo;</p>
+              <p className="text-sm text-[#94A3B8] leading-relaxed">&ldquo;{d.texto}&rdquo;</p>
               <footer className="mt-4">
-                <p className="font-space-grotesk font-bold text-gray-900 text-sm">{d.nome}</p>
-                <p className="text-xs text-[#FF5A00] font-medium">{d.comercio}</p>
+                <p className="font-sora font-bold text-[#F8FAFC] text-sm">{d.nome}</p>
+                <p className="text-xs text-[#FF6600] font-medium">{d.comercio}</p>
               </footer>
             </blockquote>
           </li>
