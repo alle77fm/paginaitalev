@@ -3,11 +3,11 @@ import Navbar from '@/components/layout/Navbar';
 import PageHero from '@/components/layout/PageHero';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
-import PricingCard from '@/components/ui/PricingCard';
+import PricingCards from '@/components/ui/PricingCards';
 import FaqAccordion from '@/components/content/FaqAccordion';
 import { italev } from '@/lib/entities';
 import { offerCatalogSchema, faqPageSchema, breadcrumbSchema } from '@/lib/schema';
-import { planos, recursosComparativos } from '@/content/comparisons/planos';
+import { recursosComparativos } from '@/content/comparisons/planos';
 import { faqInstitucional } from '@/content/faq/institucional';
 
 const faqPlanos = faqInstitucional.filter((f) =>
@@ -48,15 +48,11 @@ export default function PlanosPage() {
         {/* Cards dos planos */}
         <section aria-label="Comparativo de planos" className="section">
           <div className="mx-auto max-w-6xl px-6">
-            <div className="grid gap-6 md:grid-cols-3 md:items-start">
-              {planos.map((plano) => (
-                <PricingCard key={plano.id} plano={plano} />
-              ))}
-            </div>
+            <PricingCards cta="whatsapp" />
             <p className="mt-8 text-center text-sm text-[#64748B]">
               Todos os planos incluem suporte de segunda a sexta, 9h às 18h.
               Dúvidas?{' '}
-              <a href={`mailto:${italev.email}`} className="text-[#4F7CFF] hover:underline">
+              <a href={`mailto:${italev.email}`} className="text-[#FF5A00] hover:underline">
                 {italev.email}
               </a>
             </p>
@@ -82,25 +78,21 @@ export default function PlanosPage() {
                 <thead>
                   <tr
                     className="border-b border-white/[0.08]"
-                    style={{ background: 'rgba(79,124,255,0.08)' }}
+                    style={{ background: 'rgba(255,90,0,0.06)' }}
                   >
                     <th scope="col" className="px-4 py-3 text-left font-sora font-bold text-[#F8FAFC]">Recurso</th>
                     <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#F8FAFC]">Start</th>
-                    <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#4F7CFF]">Pro ⭐</th>
+                    <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#FF5A00]">Pro ⭐</th>
                     <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#F8FAFC]">Scale</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/[0.05]">
                   {recursosComparativos.map((r) => (
-                    <tr
-                      key={r.nome}
-                      className="transition-colors"
-                      style={{ ['&:hover' as string]: { background: 'rgba(79,124,255,0.05)' } }}
-                    >
+                    <tr key={r.nome} className="transition-colors hover:bg-white/[0.02]">
                       <td className="px-4 py-3 font-medium text-[#F8FAFC]">{r.nome}</td>
-                      <td className="px-4 py-3 text-center">{r.start ? <span className="text-[#4F7CFF] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
-                      <td className="px-4 py-3 text-center">{r.pro ? <span className="text-[#4F7CFF] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
-                      <td className="px-4 py-3 text-center">{r.scale ? <span className="text-[#4F7CFF] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
+                      <td className="px-4 py-3 text-center">{r.start ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
+                      <td className="px-4 py-3 text-center">{r.pro ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
+                      <td className="px-4 py-3 text-center">{r.scale ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
                     </tr>
                   ))}
                 </tbody>

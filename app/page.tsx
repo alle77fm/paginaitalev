@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
+import PricingCards from '@/components/ui/PricingCards';
 import { italev } from '@/lib/entities';
 import { serviceSchema, faqPageSchema } from '@/lib/schema';
 import { faqInstitucional } from '@/content/faq/institucional';
@@ -81,46 +82,6 @@ const processo = [
   },
 ];
 
-// Planos
-const planos = [
-  {
-    nome: 'Start',
-    descricao: 'Para quem está começando',
-    preco: 'R$149',
-    destaque: false,
-    features: [
-      'App com sua marca',
-      'Pedidos via WhatsApp',
-      'Pagamento via PIX',
-      'Suporte via WhatsApp',
-    ],
-  },
-  {
-    nome: 'Pro',
-    descricao: 'Para quem quer crescer',
-    preco: 'R$219',
-    destaque: true,
-    features: [
-      'Tudo do plano Start',
-      'Cupons automáticos',
-      'Relatórios avançados',
-      'Notificações Push',
-      'Atendimento Prioritário',
-    ],
-  },
-  {
-    nome: 'Scale',
-    descricao: 'Controle total para operações que querem crescer',
-    preco: 'R$379',
-    destaque: false,
-    features: [
-      'Tudo do plano Pro',
-      'Suporte prioritário',
-      'Onboarding assistido',
-      'Multi-loja (em breve)',
-    ],
-  },
-];
 
 export default function HomePage() {
   return (
@@ -268,56 +229,7 @@ export default function HomePage() {
               Escolha o plano ideal para seu momento
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-            {planos.map((plano, i) => (
-              <div
-                key={i}
-                className={`
-                  p-10 rounded-[32px] flex flex-col relative
-                  ${
-                    plano.destaque
-                      ? 'bg-surface-container-high border-2 border-primary-container md:scale-105 z-10 shadow-2xl'
-                      : 'bg-surface-container-low ghost-border'
-                  }
-                `}
-              >
-                {plano.destaque && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-white px-4 py-1 rounded-full text-label-caps uppercase tracking-widest whitespace-nowrap">
-                    MAIS VENDIDO
-                  </div>
-                )}
-                <h3 className="text-headline-lg mb-2 text-on-surface">{plano.nome}</h3>
-                <p className="text-on-secondary-container mb-8">{plano.descricao}</p>
-                <div className="mb-8">
-                  <span className="text-headline-xl text-on-surface">{plano.preco}</span>
-                  <span className="text-on-secondary-container">/mês</span>
-                </div>
-                <ul className="space-y-4 mb-10 flex-grow">
-                  {plano.features.map((feature, j) => (
-                    <li key={j} className="flex gap-3 text-on-surface items-start">
-                      <svg className="w-5 h-5 text-primary-container flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                      </svg>
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="/planos"
-                  className={`
-                    w-full py-4 rounded-xl text-center font-bold text-label-caps uppercase tracking-widest transition-all
-                    ${
-                      plano.destaque
-                        ? 'bg-primary-container text-white orange-glow'
-                        : 'border border-white/20 text-on-surface hover:bg-white/5'
-                    }
-                  `}
-                >
-                  {plano.destaque ? 'Começar Agora' : 'Escolher Plano'}
-                </Link>
-              </div>
-            ))}
-          </div>
+          <PricingCards cta="page" />
         </section>
 
         {/* ── CTA FINAL ─────────────────────────────────────── */}

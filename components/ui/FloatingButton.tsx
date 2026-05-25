@@ -118,12 +118,15 @@ export default function FloatingButton() {
           className="fixed inset-0 z-50 flex items-end justify-center bg-black/60 p-4 backdrop-blur-sm sm:items-center"
           onClick={handleBackdropClick}
         >
-          <div className="w-full max-w-md rounded-2xl border-2 border-black bg-white shadow-[6px_6px_0_#000]">
+          <div
+            className="w-full max-w-md rounded-2xl border border-[#FF5A00]/20"
+            style={{ background: 'rgba(7,11,20,0.95)', backdropFilter: 'blur(20px)' }}
+          >
             {/* Header */}
-            <div className="flex items-center justify-between border-b-2 border-black px-6 py-4">
+            <div className="flex items-center justify-between border-b border-white/[0.08] px-6 py-4">
               <h2
                 id="modal-title"
-                className="font-space-grotesk text-lg font-bold leading-tight"
+                className="font-sora text-lg font-bold text-[#F8FAFC] leading-tight"
               >
                 Quero ver funcionando
               </h2>
@@ -131,7 +134,7 @@ export default function FloatingButton() {
                 type="button"
                 onClick={() => setOpen(false)}
                 aria-label="Fechar"
-                className="rounded-lg p-1.5 text-gray-500 transition-colors hover:bg-gray-100"
+                className="rounded-lg p-1.5 text-[#94A3B8] transition-colors hover:text-[#F8FAFC] hover:bg-white/[0.05]"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden="true">
                   <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z" />
@@ -141,134 +144,51 @@ export default function FloatingButton() {
 
             {/* Form */}
             <form onSubmit={handleSubmit} className="space-y-3 px-6 py-5">
-              {/* Nome */}
-              <div>
-                <label htmlFor="fb-nome" className="mb-1 block text-sm font-medium text-gray-800">
-                  Nome
-                </label>
-                <input
-                  id="fb-nome"
-                  name="nome"
-                  type="text"
-                  required
-                  autoComplete="name"
-                  value={form.nome}
-                  onChange={handleChange}
-                  placeholder="Seu nome"
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                />
-              </div>
+              {[
+                { id: 'fb-nome', name: 'nome', type: 'text', label: 'Nome', placeholder: 'Seu nome', autoComplete: 'name' },
+                { id: 'fb-comercio', name: 'comercio', type: 'text', label: 'Nome do comércio', placeholder: 'Ex: Supermercado Silva', autoComplete: 'organization' },
+                { id: 'fb-cidade', name: 'cidade', type: 'text', label: 'Cidade', placeholder: 'Sua cidade', autoComplete: 'address-level2' },
+                { id: 'fb-whatsapp', name: 'whatsapp', type: 'tel', label: 'WhatsApp', placeholder: '(00) 00000-0000', autoComplete: 'tel' },
+              ].map((field) => (
+                <div key={field.id}>
+                  <label htmlFor={field.id} className="mb-1.5 block text-sm font-medium text-[#94A3B8]">
+                    {field.label}
+                  </label>
+                  <input
+                    id={field.id}
+                    name={field.name}
+                    type={field.type}
+                    required
+                    autoComplete={field.autoComplete}
+                    value={form[field.name as keyof FormData]}
+                    onChange={handleChange}
+                    placeholder={field.placeholder}
+                    className="w-full rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#FF5A00] focus:ring-1 focus:ring-[#FF5A00]"
+                  />
+                </div>
+              ))}
 
-              {/* Comércio */}
               <div>
-                <label htmlFor="fb-comercio" className="mb-1 block text-sm font-medium text-gray-800">
-                  Nome do comércio
-                </label>
-                <input
-                  id="fb-comercio"
-                  name="comercio"
-                  type="text"
-                  required
-                  autoComplete="organization"
-                  value={form.comercio}
-                  onChange={handleChange}
-                  placeholder="Ex: Supermercado Silva"
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                />
-              </div>
-
-              {/* Cidade */}
-              <div>
-                <label htmlFor="fb-cidade" className="mb-1 block text-sm font-medium text-gray-800">
-                  Cidade
-                </label>
-                <input
-                  id="fb-cidade"
-                  name="cidade"
-                  type="text"
-                  required
-                  autoComplete="address-level2"
-                  value={form.cidade}
-                  onChange={handleChange}
-                  placeholder="Sua cidade"
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                />
-              </div>
-
-              {/* WhatsApp */}
-              <div>
-                <label htmlFor="fb-whatsapp" className="mb-1 block text-sm font-medium text-gray-800">
-                  WhatsApp
-                </label>
-                <input
-                  id="fb-whatsapp"
-                  name="whatsapp"
-                  type="tel"
-                  required
-                  autoComplete="tel"
-                  value={form.whatsapp}
-                  onChange={handleChange}
-                  placeholder="(00) 00000-0000"
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                />
-              </div>
-
-              {/* Segmento */}
-              <div>
-                <label htmlFor="fb-segmento" className="mb-1 block text-sm font-medium text-gray-800">
-                  Segmento
-                </label>
-                <select
-                  id="fb-segmento"
-                  name="segmento"
-                  required
-                  value={form.segmento}
-                  onChange={handleChange}
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                >
+                <label htmlFor="fb-segmento" className="mb-1.5 block text-sm font-medium text-[#94A3B8]">Segmento</label>
+                <select id="fb-segmento" name="segmento" required value={form.segmento} onChange={handleChange}
+                  className="w-full rounded-lg border border-white/10 bg-[#0d1220] px-3 py-2 text-sm text-[#F8FAFC] transition-all focus:outline-none focus:border-[#FF5A00] focus:ring-1 focus:ring-[#FF5A00]">
                   <option value="">Selecione seu segmento</option>
-                  {SEGMENTOS.map((s) => (
-                    <option key={s} value={s}>
-                      {s}
-                    </option>
-                  ))}
+                  {SEGMENTOS.map((s) => <option key={s} value={s}>{s}</option>)}
                 </select>
               </div>
 
-              {/* Plano */}
               <div>
-                <label htmlFor="fb-plano" className="mb-1 block text-sm font-medium text-gray-800">
-                  Plano de interesse
-                </label>
-                <select
-                  id="fb-plano"
-                  name="plano"
-                  required
-                  value={form.plano}
-                  onChange={handleChange}
-                  className="w-full rounded-lg border-2 border-black px-3 py-2 text-sm transition-shadow focus:outline-none focus:ring-2 focus:ring-[#FF5A00] focus:ring-offset-1"
-                >
+                <label htmlFor="fb-plano" className="mb-1.5 block text-sm font-medium text-[#94A3B8]">Plano de interesse</label>
+                <select id="fb-plano" name="plano" required value={form.plano} onChange={handleChange}
+                  className="w-full rounded-lg border border-white/10 bg-[#0d1220] px-3 py-2 text-sm text-[#F8FAFC] transition-all focus:outline-none focus:border-[#FF5A00] focus:ring-1 focus:ring-[#FF5A00]">
                   <option value="">Selecione um plano</option>
-                  {PLANOS.map((p) => (
-                    <option key={p} value={p}>
-                      {p}
-                    </option>
-                  ))}
+                  {PLANOS.map((p) => <option key={p} value={p}>{p}</option>)}
                 </select>
               </div>
 
-              {/* Submit */}
               <button
                 type="submit"
-                className="
-                  mt-2 w-full rounded-lg border-2 border-black
-                  bg-[#FF5A00] py-3
-                  font-semibold text-white
-                  shadow-[3px_3px_0_#000]
-                  transition-all duration-150
-                  hover:shadow-[1px_1px_0_#000] hover:translate-x-[2px] hover:translate-y-[2px]
-                  active:shadow-none active:translate-x-[3px] active:translate-y-[3px]
-                "
+                className="mt-2 w-full rounded-lg bg-[#FF5A00] hover:bg-[#e04e00] py-3 font-semibold text-white text-sm shadow-[0_0_20px_rgba(255,90,0,0.35)] transition-all duration-150"
               >
                 Receber atendimento via WhatsApp
               </button>

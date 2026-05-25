@@ -16,7 +16,7 @@ interface ButtonProps {
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    'bg-[#4F7CFF] hover:bg-[#6C8CFF] text-white shadow-[0_0_20px_rgba(79,124,255,0.3)] hover:shadow-[0_0_28px_rgba(79,124,255,0.5)]',
+    'bg-[#FF5A00] hover:bg-[#e04e00] text-white shadow-[0_0_20px_rgba(255,90,0,0.35)] hover:shadow-[0_0_28px_rgba(255,90,0,0.5)]',
   outline:
     'bg-transparent border border-white/20 text-[#F8FAFC] hover:border-[#4F7CFF] hover:bg-[rgba(79,124,255,0.08)]',
   whatsapp:

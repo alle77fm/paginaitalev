@@ -21,12 +21,7 @@ const SEGMENTOS = [
   'Outro',
 ];
 
-const PLANOS = [
-  'Start',
-  'Pro',
-  'Scale',
-  'Ainda não sei',
-];
+const PLANOS = ['Start', 'Pro', 'Scale', 'Ainda não sei'];
 
 const INITIAL_FORM: FormData = {
   nome: '',
@@ -37,13 +32,16 @@ const INITIAL_FORM: FormData = {
   plano: '',
 };
 
+const inputCls =
+  'w-full rounded-lg border border-white/10 bg-white/[0.04] px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#FF5A00] focus:ring-1 focus:ring-[#FF5A00]';
+
+const labelCls = 'block text-sm font-medium text-[#94A3B8] mb-1.5';
+
 export default function LeadForm() {
   const [form, setForm] = useState<FormData>(INITIAL_FORM);
   const [submitted, setSubmitted] = useState(false);
 
-  function handleChange(
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
-  ) {
+  function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   }
 
@@ -74,8 +72,11 @@ export default function LeadForm() {
   }
 
   return (
-    <div className="w-full max-w-md rounded-2xl border border-[#4F7CFF]/30 bg-[#070B14]/40 backdrop-blur-md p-8 shadow-lg shadow-[#6C8CFF]/10">
-      <h2 className="font-space-grotesk text-2xl font-bold text-[#F8FAFC] mb-2">
+    <div
+      className="w-full max-w-md rounded-2xl border border-[#FF5A00]/20 p-8 shadow-[0_0_40px_rgba(79,124,255,0.08)]"
+      style={{ background: 'rgba(7,11,20,0.7)', backdropFilter: 'blur(16px)' }}
+    >
+      <h2 className="font-sora text-2xl font-bold text-[#F8FAFC] mb-1.5">
         Quero uma demonstração
       </h2>
       <p className="text-[#94A3B8] text-sm mb-6">
@@ -84,8 +85,8 @@ export default function LeadForm() {
 
       {submitted ? (
         <div className="text-center py-8">
-          <div className="w-12 h-12 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
-            <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="w-12 h-12 rounded-full bg-[#FF5A00]/20 flex items-center justify-center mx-auto mb-4">
+            <svg className="w-6 h-6 text-[#FF5A00]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
             </svg>
           </div>
@@ -94,131 +95,51 @@ export default function LeadForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Nome */}
           <div>
-            <label htmlFor="lf-nome" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              Nome
-            </label>
-            <input
-              id="lf-nome"
-              name="nome"
-              type="text"
-              required
-              value={form.nome}
-              onChange={handleChange}
-              placeholder="Seu nome"
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            />
+            <label htmlFor="lf-nome" className={labelCls}>Nome</label>
+            <input id="lf-nome" name="nome" type="text" required autoComplete="name"
+              value={form.nome} onChange={handleChange} placeholder="Seu nome" className={inputCls} />
           </div>
 
-          {/* Nome do comércio */}
           <div>
-            <label htmlFor="lf-comercio" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              Nome do comércio
-            </label>
-            <input
-              id="lf-comercio"
-              name="comercio"
-              type="text"
-              required
-              value={form.comercio}
-              onChange={handleChange}
-              placeholder="Ex: Supermercado Silva"
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            />
+            <label htmlFor="lf-comercio" className={labelCls}>Nome do comércio</label>
+            <input id="lf-comercio" name="comercio" type="text" required autoComplete="organization"
+              value={form.comercio} onChange={handleChange} placeholder="Ex: Supermercado Silva" className={inputCls} />
           </div>
 
-          {/* Cidade */}
           <div>
-            <label htmlFor="lf-cidade" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              Cidade
-            </label>
-            <input
-              id="lf-cidade"
-              name="cidade"
-              type="text"
-              required
-              value={form.cidade}
-              onChange={handleChange}
-              placeholder="Sua cidade"
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            />
+            <label htmlFor="lf-cidade" className={labelCls}>Cidade</label>
+            <input id="lf-cidade" name="cidade" type="text" required autoComplete="address-level2"
+              value={form.cidade} onChange={handleChange} placeholder="Sua cidade" className={inputCls} />
           </div>
 
-          {/* WhatsApp */}
           <div>
-            <label htmlFor="lf-whatsapp" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              WhatsApp
-            </label>
-            <input
-              id="lf-whatsapp"
-              name="whatsapp"
-              type="tel"
-              required
-              value={form.whatsapp}
-              onChange={handleChange}
-              placeholder="(00) 00000-0000"
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] placeholder-[#64748B] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            />
+            <label htmlFor="lf-whatsapp" className={labelCls}>WhatsApp</label>
+            <input id="lf-whatsapp" name="whatsapp" type="tel" required autoComplete="tel"
+              value={form.whatsapp} onChange={handleChange} placeholder="(00) 00000-0000" className={inputCls} />
           </div>
 
-          {/* Segmento */}
           <div>
-            <label htmlFor="lf-segmento" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              Segmento
-            </label>
-            <select
-              id="lf-segmento"
-              name="segmento"
-              required
-              value={form.segmento}
-              onChange={handleChange}
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            >
+            <label htmlFor="lf-segmento" className={labelCls}>Segmento</label>
+            <select id="lf-segmento" name="segmento" required value={form.segmento}
+              onChange={handleChange} className={inputCls}>
               <option value="">Selecione seu segmento</option>
-              {SEGMENTOS.map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
+              {SEGMENTOS.map((s) => <option key={s} value={s}>{s}</option>)}
             </select>
           </div>
 
-          {/* Plano */}
           <div>
-            <label htmlFor="lf-plano" className="block text-sm font-medium text-[#F8FAFC] mb-2">
-              Plano de interesse
-            </label>
-            <select
-              id="lf-plano"
-              name="plano"
-              required
-              value={form.plano}
-              onChange={handleChange}
-              className="w-full rounded-lg border border-[#4F7CFF]/20 bg-[#070B14]/50 px-4 py-2.5 text-sm text-[#F8FAFC] transition-all focus:outline-none focus:border-[#4F7CFF] focus:ring-1 focus:ring-[#4F7CFF]"
-            >
+            <label htmlFor="lf-plano" className={labelCls}>Plano de interesse</label>
+            <select id="lf-plano" name="plano" required value={form.plano}
+              onChange={handleChange} className={inputCls}>
               <option value="">Selecione um plano</option>
-              {PLANOS.map((p) => (
-                <option key={p} value={p}>
-                  {p}
-                </option>
-              ))}
+              {PLANOS.map((p) => <option key={p} value={p}>{p}</option>)}
             </select>
           </div>
 
-          {/* Submit */}
           <button
             type="submit"
-            className="
-              w-full rounded-lg border border-[#4F7CFF]
-              bg-[#4F7CFF] py-2.5 px-4
-              font-semibold text-white text-sm
-              shadow-lg shadow-[#4F7CFF]/30
-              transition-all duration-200
-              hover:shadow-[0_0_20px_rgba(79,124,255,0.5)]
-              hover:border-[#6C8CFF]
-              focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4F7CFF] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070B14]
-            "
+            className="w-full rounded-lg bg-[#FF5A00] hover:bg-[#e04e00] py-3 font-semibold text-white text-sm shadow-[0_0_20px_rgba(255,90,0,0.35)] transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FF5A00] focus-visible:ring-offset-2 focus-visible:ring-offset-[#070B14]"
           >
             Quero uma demonstração
           </button>
@@ -227,4 +148,3 @@ export default function LeadForm() {
     </div>
   );
 }
-

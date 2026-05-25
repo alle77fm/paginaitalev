@@ -45,12 +45,6 @@ export default function PricingCard({ plano }: PricingCardProps) {
         <p className="mt-2 text-sm text-[#94A3B8]">{plano.descricaoCurta}</p>
       </div>
 
-      {/* Setup e anual */}
-      <div className="mb-4 space-y-0.5 text-xs text-[#64748B]">
-        <p>+ Taxa de setup: {plano.setupLabel}</p>
-        <p>Plano anual com desconto: {plano.anualLabel}</p>
-      </div>
-
       {/* Recursos */}
       <ul className="mb-6 flex-1 space-y-2" role="list">
         {plano.recursos.map((recurso) => (

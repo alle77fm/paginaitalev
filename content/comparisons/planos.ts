@@ -1,7 +1,6 @@
 /**
  * Fonte única dos planos Italev Sistemas.
  * Alimenta a página /planos (UI) e o schema OfferCatalog.
- * [INSERIR] = taxa de setup e desconto anual (aguardando dado real).
  */
 
 export interface RecursoPlano {
@@ -15,8 +14,6 @@ export interface Plano {
   id: 'start' | 'pro' | 'scale';
   nome: string;
   preco: number; // mensal em BRL
-  setupLabel: string; // '[INSERIR]' até ter dado real
-  anualLabel: string; // '[INSERIR]' até ter dado real
   descricaoCurta: string;
   recursos: string[];
   destaque: boolean;
@@ -29,8 +26,6 @@ export const planos: Plano[] = [
     id: 'start',
     nome: 'Start',
     preco: 149,
-    setupLabel: '[INSERIR]',
-    anualLabel: '[INSERIR]',
     descricaoCurta: 'Para começar a vender online com app e catálogo próprios.',
     recursos: [
       'Aplicativo próprio de delivery',
@@ -45,8 +40,6 @@ export const planos: Plano[] = [
     id: 'pro',
     nome: 'Pro',
     preco: 219,
-    setupLabel: '[INSERIR]',
-    anualLabel: '[INSERIR]',
     descricaoCurta: 'Recomendado para a maioria dos comércios.',
     recursos: [
       'Tudo do plano Start',
@@ -65,8 +58,6 @@ export const planos: Plano[] = [
     id: 'scale',
     nome: 'Scale',
     preco: 379,
-    setupLabel: '[INSERIR]',
-    anualLabel: '[INSERIR]',
     descricaoCurta: 'Controle total para operações que querem crescer',
     recursos: [
       'Tudo do plano Pro',

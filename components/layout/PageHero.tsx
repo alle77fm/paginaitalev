@@ -17,7 +17,7 @@ export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
       />
       <div className="relative z-10 max-w-[760px] mx-auto px-6">
         {badge && (
-          <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-[#4F7CFF]/30 bg-[#4F7CFF]/10 text-[#4F7CFF] text-sm font-semibold">
+          <span className="inline-block mb-5 px-4 py-1.5 rounded-full border border-[#FF5A00]/30 bg-[#FF5A00]/10 text-[#FF5A00] text-sm font-semibold">
             {badge}
           </span>
         )}

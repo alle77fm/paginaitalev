@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ── Paleta oficial ──────────────────────────────────────────────
+   primary  #FF5A00  → CTAs, badges, destaques, hover, check icons
+   accent   #4F7CFF  → glows, borda card hover, profundidade
+   accent-glow #6C8CFF → halos, sombras difusas
+   bg       #070B14  → background base
+   text     #F8FAFC  → texto principal
+   muted    #94A3B8  → texto secundário
+   ──────────────────────────────────────────────────────────────── */
+:root {
+  --color-primary: #FF5A00;
+  --color-accent: #4F7CFF;
+  --color-accent-glow: #6C8CFF;
+  --color-bg: #070B14;
+  --color-text: #F8FAFC;
+  --color-muted: #94A3B8;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

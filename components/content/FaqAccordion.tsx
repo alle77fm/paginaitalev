@@ -29,7 +29,7 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
                 </span>
                 <span
                   aria-hidden="true"
-                  className={`shrink-0 text-[#4F7CFF] transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}
+                  className={`shrink-0 text-[#FF5A00] transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}
                 >
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5">
                     <path d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />

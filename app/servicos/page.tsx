@@ -108,10 +108,10 @@ export default function ServicosPage() {
         <section aria-label="Comece agora" className="section">
           <div className="mx-auto max-w-4xl px-6 text-center">
             <div
-              className="rounded-[40px] border border-[#4F7CFF]/20 p-12 md:p-16"
+              className="rounded-[40px] border border-[#FF5A00]/20 p-12 md:p-16"
               style={{
                 background:
-                  'linear-gradient(135deg, rgba(79,124,255,0.1) 0%, rgba(108,140,255,0.05) 100%)',
+                  'linear-gradient(135deg, rgba(255,90,0,0.06) 0%, rgba(255,255,255,0.02) 100%)',
               }}
             >
               <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-4">
@@ -122,7 +122,7 @@ export default function ServicosPage() {
               </p>
               <Link
                 href="/planos"
-                className="inline-flex items-center justify-center bg-[#4F7CFF] hover:bg-[#6C8CFF] text-white px-8 py-4 rounded-[10px] font-semibold transition-all duration-200 shadow-[0_0_24px_rgba(79,124,255,0.35)]"
+                className="inline-flex items-center justify-center bg-[#FF5A00] hover:bg-[#e04e00] text-white px-8 py-4 rounded-[10px] font-semibold transition-all duration-200 shadow-[0_0_24px_rgba(255,90,0,0.35)]"
               >
                 Ver planos e preços
               </Link>
