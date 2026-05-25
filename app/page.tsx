@@ -106,11 +106,11 @@ export default function HomePage() {
                 </span>
               </div>
               <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-on-surface text-balance">
-                Seu app próprio.
+                Seu comércio com app próprio
                 <br />
-                <span className="text-primary-container">Mais vendas.</span>
+                <span className="text-primary-container">para vender mais,</span>
                 <br />
-                Zero comissões.
+                sem depender do iFood
               </h1>
               <p className="text-body-lg text-on-secondary-container mb-10 max-w-lg">
                 Tenha o seu próprio aplicativo para vender mais, fidelizar clientes e
