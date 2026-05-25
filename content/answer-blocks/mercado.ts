@@ -144,7 +144,7 @@ export const comoFunciona: Passo[] = [
     numero: 1,
     titulo: 'Escolha o plano ideal para o seu comércio',
     descricao:
-      'Start, Pro ou Growth — cada plano tem recursos pensados para o estágio do negócio. O plano pode ser trocado a qualquer momento.',
+      'Start, Pro ou Scale — cada plano tem recursos pensados para o estágio do negócio. O plano pode ser trocado a qualquer momento.',
   },
   {
     numero: 2,

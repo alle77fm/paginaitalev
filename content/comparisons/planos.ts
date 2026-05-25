@@ -8,11 +8,11 @@ export interface RecursoPlano {
   nome: string;
   start: boolean;
   pro: boolean;
-  growth: boolean;
+  scale: boolean;
 }
 
 export interface Plano {
-  id: 'start' | 'pro' | 'growth';
+  id: 'start' | 'pro' | 'scale';
   nome: string;
   preco: number; // mensal em BRL
   setupLabel: string; // '[INSERIR]' até ter dado real
@@ -62,12 +62,12 @@ export const planos: Plano[] = [
     subTexto: 'Menos de R$7 por dia',
   },
   {
-    id: 'growth',
-    nome: 'Growth',
+    id: 'scale',
+    nome: 'Scale',
     preco: 379,
     setupLabel: '[INSERIR]',
     anualLabel: '[INSERIR]',
-    descricaoCurta: 'Para comércios que querem crescer com estrutura e suporte dedicado.',
+    descricaoCurta: 'Controle total para operações que querem crescer',
     recursos: [
       'Tudo do plano Pro',
       'Suporte prioritário',
@@ -79,17 +79,17 @@ export const planos: Plano[] = [
 ];
 
 export const recursosComparativos: RecursoPlano[] = [
-  { nome: 'Aplicativo próprio', start: true, pro: true, growth: true },
-  { nome: 'Catálogo digital', start: true, pro: true, growth: true },
-  { nome: 'Pedidos via WhatsApp', start: true, pro: true, growth: true },
-  { nome: 'Pagamento PIX', start: true, pro: true, growth: true },
-  { nome: 'Popup de vendas', start: true, pro: true, growth: true },
-  { nome: 'Marca e domínio próprios', start: false, pro: true, growth: true },
-  { nome: 'Relatórios e dashboard', start: false, pro: true, growth: true },
-  { nome: 'Disparo de promoções', start: false, pro: true, growth: true },
-  { nome: 'Agendamento de entrega', start: false, pro: true, growth: true },
-  { nome: 'Cupons de desconto', start: false, pro: true, growth: true },
-  { nome: 'Tabloide de ofertas PDF', start: false, pro: true, growth: true },
-  { nome: 'Suporte prioritário', start: false, pro: false, growth: true },
-  { nome: 'Onboarding assistido', start: false, pro: false, growth: true },
+  { nome: 'Aplicativo próprio', start: true, pro: true, scale: true },
+  { nome: 'Catálogo digital', start: true, pro: true, scale: true },
+  { nome: 'Pedidos via WhatsApp', start: true, pro: true, scale: true },
+  { nome: 'Pagamento PIX', start: true, pro: true, scale: true },
+  { nome: 'Popup de vendas', start: true, pro: true, scale: true },
+  { nome: 'Marca e domínio próprios', start: false, pro: true, scale: true },
+  { nome: 'Relatórios e dashboard', start: false, pro: true, scale: true },
+  { nome: 'Disparo de promoções', start: false, pro: true, scale: true },
+  { nome: 'Agendamento de entrega', start: false, pro: true, scale: true },
+  { nome: 'Cupons de desconto', start: false, pro: true, scale: true },
+  { nome: 'Tabloide de ofertas PDF', start: false, pro: true, scale: true },
+  { nome: 'Suporte prioritário', start: false, pro: false, scale: true },
+  { nome: 'Onboarding assistido', start: false, pro: false, scale: true },
 ];

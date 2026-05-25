@@ -50,9 +50,9 @@ export const faqInstitucional: FaqItem[] = [
   },
   {
     id: 'diferenca-planos',
-    pergunta: 'Qual a diferença entre os planos Start, Pro e Growth?',
+    pergunta: 'Qual a diferença entre os planos Start, Pro e Scale?',
     resposta:
-      'O plano Start (R$149/mês) inclui app, catálogo digital, pedidos via WhatsApp, PIX e popup de vendas. O Pro (R$219/mês) adiciona marca e domínio próprios, relatórios, disparo de promoções, agendamento de entrega, cupons e tabloide de ofertas em PDF. O Growth (R$379/mês) inclui tudo do Pro com suporte prioritário e onboarding assistido.',
+      'O plano Start (R$149/mês) inclui app, catálogo digital, pedidos via WhatsApp, PIX e popup de vendas. O Pro (R$219/mês) adiciona marca e domínio próprios, relatórios, disparo de promoções, agendamento de entrega, cupons e tabloide de ofertas em PDF. O Scale (R$379/mês) inclui tudo do Pro com suporte prioritário e onboarding assistido.',
   },
   {
     id: 'precisa-saber-programar',
@@ -82,12 +82,12 @@ export const faqInstitucional: FaqItem[] = [
     id: 'marca-propria',
     pergunta: 'O app vai ter a minha marca ou a marca da Italev?',
     resposta:
-      'No plano Pro e Growth, o aplicativo é entregue com a identidade visual e o domínio próprio do comércio — logo, nome e cores do estabelecimento. O cliente final vê a marca do lojista, não a da Italev.',
+      'No plano Pro e Scale, o aplicativo é entregue com a identidade visual e o domínio próprio do comércio — logo, nome e cores do estabelecimento. O cliente final vê a marca do lojista, não a da Italev.',
   },
   {
     id: 'suporte',
     pergunta: 'Como funciona o suporte da Italev Sistemas?',
     resposta:
-      'O suporte é realizado de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. O plano Growth inclui suporte prioritário com tempo de resposta menor.',
+      'O suporte é realizado de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. O plano Scale inclui suporte prioritário com tempo de resposta menor.',
   },
 ];

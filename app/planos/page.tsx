@@ -15,12 +15,12 @@ const faqPlanos = faqInstitucional.filter((f) =>
 
 
 export const metadata: Metadata = {
-  title: 'Planos e preços — Start, Pro e Growth',
+  title: 'Planos e preços — Start, Pro e Scale',
   description:
-    'Conheça os planos da Italev Sistemas: Start R$149/mês, Pro R$219/mês e Growth R$379/mês. Assinatura fixa, sem comissão por venda. App de delivery e e-commerce próprio para seu comércio.',
+    'Conheça os planos da Italev Sistemas: Start R$149/mês, Pro R$219/mês e Scale R$379/mês. Assinatura fixa, sem comissão por venda. App de delivery e e-commerce próprio para seu comércio.',
   alternates: { canonical: `${italev.domain}/planos` },
   openGraph: {
-    title: 'Planos Italev Sistemas — Start, Pro e Growth',
+    title: 'Planos Italev Sistemas — Start, Pro e Scale',
     description: 'Assinatura fixa, sem comissão. App próprio com catálogo digital, WhatsApp e PIX.',
     url: `${italev.domain}/planos`,
   },
@@ -73,7 +73,7 @@ export default function PlanosPage() {
               O que está incluído em cada plano
             </h2>
             <p className="text-gray-500 mb-8">
-              Comparativo completo de recursos entre os planos Start, Pro e Growth.
+              Comparativo completo de recursos entre os planos Start, Pro e Scale.
             </p>
             <div className="overflow-x-auto rounded-xl border-2 border-black shadow-[4px_4px_0_#000]">
               <table className="w-full text-sm">
@@ -82,7 +82,7 @@ export default function PlanosPage() {
                     <th scope="col" className="px-4 py-3 text-left font-space-grotesk font-bold">Recurso</th>
                     <th scope="col" className="px-4 py-3 text-center font-space-grotesk font-bold">Start</th>
                     <th scope="col" className="px-4 py-3 text-center font-space-grotesk font-bold text-[#FF5A00]">Pro ⭐</th>
-                    <th scope="col" className="px-4 py-3 text-center font-space-grotesk font-bold">Growth</th>
+                    <th scope="col" className="px-4 py-3 text-center font-space-grotesk font-bold">Scale</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-200 bg-white">
@@ -91,7 +91,7 @@ export default function PlanosPage() {
                       <td className="px-4 py-3 font-medium text-gray-800">{r.nome}</td>
                       <td className="px-4 py-3 text-center text-gray-500">{r.start ? <span className="text-green-600 font-bold">✓</span> : <span className="text-gray-300">–</span>}</td>
                       <td className="px-4 py-3 text-center text-gray-500">{r.pro ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-gray-300">–</span>}</td>
-                      <td className="px-4 py-3 text-center text-gray-500">{r.growth ? <span className="text-green-600 font-bold">✓</span> : <span className="text-gray-300">–</span>}</td>
+                      <td className="px-4 py-3 text-center text-gray-500">{r.scale ? <span className="text-green-600 font-bold">✓</span> : <span className="text-gray-300">–</span>}</td>
                     </tr>
                   ))}
                 </tbody>

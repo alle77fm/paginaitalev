@@ -109,15 +109,15 @@ const planos = [
     ],
   },
   {
-    nome: 'Growth',
-    descricao: 'Para quem não quer parar',
+    nome: 'Scale',
+    descricao: 'Controle total para operações que querem crescer',
     preco: 'R$379',
     destaque: false,
     features: [
       'Tudo do plano Pro',
-      'Domínio próprio',
-      'Integrações avançadas',
-      'Gestor de conta dedicado',
+      'Suporte prioritário',
+      'Onboarding assistido',
+      'Multi-loja (em breve)',
     ],
   },
 ];

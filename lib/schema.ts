@@ -113,7 +113,7 @@ export function faqPageSchema(faq: { pergunta: string; resposta: string }[]) {
 }
 
 // ---------------------------------------------------------------------------
-// OfferCatalog — planos Start, Pro, Growth
+// OfferCatalog — planos Start, Pro, Scale
 // Fonte única: content/comparisons/planos.ts (criado na Etapa B)
 // Por ora, os dados estão inline para o schema estar disponível desde a Etapa A.
 // ---------------------------------------------------------------------------
@@ -160,7 +160,7 @@ export function offerCatalogSchema() {
       },
       {
         '@type': 'Offer',
-        name: 'Growth',
+        name: 'Scale',
         price: '379.00',
         priceCurrency: 'BRL',
         priceSpecification: {

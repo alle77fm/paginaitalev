@@ -90,7 +90,7 @@ export default function ServicosPage() {
               />
               <AnswerBlock
                 heading="Identidade visual e domínio próprios"
-                resposta="Nos planos Pro e Growth, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio — não a da Italev."
+                resposta="Nos planos Pro e Scale, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio — não a da Italev."
                 headingLevel="h3"
               />
             </div>
