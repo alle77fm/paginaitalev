@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
@@ -131,25 +132,17 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            <div className="relative mt-12 md:mt-0">
+            <div className="relative mt-12 md:mt-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-primary-container/10 blur-[100px] rounded-full" />
-              {/* Mockup de celular */}
-              <div className="relative z-10 w-full max-w-[380px] mx-auto aspect-[9/16] bg-gradient-to-br from-surface-container-high to-surface-container rounded-[40px] border-4 border-surface-bright shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-700 flex items-center justify-center overflow-hidden">
-                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-surface rounded-b-2xl" />
-                <div className="text-center px-6">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-primary-container/20 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-primary-container" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.05,11.97 C17.0563,14.7308 19.2998,16.94 22.04,16.94 C22.04,16.94 22.04,16.94 22.05,16.94 L22.05,11.97 L17.05,11.97 Z M22.04,2.05 C22.04,2.05 22.04,2.05 22.04,2.05 L17.05,2.05 L17.05,7 L22.05,7 L22.05,2.05 L22.04,2.05 Z M2,11.97 C2.00626,14.7308 4.24979,16.94 6.99,16.94 C6.99,16.94 6.99,16.94 7,16.94 L7,11.97 L2,11.97 Z M7,2.05 L2,2.05 L2,7 L7,7 L7,2.05 Z M9.5,2.05 L9.5,16.94 C9.5063,19.7008 11.7498,21.91 14.49,21.91 C14.49,21.91 14.49,21.91 14.5,21.91 L14.5,2.05 L9.5,2.05 Z" />
-                    </svg>
-                  </div>
-                  <p className="text-body-md font-bold text-on-surface mb-1">
-                    {italev.brandName}
-                  </p>
-                  <p className="text-label-caps text-on-secondary-container uppercase tracking-widest">
-                    Seu app próprio
-                  </p>
-                </div>
-              </div>
+              <Image
+                src="/img_phone.png"
+                alt="App próprio de delivery da Italev Sistemas rodando em smartphone — catálogo digital com pedidos via WhatsApp e PIX"
+                width={420}
+                height={560}
+                priority
+                sizes="(max-width: 768px) 80vw, 420px"
+                className="relative z-10 w-full max-w-[320px] md:max-w-[420px] h-auto"
+              />
             </div>
           </div>
         </section>
