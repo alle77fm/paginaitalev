@@ -46,14 +46,6 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
   },
-  /**
-   * Staging: noindex ativo.
-   * Remover antes do cutover de DNS (ver MIGRATION_ROADMAP.md Fase 5).
-   */
-  robots: {
-    index: false,
-    follow: false,
-  },
 };
 
 export default function RootLayout({
