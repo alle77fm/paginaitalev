@@ -135,7 +135,7 @@ export default function HomePage() {
             <div className="relative mt-12 md:mt-0 flex items-center justify-center">
               <div className="absolute inset-0 bg-primary-container/10 blur-[100px] rounded-full" />
               <Image
-                src="/img_phone.png"
+                src="/img_phone.webp"
                 alt="App próprio de delivery da Italev Sistemas rodando em smartphone — catálogo digital com pedidos via WhatsApp e PIX"
                 width={420}
                 height={560}
