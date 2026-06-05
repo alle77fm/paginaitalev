@@ -7,7 +7,7 @@
 export default function HeroVerFuncionandoBtn() {
   function handleClick() {
     const btn = document.querySelector<HTMLButtonElement>(
-      '[aria-label="Ver funcionando — abrir formulário de demonstração"]',
+      '[aria-label="Ver demonstração — abrir formulário de demonstração"]',
     );
     btn?.click();
   }
