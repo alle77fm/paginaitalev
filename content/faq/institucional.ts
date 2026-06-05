@@ -43,6 +43,12 @@ export const faqInstitucional: FaqItem[] = [
       'Sim. A Italev Sistemas desenvolve aplicativos para supermercados, padarias, açougues, lanchonetes, marmitarias, cafeterias e qualquer comércio local que queira vender online. O catálogo digital é personalizável com as categorias e produtos do seu negócio, com fotos, preços e descrições.',
   },
   {
+    id: 'quanto-tempo-loja-no-ar',
+    pergunta: 'Quanto tempo leva para colocar minha loja no ar?',
+    resposta:
+      'O aplicativo fica pronto em até 15 dias úteis após o início do onboarding. A Italev Sistemas cuida de toda a configuração: catálogo, identidade visual, domínio e integração com WhatsApp. O comerciante não precisa de conhecimento técnico — apenas fornece as informações do negócio.',
+  },
+  {
     id: 'o-que-e-italev',
     pergunta: 'O que é a Italev Sistemas?',
     resposta:

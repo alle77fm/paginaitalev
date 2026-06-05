@@ -62,7 +62,7 @@ export default function PricingCard({ plano }: PricingCardProps) {
 
       {/* CTA */}
       <a
-        href={`https://wa.me/5535997493286?text=${encodeURIComponent(`Olá, tenho interesse no plano ${plano.nome} da Italev Sistemas.`)}`}
+        href={`https://wa.me/5535997493286?text=${encodeURIComponent(`Olá! Tenho interesse no plano ${plano.nome} e gostaria de solicitar uma demonstração gratuita.`)}`}
         target="_blank"
         rel="noopener noreferrer"
         className={`block w-full rounded-[10px] py-3 text-center text-sm font-bold transition-all duration-200 ${
@@ -71,7 +71,7 @@ export default function PricingCard({ plano }: PricingCardProps) {
             : 'border border-white/20 text-[#F8FAFC] hover:border-[#4F7CFF] hover:bg-[rgba(79,124,255,0.08)]'
         }`}
       >
-        {isPro ? 'Escolher plano Pro' : `Escolher plano ${plano.nome}`}
+        💬 Solicitar demonstração gratuita
       </a>
     </article>
   );

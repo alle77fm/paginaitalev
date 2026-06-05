@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { planos } from '@/content/comparisons/planos';
 import { italev } from '@/lib/entities';
 
@@ -13,7 +12,7 @@ export default function PricingCards({ cta = 'whatsapp' }: PricingCardsProps) {
       {planos.map((plano) => {
         const isPro = plano.destaque;
         const waLink = `https://wa.me/${italev.whatsapp}?text=${encodeURIComponent(
-          `Olá, tenho interesse no plano ${plano.nome} da Italev Sistemas.`,
+          `Olá! Tenho interesse no plano ${plano.nome} e gostaria de solicitar uma demonstração gratuita.`,
         )}`;
 
         return (
@@ -79,19 +78,21 @@ export default function PricingCards({ cta = 'whatsapp' }: PricingCardsProps) {
                     : 'border border-white/20 text-[#F8FAFC] hover:border-[#FF5A00] hover:bg-[rgba(255,90,0,0.08)]'
                 }`}
               >
-                {isPro ? 'Começar com o Pro' : `Escolher ${plano.nome}`}
+                💬 Solicitar demonstração gratuita
               </a>
             ) : (
-              <Link
-                href="/planos"
+              <a
+                href={waLink}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`block w-full py-4 rounded-xl text-center font-bold text-sm transition-all duration-200 ${
                   isPro
                     ? 'bg-[#FF5A00] hover:bg-[#e04e00] text-white shadow-[0_0_20px_rgba(255,90,0,0.35)]'
                     : 'border border-white/20 text-[#F8FAFC] hover:border-[#FF5A00] hover:bg-[rgba(255,90,0,0.08)]'
                 }`}
               >
-                {isPro ? 'Começar Agora' : 'Escolher Plano'}
-              </Link>
+                💬 Solicitar demonstração gratuita
+              </a>
             )}
           </div>
         );

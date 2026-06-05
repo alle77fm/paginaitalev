@@ -8,7 +8,6 @@ import {
   webSiteSchema,
 } from '@/lib/schema';
 import JsonLd from '@/components/seo/JsonLd';
-import FloatingButton from '@/components/ui/FloatingButton';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -65,9 +64,6 @@ export default function RootLayout({
         <JsonLd data={webSiteSchema()} />
 
         {children}
-
-        {/* Botão flutuante "Ver funcionando" — presente em todas as páginas */}
-        <FloatingButton />
       </body>
     </html>
   );
