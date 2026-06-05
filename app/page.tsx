@@ -285,6 +285,57 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* ── COMPARATIVO ───────────────────────────────────── */}
+        <section
+          aria-label="Comparativo: app próprio vs marketplaces"
+          className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-headline-xl text-on-surface mb-4">
+              Seu aplicativo vs marketplaces
+            </h2>
+          </div>
+
+          <div className="rounded-2xl ghost-border overflow-hidden"
+            style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(12px)' }}
+          >
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-[520px] text-left">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">Recurso</th>
+                    <th className="px-6 py-4 text-primary-container text-body-md font-semibold">Seu aplicativo</th>
+                    <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">iFood</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { recurso: 'Sua marca', app: '✅', ifood: '❌' },
+                    { recurso: 'Clientes próprios', app: '✅', ifood: '❌' },
+                    { recurso: 'Promoções personalizadas', app: '✅', ifood: '⚠️ Limitado' },
+                    { recurso: 'Comissão por pedido', app: '✅ Não cobra', ifood: '❌ Cobra' },
+                    { recurso: 'Controle do negócio', app: '✅ Total', ifood: '⚠️ Parcial' },
+                    { recurso: 'Pagamento via PIX direto', app: '✅', ifood: '❌' },
+                  ].map((row, i) => (
+                    <tr key={i} className={i % 2 === 0 ? 'bg-white/[0.02]' : ''}>
+                      <td className="px-6 py-4 text-on-surface text-body-md">{row.recurso}</td>
+                      <td className="px-6 py-4 text-on-surface text-body-md">{row.app}</td>
+                      <td className="px-6 py-4 text-on-secondary-container text-body-md">{row.ifood}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <p className="px-6 py-6 border-t border-white/10 text-on-secondary-container text-body-md leading-relaxed">
+              Com um aplicativo próprio, você recebe os pedidos diretamente dos seus clientes,
+              sem pagar comissão para marketplaces. O cadastro dos clientes fica com você,
+              a marca é a sua e o pagamento cai direto na sua conta via PIX — uma alternativa
+              real ao iFood para comércios locais que querem mais autonomia.
+            </p>
+          </div>
+        </section>
+
         {/* ── PROCESSO ──────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="bg-surface-container-high rounded-[40px] p-8 md:p-24 relative overflow-hidden">

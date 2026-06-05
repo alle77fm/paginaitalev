@@ -13,6 +13,36 @@ export interface FaqItem {
 
 export const faqInstitucional: FaqItem[] = [
   {
+    id: 'app-proprio-vs-ifood',
+    pergunta: 'Vale a pena ter um aplicativo próprio em vez do iFood?',
+    resposta:
+      'Sim. Com um aplicativo próprio você não paga comissão por pedido, sua marca fica em destaque e o cadastro dos clientes é seu. No iFood você depende do algoritmo da plataforma e paga entre 12% e 27% por pedido. Com a Italev Sistemas, você paga uma mensalidade fixa e fica com 100% do valor de cada venda recebida via PIX.',
+  },
+  {
+    id: 'custo-app-supermercado',
+    pergunta: 'Quanto custa criar um aplicativo para supermercado?',
+    resposta:
+      'A Italev Sistemas oferece planos a partir de R$149 por mês, sem comissão por venda. O lojista paga uma assinatura fixa e fica com 100% de cada pedido. Não há percentual descontado por venda, diferente dos marketplaces. O aplicativo fica pronto em até 15 dias úteis após o cadastro.',
+  },
+  {
+    id: 'pedidos-whatsapp',
+    pergunta: 'Posso receber pedidos pelo WhatsApp?',
+    resposta:
+      'Sim. O aplicativo da Italev envia os pedidos diretamente para o WhatsApp da empresa, já organizados com nome do cliente, itens e valor total. Não precisa de nenhum sistema adicional — basta ter WhatsApp ativo para começar a receber pedidos de forma organizada.',
+  },
+  {
+    id: 'instalar-app',
+    pergunta: 'Meu cliente precisa instalar aplicativo?',
+    resposta:
+      'Não. O aplicativo da Italev funciona pelo navegador do celular ou computador, sem precisar instalar nada. O cliente acessa pelo link, navega pelo catálogo e faz o pedido em poucos cliques. Isso reduz a barreira de entrada e facilita a primeira compra.',
+  },
+  {
+    id: 'funciona-padaria-acougue',
+    pergunta: 'Funciona para padarias e açougues?',
+    resposta:
+      'Sim. A Italev Sistemas desenvolve aplicativos para supermercados, padarias, açougues, lanchonetes, marmitarias, cafeterias e qualquer comércio local que queira vender online. O catálogo digital é personalizável com as categorias e produtos do seu negócio, com fotos, preços e descrições.',
+  },
+  {
     id: 'o-que-e-italev',
     pergunta: 'O que é a Italev Sistemas?',
     resposta:
