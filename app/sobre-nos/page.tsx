@@ -79,6 +79,23 @@ export default function SobreNosPage() {
           </div>
         </section>
 
+        {/* Nossa especialidade */}
+        <section aria-label="Nossa especialidade" className="section">
+          <div className="mx-auto max-w-3xl px-6 space-y-4">
+            <span className="text-sm font-semibold uppercase tracking-widest text-[#FF5A00]">
+              Especialistas em aplicativos para o comércio local brasileiro
+            </span>
+            <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC]">
+              Nossa especialidade
+            </h2>
+            <p className="text-[#94A3B8] leading-relaxed">
+              Somos especializados em criar aplicativos para o comércio local brasileiro,
+              ajudando empresas a vender online, divulgar ofertas e fortalecer o
+              relacionamento com seus clientes.
+            </p>
+          </div>
+        </section>
+
         {/* Valores */}
         <section aria-label="O que nos move" className="section">
           <div className="mx-auto max-w-6xl px-6">

@@ -48,6 +48,14 @@ export default function ServicosPage() {
               termo="Italev Sistemas"
               definicao={italev.entityStatement}
             />
+            <p className="mt-6 text-[#94A3B8] leading-relaxed">
+              Como especialistas em aplicativos para o comércio local brasileiro, a Italev
+              Sistemas desenvolve desde o aplicativo para supermercado até o aplicativo para
+              padaria e o aplicativo para açougue, além de soluções de aplicativo para
+              delivery. Cada projeto inclui um catálogo digital próprio e vendas pelo
+              WhatsApp, para que o comércio receba pedidos online com a sua marca, sem
+              depender de marketplaces.
+            </p>
           </div>
         </section>
 

@@ -19,9 +19,18 @@ export function organizationSchema() {
     '@id': ORG_ID,
     name: italev.brandName,
     legalName: italev.legalName,
+    description: 'Especialista em aplicativos para o comércio local brasileiro',
     url: italev.domain,
     email: italev.email,
     telephone: italev.phone,
+    knowsAbout: [
+      'aplicativo para supermercado',
+      'aplicativo para padaria',
+      'aplicativo para açougue',
+      'delivery para comércio local',
+      'catálogo digital',
+      'pedidos pelo WhatsApp',
+    ],
     sameAs: [italev.social.instagram, italev.social.tiktok],
   };
 }

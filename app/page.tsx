@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import PricingCards from '@/components/ui/PricingCards';
+import OpenDemoButton from '@/components/ui/OpenDemoButton';
 import { italev } from '@/lib/entities';
 import { serviceSchema, faqPageSchema } from '@/lib/schema';
 import { faqInstitucional } from '@/content/faq/institucional';
@@ -12,12 +13,12 @@ import { faqInstitucional } from '@/content/faq/institucional';
 export const metadata: Metadata = {
   title: 'App de delivery e e-commerce para comércios locais | Italev Sistemas',
   description:
-    'Italev Sistemas desenvolve aplicativos próprios de delivery e e-commerce para supermercados, restaurantes e comércios locais. Pedidos no WhatsApp, PIX, sem comissão por venda.',
+    'Tenha seu próprio app de delivery para vender sem pagar comissão por pedido. A Italev Sistemas cria aplicativos de delivery e e-commerce como alternativa ao iFood.',
   alternates: { canonical: italev.domain },
   openGraph: {
     title: 'Italev Sistemas — App de delivery próprio para seu comércio',
     description:
-      'Venda online com app e catálogo próprios. Sem marketplace, sem comissão. Pedidos no WhatsApp e PIX.',
+      'Venda online com app próprio, marca própria e controle dos clientes. Uma alternativa ao iFood para supermercados, restaurantes, açougues e conveniências.',
     url: italev.domain,
   },
 };
@@ -39,13 +40,13 @@ const beneficios = [
   },
   {
     icon: 'M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.375m-1.5-5.625v.75c0 .414.336.75.75.75h.75m-6-1.5h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008v-.008z',
-    title: 'Fim da comissão',
-    descricao: 'Chega de perder até 27% em taxas. Com a Italev, 100% do que é seu, fica com você.',
+    title: 'Venda sem intermediários',
+    descricao: 'Receba pedidos diretamente dos seus clientes e tenha mais controle sobre suas vendas.',
   },
   {
     icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z',
-    title: 'Marca própria',
-    descricao: 'Seu app com sua identidade, no celular do seu cliente. Gere reconhecimento e recorrência.',
+    title: 'Sua marca em destaque',
+    descricao: 'Seu cliente compra no seu aplicativo, fortalecendo o reconhecimento da sua empresa.',
   },
   {
     icon: 'M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z',
@@ -59,8 +60,8 @@ const beneficios = [
   },
   {
     icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z',
-    title: 'Atendimento VIP',
-    descricao: 'Comunique-se melhor, acompanhe pedidos e fidelize clientes com facilidade.',
+    title: 'WhatsApp integrado',
+    descricao: 'Receba pedidos organizados diretamente no WhatsApp da empresa.',
   },
 ];
 
@@ -81,6 +82,29 @@ const processo = [
     titulo: 'Você começa a vender',
     descricao: 'Divulgamos, recebemos pedidos e aumentamos suas vendas desde o primeiro dia.',
   },
+];
+
+// Nichos atendidos
+const nichos = [
+  'Supermercados',
+  'Padarias',
+  'Açougues',
+  'Lanchonetes',
+  'Marmitarias',
+  'Cafeterias',
+  'Hortifrutis',
+  'Pet Shops',
+  'Distribuidoras',
+  'Lojas de roupas',
+];
+
+// Fluxo do pedido (como funciona o app para o cliente final)
+const fluxoPedido = [
+  'O cliente acessa seu catálogo online',
+  'Escolhe os produtos',
+  'Finaliza o pedido',
+  'O pedido chega diretamente no WhatsApp da empresa',
+  'Você confirma a venda e realiza a entrega',
 ];
 
 
@@ -107,23 +131,21 @@ export default function HomePage() {
                 </span>
               </div>
               <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-on-surface text-balance">
-                Seu comércio com app próprio
+                Tenha seu próprio app de delivery
                 <br />
-                <span className="text-primary-container">para vender mais,</span>
+                <span className="text-primary-container">para vender sem pagar</span>
                 <br />
-                sem depender do iFood
+                comissão por pedido
               </h1>
               <p className="text-body-lg text-on-secondary-container mb-10 max-w-lg">
-                Tenha o seu próprio aplicativo para vender mais, fidelizar clientes e
-                aumentar sua lucratividade sem depender de taxas abusivas de terceiros.
+                Tenha seu próprio aplicativo com a sua marca, receba pedidos pelo
+                WhatsApp e fortaleça seu negócio sem depender exclusivamente de
+                marketplaces.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/planos"
-                  className="inline-flex items-center justify-center bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md orange-glow transition-all"
-                >
-                  Quero meu app agora
-                </Link>
+                <OpenDemoButton className="inline-flex items-center justify-center bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md orange-glow transition-all">
+                  Solicitar demonstração gratuita
+                </OpenDemoButton>
                 <Link
                   href="/contato"
                   className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-body-md hover:bg-white/5 transition-all"
@@ -145,6 +167,78 @@ export default function HomePage() {
               />
             </div>
           </div>
+        </section>
+
+        {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
+        <section
+          aria-label="Soluções para o comércio local"
+          className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
+        >
+          <div className="text-center mb-12">
+            <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
+              Especialistas em aplicativos para o comércio local brasileiro
+            </span>
+            <h2 className="text-headline-xl text-on-surface mb-4">
+              Soluções para o comércio local
+            </h2>
+            <p className="text-on-secondary-container text-body-lg max-w-2xl mx-auto">
+              A Italev Sistemas desenvolve aplicativos para empresas que desejam vender
+              online, divulgar promoções e receber pedidos de forma simples.
+            </p>
+          </div>
+
+          <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {nichos.map((nicho) => (
+              <li
+                key={nicho}
+                className="flex flex-col items-center gap-3 bg-surface-container-low p-6 rounded-2xl ghost-border text-center"
+              >
+                <span className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
+                  </svg>
+                </span>
+                <span className="text-body-md text-on-surface font-medium">{nicho}</span>
+              </li>
+            ))}
+          </ul>
+
+          <p className="text-on-secondary-container text-body-lg text-center mt-10 max-w-3xl mx-auto">
+            Ideal para supermercados, açougues, padarias, lanchonetes, marmitarias,
+            cafeterias e pequenos negócios que desejam vender online e fidelizar clientes.
+          </p>
+        </section>
+
+        {/* ── COMO FUNCIONA UM APP PRÓPRIO (fluxo do pedido) ── */}
+        <section
+          aria-label="Como funciona um aplicativo próprio para comércio local"
+          className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-headline-xl text-on-surface mb-4">
+              Como funciona um aplicativo próprio para comércio local?
+            </h2>
+          </div>
+
+          <ol className="grid grid-cols-1 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {fluxoPedido.map((passo, i) => (
+              <li
+                key={i}
+                className="bg-surface-container-low p-6 rounded-2xl ghost-border flex flex-col gap-3"
+              >
+                <span className="w-9 h-9 rounded-full bg-primary-container text-white font-bold flex items-center justify-center">
+                  {i + 1}
+                </span>
+                <span className="text-body-md text-on-surface">{passo}</span>
+              </li>
+            ))}
+          </ol>
+
+          <p className="text-on-secondary-container text-body-lg text-center mt-10 max-w-3xl mx-auto">
+            Esse processo reduz os atritos da compra, deixa o atendimento mais ágil e
+            facilita a fidelização dos clientes — que voltam a comprar direto com você,
+            sem intermediários.
+          </p>
         </section>
 
         {/* ── STATS ─────────────────────────────────────────── */}

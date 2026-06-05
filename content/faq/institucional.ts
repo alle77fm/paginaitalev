@@ -90,4 +90,40 @@ export const faqInstitucional: FaqItem[] = [
     resposta:
       'O suporte é realizado de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. O plano Scale inclui suporte prioritário com tempo de resposta menor.',
   },
+  {
+    id: 'custo-app-supermercado',
+    pergunta: 'Quanto custa criar um aplicativo para supermercado?',
+    resposta:
+      'A Italev Sistemas oferece planos a partir de R$149 por mês, sem taxa sobre vendas. O lojista paga uma assinatura fixa e fica com 100% do valor de cada pedido recebido. Não há comissão por venda, diferente dos marketplaces tradicionais. O setup inicial é cobrado uma única vez e o aplicativo fica pronto em até 15 dias úteis.',
+  },
+  {
+    id: 'pedidos-whatsapp',
+    pergunta: 'Posso receber pedidos pelo WhatsApp?',
+    resposta:
+      'Sim. O aplicativo da Italev Sistemas envia os pedidos diretamente para o WhatsApp da empresa, já organizados com nome do cliente, itens escolhidos e valor total. Não é preciso nenhum sistema adicional — basta ter WhatsApp ativo no celular ou computador para começar a receber pedidos.',
+  },
+  {
+    id: 'instalar-app',
+    pergunta: 'Meu cliente precisa instalar aplicativo?',
+    resposta:
+      'Não. O aplicativo da Italev funciona diretamente pelo navegador do celular ou computador, sem precisar instalar nada. O cliente acessa pelo link, navega pelo catálogo e faz o pedido em poucos cliques. Isso reduz a barreira de entrada e facilita a primeira compra.',
+  },
+  {
+    id: 'vender-sem-ifood',
+    pergunta: 'É possível vender sem depender do iFood?',
+    resposta:
+      'Sim. Com um aplicativo próprio, você recebe os pedidos diretamente dos seus clientes, sem pagar comissão para marketplaces. O cadastro dos clientes fica com você, a marca é a sua e o pagamento cai direto na sua conta via PIX. É uma alternativa real ao iFood para comércios locais que querem mais autonomia.',
+  },
+  {
+    id: 'funciona-celular-computador',
+    pergunta: 'O aplicativo funciona em celular e computador?',
+    resposta:
+      'Sim. O aplicativo da Italev Sistemas funciona em qualquer dispositivo com acesso à internet — celular, tablet ou computador. Não precisa de instalação. O catálogo é responsivo e se adapta automaticamente à tela do cliente, oferecendo uma experiência de compra confortável em qualquer aparelho.',
+  },
+  {
+    id: 'divulgar-promocoes',
+    pergunta: 'Posso divulgar promoções e ofertas?',
+    resposta:
+      'Sim. Os planos Pro e Scale incluem disparo de promoções automáticas e tabloide de ofertas em PDF. Você pode criar cupons de desconto, configurar popups de vendas e comunicar ofertas diretamente para seus clientes. Tudo pelo painel de administração, sem precisar de conhecimento técnico.',
+  },
 ];

@@ -138,6 +138,16 @@ export default function Footer() {
         </div>
       </div>
 
+      {/* Bloco institucional — reforço de entidade para busca/IA */}
+      <div className="max-w-container mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-white/5">
+        <p className="text-on-secondary-container text-body-md max-w-4xl">
+          A Italev Sistemas é especialista em aplicativos para o comércio local
+          brasileiro. Desenvolvemos soluções para supermercados, açougues, padarias,
+          lanchonetes, cafeterias e pequenos negócios que desejam vender online,
+          divulgar promoções e receber pedidos diretamente pelo WhatsApp.
+        </p>
+      </div>
+
       {/* Bottom bar */}
       <div className="max-w-container mx-auto px-margin-mobile md:px-gutter mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
         <span className="text-on-secondary-container text-body-md">
