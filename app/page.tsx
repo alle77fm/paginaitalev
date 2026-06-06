@@ -129,12 +129,22 @@ export default function HomePage() {
                   Transforme seu comércio
                 </span>
               </div>
-              <h1 className="text-display-lg-mobile md:text-display-lg mb-6 text-on-surface text-balance">
-                Tenha seu próprio app de delivery
-                <br />
-                <span className="text-primary-container">para vender sem pagar</span>
-                <br />
-                comissão por pedido
+              <h1 className="md:text-display-lg mb-6 text-on-surface">
+                {/* Mobile: layout compacto */}
+                <span className="block md:hidden text-[2.25rem] leading-[1.02] tracking-tight">
+                  Tenha seu<br />
+                  próprio app<br />
+                  de delivery<br />
+                  <span className="text-primary-container">Sem pagar taxas<br />em cada venda</span>
+                </span>
+                {/* Desktop: layout original */}
+                <span className="hidden md:inline text-balance">
+                  Tenha seu próprio app de delivery
+                  <br />
+                  <span className="text-primary-container">para vender sem pagar</span>
+                  <br />
+                  comissão por pedido
+                </span>
               </h1>
               <p className="text-body-lg text-on-secondary-container mb-10 max-w-lg">
                 Tenha seu próprio aplicativo com a sua marca, receba pedidos pelo
