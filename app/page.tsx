@@ -131,11 +131,12 @@ export default function HomePage() {
               </div>
               <h1 className="md:text-display-lg mb-6 text-on-surface">
                 {/* Mobile: layout compacto */}
-                <span className="block md:hidden text-[2.25rem] leading-[1.02] tracking-tight">
-                  Tenha seu<br />
-                  próprio app<br />
-                  de delivery<br />
-                  <span className="text-primary-container">Sem pagar taxas<br />em cada venda</span>
+                <span className="block md:hidden text-[38px] min-[390px]:text-[42px] leading-[0.98] font-black tracking-[-0.04em]">
+                  <span className="block text-on-surface">Tenha seu</span>
+                  <span className="block text-on-surface">próprio app</span>
+                  <span className="block text-on-surface">de delivery</span>
+                  <span className="block mt-3 text-primary-container">Sem pagar taxas</span>
+                  <span className="block text-primary-container">em cada venda</span>
                 </span>
                 {/* Desktop: layout original */}
                 <span className="hidden md:inline text-balance">
