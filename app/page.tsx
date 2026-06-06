@@ -322,44 +322,69 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="rounded-2xl ghost-border overflow-hidden"
-            style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(12px)' }}
-          >
-            <div className="overflow-x-auto">
-              <table className="w-full min-w-[520px] text-left">
-                <thead>
-                  <tr className="border-b border-white/10">
-                    <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">Recurso</th>
-                    <th className="px-6 py-4 text-primary-container text-body-md font-semibold">Seu aplicativo</th>
-                    <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">iFood</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    { recurso: 'Sua marca', app: '✅', ifood: '❌' },
-                    { recurso: 'Clientes próprios', app: '✅', ifood: '❌' },
-                    { recurso: 'Promoções personalizadas', app: '✅', ifood: '⚠️ Limitado' },
-                    { recurso: 'Comissão por pedido', app: '✅ Não cobra', ifood: '❌ Cobra' },
-                    { recurso: 'Controle do negócio', app: '✅ Total', ifood: '⚠️ Parcial' },
-                    { recurso: 'Pagamento via PIX direto', app: '✅', ifood: '❌' },
-                  ].map((row, i) => (
-                    <tr key={i} className={i % 2 === 0 ? 'bg-white/[0.02]' : ''}>
-                      <td className="px-6 py-4 text-on-surface text-body-md">{row.recurso}</td>
-                      <td className="px-6 py-4 text-on-surface text-body-md">{row.app}</td>
-                      <td className="px-6 py-4 text-on-secondary-container text-body-md">{row.ifood}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
+          {(() => {
+            const rows = [
+              { recurso: 'Sua marca', app: '✅ Sim', ifood: '❌ Não' },
+              { recurso: 'Clientes próprios', app: '✅ Sim', ifood: '❌ Não' },
+              { recurso: 'Promoções personalizadas', app: '✅ Sim', ifood: '⚠️ Limitado' },
+              { recurso: 'Comissão por pedido', app: '✅ Não cobra', ifood: '❌ Cobra' },
+              { recurso: 'Controle do negócio', app: '✅ Total', ifood: '⚠️ Parcial' },
+              { recurso: 'Pagamento via PIX direto', app: '✅ Sim', ifood: '❌ Não' },
+            ];
+            return (
+              <div className="rounded-2xl ghost-border overflow-hidden"
+                style={{ background: 'rgba(255,255,255,0.03)', backdropFilter: 'blur(12px)' }}
+              >
+                {/* Desktop: tabela tradicional */}
+                <div className="hidden md:block">
+                  <table className="w-full text-left">
+                    <thead>
+                      <tr className="border-b border-white/10">
+                        <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">Recurso</th>
+                        <th className="px-6 py-4 text-primary-container text-body-md font-semibold">Seu aplicativo</th>
+                        <th className="px-6 py-4 text-on-secondary-container text-body-md font-semibold">iFood</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {rows.map((row, i) => (
+                        <tr key={i} className={i % 2 === 0 ? 'bg-white/[0.02]' : ''}>
+                          <td className="px-6 py-4 text-on-surface text-body-md">{row.recurso}</td>
+                          <td className="px-6 py-4 text-on-surface text-body-md">{row.app}</td>
+                          <td className="px-6 py-4 text-on-secondary-container text-body-md">{row.ifood}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
 
-            <p className="px-6 py-6 border-t border-white/10 text-on-secondary-container text-body-md leading-relaxed">
-              Com um aplicativo próprio, você recebe os pedidos diretamente dos seus clientes,
-              sem pagar comissão para marketplaces. O cadastro dos clientes fica com você,
-              a marca é a sua e o pagamento cai direto na sua conta via PIX — uma alternativa
-              real ao iFood para comércios locais que querem mais autonomia.
-            </p>
-          </div>
+                {/* Mobile: cards empilhados */}
+                <div className="md:hidden divide-y divide-white/10">
+                  {rows.map((row, i) => (
+                    <div key={i} className={`px-4 py-4 ${i % 2 === 0 ? 'bg-white/[0.02]' : ''}`}>
+                      <p className="text-on-surface font-semibold text-sm mb-3">{row.recurso}</p>
+                      <div className="flex flex-col gap-1.5">
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-medium text-primary-container w-28 shrink-0">Seu aplicativo</span>
+                          <span className="text-on-surface text-sm">{row.app}</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs font-medium text-on-secondary-container w-28 shrink-0">iFood</span>
+                          <span className="text-on-secondary-container text-sm">{row.ifood}</span>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="px-6 py-6 border-t border-white/10 text-on-secondary-container text-body-md leading-relaxed">
+                  Com um aplicativo próprio, você recebe os pedidos diretamente dos seus clientes,
+                  sem pagar comissão para marketplaces. O cadastro dos clientes fica com você,
+                  a marca é a sua e o pagamento cai direto na sua conta via PIX — uma alternativa
+                  real ao iFood para comércios locais que querem mais autonomia.
+                </p>
+              </div>
+            );
+          })()}
         </section>
 
         {/* ── PROCESSO ──────────────────────────────────────── */}
