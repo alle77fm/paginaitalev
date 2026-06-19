@@ -27,6 +27,7 @@ function formatUnit(value: number): string {
 
 export default function UpsellCountdownBanner() {
   const [mounted, setMounted] = useState(false);
+  const [isExpired, setIsExpired] = useState(false);
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     hours: 0,
     minutes: 0,
@@ -47,11 +48,18 @@ export default function UpsellCountdownBanner() {
       window.localStorage.setItem(STORAGE_KEY, String(deadline));
     }
 
-    setTimeLeft(getTimeLeft(deadline));
-
-    const interval = window.setInterval(() => {
+    const updateCountdown = () => {
       setTimeLeft(getTimeLeft(deadline));
-    }, 1000);
+      const expired = deadline <= Date.now();
+      setIsExpired(expired);
+
+      if (expired) {
+        window.clearInterval(interval);
+      }
+    };
+
+    const interval = window.setInterval(updateCountdown, 1000);
+    updateCountdown();
 
     return () => window.clearInterval(interval);
   }, []);
@@ -94,7 +102,9 @@ export default function UpsellCountdownBanner() {
           </div>
 
           <p className="max-w-xl text-sm font-semibold leading-relaxed text-on-surface-variant md:text-base">
-            ⚡ Solicite sua demonstração enquanto a agenda de implantação está aberta.
+            {mounted && isExpired
+              ? 'Prazo encerrado — fale conosco para verificar disponibilidade de implantação.'
+              : '⚡ Solicite sua demonstração enquanto a agenda de implantação está aberta.'}
           </p>
         </div>
       </div>
