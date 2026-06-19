@@ -74,34 +74,34 @@ export default function UpsellCountdownBanner() {
   );
 
   return (
-    <aside className="relative z-10 pt-28 md:pt-32" aria-label="Condição especial para novos comércios">
-      <div className="bg-[#063d2f] px-margin-mobile py-2.5 text-center text-[13px] font-semibold leading-snug text-emerald-50 md:text-sm">
+    <aside className="relative z-10 pt-24" aria-label="Condição especial para novos comércios">
+      <div className="bg-[#063d2f] px-margin-mobile py-1.5 text-center text-[12px] font-semibold leading-snug text-emerald-50 md:text-[13px]">
         ✅ Demonstração gratuita disponível para comércios locais — veja como vender online sem comissão por pedido 👇
       </div>
 
-      <div className="border-y border-white/10 bg-[linear-gradient(135deg,#070B14_0%,#1b0f12_42%,#3b1110_72%,#ff6600_145%)] px-margin-mobile py-5 shadow-[0_18px_50px_rgba(255,90,0,0.12)] md:py-6">
-        <div className="mx-auto flex max-w-container flex-col items-center gap-3 text-center">
-          <p className="text-[11px] font-black uppercase tracking-[0.16em] text-primary-container md:text-label-caps">
+      <div className="border-y border-white/10 bg-[linear-gradient(135deg,#070B14_0%,#1b0f12_42%,#3b1110_72%,#ff6600_145%)] px-margin-mobile py-3 shadow-[0_14px_40px_rgba(255,90,0,0.1)] md:py-4">
+        <div className="mx-auto flex max-w-container flex-col items-center gap-2.5 text-center">
+          <p className="text-[10px] font-black uppercase tracking-[0.14em] text-primary-container md:text-[11px]">
             ⚠️ CONDIÇÃO ESPECIAL PARA NOVOS COMÉRCIOS EXPIRA EM:
           </p>
 
-          <div className="grid grid-cols-3 gap-2.5 sm:gap-4" aria-live="polite">
+          <div className="grid grid-cols-3 gap-2 sm:gap-3" aria-live="polite">
             {units.map((unit) => (
               <div
                 key={unit.label}
-                className="min-w-[82px] rounded-xl border border-primary-container/30 bg-[#160b0d]/90 px-3 py-3 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_10px_30px_rgba(0,0,0,0.25)] sm:min-w-[104px] sm:px-5"
+                className="min-w-[68px] rounded-lg border border-primary-container/30 bg-[#160b0d]/90 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_24px_rgba(0,0,0,0.22)] sm:min-w-[86px] sm:px-4"
               >
-                <span className="block font-sora text-3xl font-black leading-none text-white sm:text-4xl">
+                <span className="block font-sora text-2xl font-black leading-none text-white sm:text-3xl">
                   {unit.value}
                 </span>
-                <span className="mt-1.5 block text-[10px] font-bold uppercase tracking-[0.18em] text-on-secondary-container">
+                <span className="mt-1 block text-[9px] font-bold uppercase tracking-[0.16em] text-on-secondary-container">
                   {unit.label}
                 </span>
               </div>
             ))}
           </div>
 
-          <p className="max-w-xl text-sm font-semibold leading-relaxed text-on-surface-variant md:text-base">
+          <p className="max-w-xl text-xs font-semibold leading-relaxed text-on-surface-variant md:text-sm">
             {mounted && isExpired
               ? 'Prazo encerrado — fale conosco para verificar disponibilidade de implantação.'
               : '⚡ Solicite sua demonstração enquanto a agenda de implantação está aberta.'}
