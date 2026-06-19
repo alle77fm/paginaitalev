@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { italev } from '@/lib/entities';
 
 const navLinks = [
@@ -15,10 +16,18 @@ export default function Header() {
         {/* Logo */}
         <Link
           href="/"
-          className="text-body-lg font-bold text-on-surface tracking-tight hover:text-primary-container transition-colors"
+          className="flex items-center"
           aria-label={`${italev.brandName} — página inicial`}
         >
-          {italev.brandName}
+          <Image
+            src="/logo_it.png"
+            alt={italev.brandName}
+            width={916}
+            height={272}
+            priority
+            className="h-8 w-auto md:h-9"
+            sizes="(max-width: 768px) 120px, 140px"
+          />
         </Link>
 
         {/* Nav desktop */}
