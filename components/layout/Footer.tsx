@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { italev } from '@/lib/entities';
 
 const legalLinks = [
@@ -21,9 +22,14 @@ export default function Footer() {
       <div className="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-1 md:grid-cols-4 gap-gutter">
         {/* Identidade */}
         <div>
-          <span className="text-body-lg font-bold text-on-surface mb-6 block">
-            {italev.brandName}
-          </span>
+          <Image
+            src="/logo_it.png"
+            alt={italev.brandName}
+            width={916}
+            height={272}
+            className="mb-6 h-9 w-auto"
+            sizes="150px"
+          />
           <p className="text-on-secondary-container text-body-md mb-8">
             Transformando o comércio local com tecnologia, autonomia e suporte de verdade.
           </p>

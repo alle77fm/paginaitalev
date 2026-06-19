@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { italev } from '@/lib/entities';
 
 const navLinks = [
@@ -37,10 +38,18 @@ export default function Navbar() {
           {/* Logo */}
           <Link
             href="/"
-            className="font-sora text-[#F8FAFC] font-bold text-lg tracking-tight hover:text-[#4F7CFF] transition-colors"
+            className="flex items-center"
             aria-label={`${italev.brandName} — página inicial`}
           >
-            {italev.brandName}
+            <Image
+              src="/logo_it.png"
+              alt={italev.brandName}
+              width={916}
+              height={272}
+              priority
+              className="h-8 w-auto md:h-9"
+              sizes="(max-width: 768px) 120px, 140px"
+            />
           </Link>
 
           {/* Nav desktop */}
@@ -107,10 +116,19 @@ export default function Navbar() {
         >
           <Link
             href="/"
-            className="font-sora text-2xl font-bold text-[#F8FAFC] mb-4"
+            className="mb-4 flex items-center"
             onClick={() => setMobileOpen(false)}
+            aria-label={`${italev.brandName} — página inicial`}
           >
-            {italev.brandName}
+            <Image
+              src="/logo_it.png"
+              alt={italev.brandName}
+              width={916}
+              height={272}
+              priority
+              className="h-10 w-auto"
+              sizes="160px"
+            />
           </Link>
           {navLinks.map((link) => (
             <Link
