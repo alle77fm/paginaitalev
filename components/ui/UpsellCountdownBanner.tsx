@@ -74,7 +74,7 @@ export default function UpsellCountdownBanner() {
   );
 
   return (
-    <aside className="relative z-10 pt-24" aria-label="Condição especial para novos comércios">
+    <aside className="relative z-10 pt-20 md:pt-[88px]" aria-label="Condição especial para novos comércios">
       <div className="bg-[#063d2f] px-margin-mobile py-1.5 text-center text-[12px] font-semibold leading-snug text-emerald-50 md:text-[13px]">
         ✅ Demonstração gratuita disponível para comércios locais — veja como vender online sem comissão por pedido 👇
       </div>
