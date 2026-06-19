@@ -112,18 +112,18 @@ const demoMessage =
 
 const demoHref = `https://wa.me/${italev.whatsapp}?text=${encodeURIComponent(demoMessage)}`;
 
-function MobileDemoCta({ className = '' }: { className?: string }) {
+function DemoCta({ className = '' }: { className?: string }) {
   return (
-    <div className={`md:hidden px-margin-mobile ${className}`}>
-      <div className="rounded-2xl border border-primary-container/20 bg-surface-container-low/80 p-4 text-center shadow-[0_12px_36px_rgba(0,0,0,0.22)]">
-        <p className="mb-3 text-sm font-semibold leading-snug text-on-surface">
+    <div className={`px-margin-mobile md:px-gutter ${className}`}>
+      <div className="mx-auto max-w-3xl rounded-2xl border border-primary-container/20 bg-surface-container-low/80 p-4 text-center shadow-[0_12px_36px_rgba(0,0,0,0.22)] md:flex md:items-center md:justify-between md:gap-6 md:p-6 md:text-left">
+        <p className="mb-3 text-sm font-semibold leading-snug text-on-surface md:mb-0 md:text-body-lg">
           Pronto para vender online sem pagar comissão por pedido?
         </p>
         <a
           href={demoHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98]"
+          className="inline-flex w-full items-center justify-center rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98] md:w-auto md:px-7 md:py-3.5 md:text-base md:hover:bg-primary-container/90"
         >
           Solicitar demonstração gratuita
         </a>
@@ -307,7 +307,7 @@ export default function HomePage() {
           </p>
         </section>
 
-        <MobileDemoCta className="-mt-10 mb-section-gap-mobile" />
+        <DemoCta className="-mt-10 mb-section-gap-mobile md:-mt-16 md:mb-section-gap-desktop" />
 
         {/* ── STATS ─────────────────────────────────────────── */}
         <section className="bg-surface-container-lowest py-20 mb-section-gap-mobile md:mb-section-gap-desktop">
@@ -353,7 +353,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <MobileDemoCta className="-mt-8 mb-section-gap-mobile" />
+        <DemoCta className="-mt-8 mb-section-gap-mobile md:-mt-24 md:mb-section-gap-desktop" />
 
         {/* ── COMPARATIVO ───────────────────────────────────── */}
         <section
@@ -465,7 +465,7 @@ export default function HomePage() {
           <PricingCards cta="whatsapp" />
         </section>
 
-        <MobileDemoCta className="-mt-8 mb-section-gap-mobile" />
+        <DemoCta className="-mt-8 mb-section-gap-mobile md:-mt-24 md:mb-section-gap-desktop" />
 
         {/* ── CTA FINAL ─────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
@@ -500,7 +500,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <MobileDemoCta className="-mt-10 mb-24" />
+        <DemoCta className="-mt-10 mb-24 md:-mt-24 md:mb-32" />
       </main>
 
       <Footer />
