@@ -107,6 +107,30 @@ const fluxoPedido = [
   'Você confirma a venda e realiza a entrega',
 ];
 
+const demoMessage =
+  'Olá! Gostaria de solicitar uma demonstração gratuita e conhecer como a Italev Sistemas pode ajudar meu negócio a vender mais online.';
+
+const demoHref = `https://wa.me/${italev.whatsapp}?text=${encodeURIComponent(demoMessage)}`;
+
+function MobileDemoCta({ className = '' }: { className?: string }) {
+  return (
+    <div className={`md:hidden px-margin-mobile ${className}`}>
+      <div className="rounded-2xl border border-primary-container/20 bg-surface-container-low/80 p-4 text-center shadow-[0_12px_36px_rgba(0,0,0,0.22)]">
+        <p className="mb-3 text-sm font-semibold leading-snug text-on-surface">
+          Pronto para vender online sem pagar comissão por pedido?
+        </p>
+        <a
+          href={demoHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex w-full items-center justify-center rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98]"
+        >
+          Solicitar demonstração gratuita
+        </a>
+      </div>
+    </div>
+  );
+}
 
 export default function HomePage() {
   return (
@@ -159,7 +183,7 @@ export default function HomePage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <a
-                  href={`https://wa.me/${italev.whatsapp}?text=${encodeURIComponent('Olá! Gostaria de solicitar uma demonstração gratuita e conhecer como a Italev Sistemas pode ajudar meu negócio a vender mais online.')}`}
+                  href={demoHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center justify-center gap-2 bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md orange-glow transition-all"
@@ -283,6 +307,8 @@ export default function HomePage() {
           </p>
         </section>
 
+        <MobileDemoCta className="-mt-10 mb-section-gap-mobile" />
+
         {/* ── STATS ─────────────────────────────────────────── */}
         <section className="bg-surface-container-lowest py-20 mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
@@ -326,6 +352,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <MobileDemoCta className="-mt-8 mb-section-gap-mobile" />
 
         {/* ── COMPARATIVO ───────────────────────────────────── */}
         <section
@@ -437,6 +465,8 @@ export default function HomePage() {
           <PricingCards cta="whatsapp" />
         </section>
 
+        <MobileDemoCta className="-mt-8 mb-section-gap-mobile" />
+
         {/* ── CTA FINAL ─────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
           <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
@@ -469,9 +499,22 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <MobileDemoCta className="-mt-10 mb-24" />
       </main>
 
       <Footer />
+      <div className="h-24 md:hidden" aria-hidden="true" />
+      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#070B14]/92 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl md:hidden">
+        <a
+          href={demoHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mx-auto flex max-w-sm items-center justify-center rounded-xl bg-primary-container px-5 py-3.5 text-sm font-bold text-white shadow-[0_12px_32px_rgba(255,102,0,0.28)] transition-all active:scale-[0.98]"
+        >
+          Solicitar demonstração gratuita
+        </a>
+      </div>
     </>
   );
 }
