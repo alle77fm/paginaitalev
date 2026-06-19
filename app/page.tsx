@@ -5,6 +5,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import PricingCards from '@/components/ui/PricingCards';
+import UpsellCountdownBanner from '@/components/ui/UpsellCountdownBanner';
 import { italev } from '@/lib/entities';
 import { serviceSchema, faqPageSchema } from '@/lib/schema';
 import { faqInstitucional } from '@/content/faq/institucional';
@@ -114,8 +115,9 @@ export default function HomePage() {
       <JsonLd data={faqPageSchema(faqInstitucional)} />
 
       <Header />
+      <UpsellCountdownBanner />
 
-      <main className="relative pt-32">
+      <main className="relative pt-12 md:pt-16">
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] ambient-glow pointer-events-none" />
