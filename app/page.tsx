@@ -504,17 +504,6 @@ export default function HomePage() {
       </main>
 
       <Footer />
-      <div className="h-24 md:hidden" aria-hidden="true" />
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-white/10 bg-[#070B14]/92 px-4 pb-[max(12px,env(safe-area-inset-bottom))] pt-3 backdrop-blur-xl md:hidden">
-        <a
-          href={demoHref}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mx-auto flex max-w-sm items-center justify-center rounded-xl bg-primary-container px-5 py-3.5 text-sm font-bold text-white shadow-[0_12px_32px_rgba(255,102,0,0.28)] transition-all active:scale-[0.98]"
-        >
-          Solicitar demonstração gratuita
-        </a>
-      </div>
     </>
   );
 }
