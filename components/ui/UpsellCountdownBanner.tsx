@@ -79,7 +79,7 @@ export default function UpsellCountdownBanner() {
         ✅ Demonstração gratuita disponível para comércios locais — veja como vender online sem comissão por pedido 👇
       </div>
 
-      <div className="border-y border-white/10 bg-[linear-gradient(135deg,#070B14_0%,#1b0f12_42%,#3b1110_72%,#ff6600_145%)] px-margin-mobile py-3 shadow-[0_14px_40px_rgba(255,90,0,0.1)] md:py-4">
+      <div className="border-y border-red-500/20 bg-[linear-gradient(135deg,#180303_0%,#3a0706_38%,#6f120c_72%,#b32614_115%)] px-margin-mobile py-3 shadow-[0_14px_40px_rgba(179,38,20,0.14)] md:py-4">
         <div className="mx-auto flex max-w-container flex-col items-center gap-2.5 text-center">
           <p className="text-[10px] font-black uppercase tracking-[0.14em] text-primary-container md:text-[11px]">
             ⚠️ CONDIÇÃO ESPECIAL PARA NOVOS COMÉRCIOS EXPIRA EM:
