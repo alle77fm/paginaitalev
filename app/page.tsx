@@ -115,15 +115,15 @@ const demoHref = `https://wa.me/${italev.whatsapp}?text=${encodeURIComponent(dem
 function DemoCta({ className = '' }: { className?: string }) {
   return (
     <div className={`px-margin-mobile md:px-gutter ${className}`}>
-      <div className="mx-auto max-w-3xl rounded-2xl border border-primary-container/20 bg-surface-container-low/80 p-4 text-center shadow-[0_12px_36px_rgba(0,0,0,0.22)] md:flex md:items-center md:justify-between md:gap-6 md:p-6 md:text-left">
-        <p className="mb-3 text-sm font-semibold leading-snug text-on-surface md:mb-0 md:text-body-lg">
+      <div className="mx-auto max-w-2xl rounded-2xl border border-primary-container/20 bg-surface-container-low/80 p-4 text-center shadow-[0_12px_36px_rgba(0,0,0,0.22)] md:grid md:max-w-[680px] md:grid-cols-[1fr_auto] md:items-center md:gap-5 md:p-5 md:text-left">
+        <p className="mb-3 text-sm font-semibold leading-snug text-on-surface md:mb-0 md:max-w-[340px] md:text-base md:leading-6">
           Pronto para vender online sem pagar comissão por pedido?
         </p>
         <a
           href={demoHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-full items-center justify-center rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98] md:w-auto md:px-7 md:py-3.5 md:text-base md:hover:bg-primary-container/90"
+          className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98] md:w-auto md:px-6 md:py-3 md:text-sm md:hover:bg-primary-container/90"
         >
           Solicitar demonstração gratuita
         </a>
