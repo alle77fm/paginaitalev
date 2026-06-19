@@ -75,8 +75,11 @@ export default function UpsellCountdownBanner() {
 
   return (
     <aside className="relative z-10 pt-20 md:pt-[88px]" aria-label="Condição especial para novos comércios">
-      <div className="bg-[#063d2f] px-margin-mobile py-1.5 text-center text-[12px] font-semibold leading-snug text-emerald-50 md:text-[13px]">
-        ✅ Demonstração gratuita disponível para comércios locais — veja como vender online sem comissão por pedido 👇
+      <div className="bg-[#063d2f] px-margin-mobile py-1 text-center text-xs font-semibold leading-snug text-emerald-50 sm:py-1.5 sm:text-[13px]">
+        <span className="sm:hidden">✅ Demonstração gratuita para comércios locais 👇</span>
+        <span className="hidden sm:inline">
+          ✅ Demonstração gratuita disponível para comércios locais — veja como vender online sem comissão por pedido 👇
+        </span>
       </div>
 
       <div className="border-y border-red-500/20 bg-[linear-gradient(135deg,#180303_0%,#3a0706_38%,#6f120c_72%,#b32614_115%)] px-margin-mobile py-3 shadow-[0_14px_40px_rgba(179,38,20,0.14)] md:py-4">
@@ -89,7 +92,7 @@ export default function UpsellCountdownBanner() {
             {units.map((unit) => (
               <div
                 key={unit.label}
-                className="min-w-[68px] rounded-lg border border-primary-container/30 bg-[#160b0d]/90 px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_8px_24px_rgba(0,0,0,0.22)] sm:min-w-[86px] sm:px-4"
+                className="min-w-[68px] rounded-lg border border-orange-500/35 bg-[linear-gradient(180deg,#9a1a10_0%,#5b0b08_100%)] px-2.5 py-2 shadow-[inset_0_1px_0_rgba(255,255,255,0.1),0_8px_24px_rgba(0,0,0,0.22)] sm:min-w-[86px] sm:px-4"
               >
                 <span className="block font-sora text-2xl font-black leading-none text-white sm:text-3xl">
                   {unit.value}

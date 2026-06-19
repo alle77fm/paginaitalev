@@ -133,12 +133,15 @@ export default function HomePage() {
               </div>
               <h1 className="md:text-display-lg mb-6 text-on-surface">
                 {/* Mobile: layout compacto */}
-                <span className="block md:hidden text-[32px] min-[390px]:text-[35px] leading-[1.04] font-black tracking-[-0.03em]">
-                  <span className="block text-on-surface">Tenha seu</span>
-                  <span className="block text-on-surface">próprio app</span>
-                  <span className="block text-on-surface">de delivery</span>
-                  <span className="block mt-2 text-primary-container">Sem pagar taxas</span>
-                  <span className="block text-primary-container">em cada venda</span>
+                <span className="block md:hidden text-[30px] min-[390px]:text-[33px] leading-[1.08] font-black tracking-[-0.025em]">
+                  <span className="block text-on-surface">Tenha seu próprio</span>
+                  <span className="block text-on-surface">app de delivery</span>
+                  <span className="block mt-2 text-[29px] leading-[1.04] text-primary-container min-[390px]:text-[32px]">
+                    Sem pagar taxas
+                  </span>
+                  <span className="block text-[29px] leading-[1.04] text-primary-container min-[390px]:text-[32px]">
+                    em cada venda
+                  </span>
                 </span>
                 {/* Desktop: layout original */}
                 <span className="hidden md:inline text-balance">
