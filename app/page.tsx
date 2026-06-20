@@ -154,22 +154,22 @@ export default function HomePage() {
             sizes="100vw"
             className="absolute inset-0 h-full w-full object-cover object-[62%_top] md:hidden"
           />
-          {/* Background image — desktop: inteira (object-contain), menor, ancorada à direita-baixo */}
-          <div className="absolute inset-y-0 right-0 hidden w-[55%] md:block" aria-hidden="true">
+          {/* Background image — desktop: metade direita, object-cover */}
+          <div className="absolute inset-y-0 right-0 hidden w-[50%] md:block" aria-hidden="true">
             <Image
               src="/gina-desktop.png"
               alt=""
               fill
               priority
-              sizes="55vw"
-              className="object-contain object-right-bottom"
+              sizes="50vw"
+              className="object-cover object-center"
             />
           </div>
 
           {/* Gradient overlay — desktop */}
           <div
             className="absolute inset-0 hidden md:block"
-            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.97) 0%, rgba(7,11,20,0.93) 42%, rgba(7,11,20,0.35) 58%, rgba(7,11,20,0.08) 72%, transparent 82%)' }}
+            style={{ background: 'linear-gradient(to right, #07080c 0%, #07080c 40%, transparent 60%)' }}
             aria-hidden="true"
           />
           {/* Gradient overlay — mobile */}
@@ -258,7 +258,7 @@ export default function HomePage() {
           </div>
 
           {/* Floating card: Gina — desktop only */}
-          <div className="absolute right-[6%] top-[58%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
+          <div className="absolute right-[6%] top-[8%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
             <div className="flex items-center gap-3">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
