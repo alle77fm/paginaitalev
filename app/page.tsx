@@ -143,51 +143,46 @@ export default function HomePage() {
       <main className="relative pt-32 md:pt-40">
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-[600px] h-[600px] ambient-glow pointer-events-none" />
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
-            <div className="z-10">
-              <div className="flex items-center gap-2 mb-6 text-primary-container">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+          <div className="absolute -top-32 right-0 h-[420px] w-[420px] rounded-full bg-primary-container/10 blur-[120px] pointer-events-none" />
+          <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-[0.92fr_1.08fr] md:gap-12">
+            <div className="relative z-10">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/50 bg-primary-container/5 px-4 py-2 text-primary-container">
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                 </svg>
-                <span className="text-label-caps uppercase tracking-widest">
-                  Transforme seu comércio
+                <span className="text-[11px] font-black uppercase tracking-[0.12em] md:text-xs">
+                  Assistente virtual comercial
                 </span>
               </div>
-              <h1 className="md:text-display-lg mb-6 text-on-surface">
-                {/* Mobile: layout compacto */}
-                <span className="block md:hidden text-[30px] min-[390px]:text-[33px] leading-[1.08] font-black tracking-[-0.025em]">
-                  <span className="block text-on-surface">Tenha seu próprio</span>
-                  <span className="block text-on-surface">app de delivery</span>
-                  <span className="block mt-2 text-[29px] leading-[1.04] text-primary-container min-[390px]:text-[32px]">
-                    Sem pagar taxas
-                  </span>
-                  <span className="block text-[29px] leading-[1.04] text-primary-container min-[390px]:text-[32px]">
-                    em cada venda
+
+              <h1 className="mb-6 max-w-[620px] font-sora text-[38px] font-black leading-[1.03] text-on-surface min-[390px]:text-[42px] md:text-[58px] lg:text-[64px]">
+                <span className="block md:hidden">
+                  Tenha seu app próprio
+                  <span className="mt-2 block text-primary-container">
+                    para vender sem pagar comissão
                   </span>
                 </span>
-                {/* Desktop: layout original */}
-                <span className="hidden md:inline text-balance">
+                <span className="hidden md:block text-balance">
                   Tenha seu próprio app de delivery
-                  <br />
-                  <span className="text-primary-container">para vender sem pagar</span>
-                  <br />
+                  <span className="block text-primary-container">
+                    para vender sem pagar
+                  </span>
                   comissão por pedido
                 </span>
               </h1>
-              <p className="text-body-lg text-on-secondary-container mb-10 max-w-lg">
-                Tenha seu próprio aplicativo com a sua marca, receba pedidos pelo
-                WhatsApp e fortaleça seu negócio sem depender exclusivamente de
-                marketplaces.
+
+              <p className="mb-8 max-w-lg text-lg leading-relaxed text-on-secondary-container md:text-xl">
+                Receba pedidos pelo WhatsApp e fortaleça seu negócio sem depender de marketplaces.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+
+              <div className="flex flex-col gap-4 sm:flex-row">
                 <a
                   href={demoHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2 bg-primary-container text-white px-8 py-4 rounded-xl font-bold text-body-md orange-glow transition-all"
+                  className="inline-flex items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all active:scale-[0.98] md:px-8"
                 >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 shrink-0" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
                     <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                     <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
                   </svg>
@@ -195,23 +190,55 @@ export default function HomePage() {
                 </a>
                 <Link
                   href="/contato"
-                  className="inline-flex items-center justify-center bg-transparent border border-white/30 text-white px-8 py-4 rounded-xl font-bold text-body-md hover:bg-white/5 transition-all"
+                  className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/30 bg-transparent px-6 py-4 text-base font-bold text-white transition-all hover:bg-white/5 md:px-8"
                 >
+                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
+                  </svg>
                   Ver como funciona
                 </Link>
               </div>
             </div>
-            <div className="relative mt-12 md:mt-0 flex items-center justify-center">
-              <div className="absolute inset-0 bg-primary-container/10 blur-[100px] rounded-full" />
+
+            <div className="relative mt-4 min-h-[500px] overflow-hidden rounded-[32px] border border-white/10 bg-[radial-gradient(circle_at_72%_22%,rgba(255,90,0,0.18),transparent_34%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(255,255,255,0.015))] shadow-[0_28px_90px_rgba(0,0,0,0.32)] md:mt-0 md:min-h-[560px]">
+              <div className="absolute inset-x-8 top-16 h-px rotate-[-18deg] bg-primary-container/40" />
+              <div className="absolute -right-24 top-28 h-[360px] w-[360px] rounded-full border border-primary-container/35" />
+
               <Image
-                src="/img_phone.webp"
-                alt="App próprio de delivery da Italev Sistemas rodando em smartphone — catálogo digital com pedidos via WhatsApp e PIX"
-                width={420}
-                height={560}
+                src="/gina-mobile.png"
+                alt="Gina, assistente virtual comercial da Italev Sistemas"
+                width={1122}
+                height={1402}
                 priority
-                sizes="(max-width: 768px) 80vw, 420px"
-                className="relative z-10 w-full max-w-[320px] md:max-w-[420px] h-auto rounded-3xl overflow-hidden"
+                sizes="92vw"
+                className="absolute inset-x-0 bottom-0 h-full w-full object-cover object-bottom md:hidden"
               />
+              <Image
+                src="/gina-desktop.png"
+                alt="Gina, assistente virtual comercial da Italev Sistemas"
+                width={1672}
+                height={941}
+                priority
+                sizes="52vw"
+                className="absolute inset-0 hidden h-full w-full object-cover object-center md:block"
+              />
+
+              <div className="absolute left-5 top-[52%] max-w-[230px] rounded-2xl border border-white/15 bg-black/45 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-8 md:top-auto md:bottom-24">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+                    <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
+                    </svg>
+                  </span>
+                  <p className="text-sm font-semibold leading-snug text-white md:text-base">
+                    Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
+                  </p>
+                </div>
+              </div>
+
+              <div className="absolute inset-x-5 bottom-5 rounded-2xl border border-white/15 bg-black/45 px-4 py-3 text-center text-sm font-bold text-white backdrop-blur-md md:text-base">
+                Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span>
+              </div>
             </div>
           </div>
         </section>
