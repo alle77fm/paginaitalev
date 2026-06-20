@@ -142,8 +142,8 @@ export default function HomePage() {
 
       <main className="relative pt-32 md:pt-40">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
-          <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[radial-gradient(circle_at_76%_44%,rgba(255,90,0,0.2),transparent_31%),linear-gradient(135deg,#050811_0%,#080c15_48%,#120a07_100%)] px-5 pb-0 pt-8 shadow-[0_28px_100px_rgba(0,0,0,0.38)] md:rounded-[40px] md:px-12 md:py-14 lg:px-16">
+        <section className="relative mb-section-gap-mobile w-full overflow-hidden px-margin-mobile md:mb-section-gap-desktop md:px-6 lg:px-8">
+          <div className="relative mx-auto max-w-[1480px] overflow-hidden rounded-[34px] border border-white/10 bg-[radial-gradient(circle_at_82%_44%,rgba(255,90,0,0.2),transparent_32%),linear-gradient(135deg,#020306_0%,#050608_48%,#100704_100%)] px-5 pb-0 pt-8 shadow-[0_34px_120px_rgba(0,0,0,0.46)] md:rounded-[40px] md:px-14 md:py-14 lg:px-18 xl:px-20">
             <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,transparent_38%,rgba(255,90,0,0.06)_100%)]" />
             <div className="absolute -left-24 bottom-20 h-[320px] w-[320px] rounded-full border border-primary-container/20 md:left-auto md:right-14 md:bottom-24 md:h-[470px] md:w-[470px]" />
             <div className="absolute right-20 top-40 hidden grid-cols-5 gap-2 opacity-70 md:grid" aria-hidden="true">
@@ -153,8 +153,8 @@ export default function HomePage() {
             </div>
             <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/78 to-transparent md:hidden" />
 
-            <div className="relative z-10 grid min-h-[780px] grid-cols-1 md:min-h-[610px] md:grid-cols-[0.94fr_1.06fr] md:items-center md:gap-10 lg:gap-14">
-              <div className="relative z-20 pb-[440px] md:flex md:min-h-[520px] md:flex-col md:justify-center md:pb-0">
+            <div className="relative z-10 grid min-h-[780px] grid-cols-1 md:min-h-[640px] md:grid-cols-[0.82fr_1.18fr] md:items-center md:gap-8 lg:gap-14">
+              <div className="relative z-20 pb-[440px] md:flex md:min-h-[540px] md:flex-col md:justify-center md:pb-0">
                 <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-primary-container/60 bg-black/25 px-4 py-2 text-primary-container backdrop-blur-sm">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
@@ -224,8 +224,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[470px] md:relative md:inset-auto md:h-[610px] md:min-h-[610px]">
-                <div className="absolute bottom-10 left-[10%] right-[6%] top-4 hidden rounded-[110px_110px_42px_42px] border border-primary-container/35 bg-[radial-gradient(circle_at_58%_26%,rgba(255,90,0,0.25),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.12))] md:block" />
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[470px] md:relative md:inset-auto md:-mr-10 md:h-[650px] md:min-h-[650px] lg:-mr-16 xl:-mr-20">
+                <div className="absolute bottom-10 left-[4%] right-[7%] top-4 hidden rounded-[130px_130px_42px_42px] border border-primary-container/35 bg-[radial-gradient(circle_at_60%_28%,rgba(255,90,0,0.24),transparent_37%),linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.14))] md:block" />
                 <Image
                   src="/gina-mobile.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
@@ -242,10 +242,10 @@ export default function HomePage() {
                   height={941}
                   priority
                   sizes="52vw"
-                  className="absolute inset-0 hidden h-full w-full scale-110 object-cover object-[55%_50%] md:block"
+                  className="absolute inset-0 hidden h-full w-full object-cover object-[60%_50%] md:block"
                 />
 
-                <div className="absolute left-4 top-20 max-w-[220px] rounded-2xl border border-white/15 bg-black/45 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-18px] md:top-[170px] md:max-w-[275px] md:p-5">
+                <div className="absolute left-4 top-20 max-w-[220px] rounded-2xl border border-white/15 bg-black/45 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-42px] md:top-[190px] md:max-w-[275px] md:p-5">
                   <div className="flex items-center gap-3">
                     <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:h-12 md:w-12">
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
@@ -258,7 +258,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute inset-x-4 bottom-5 rounded-2xl border border-white/15 bg-black/50 px-4 py-3 text-center text-sm font-bold text-white backdrop-blur-md md:left-[8%] md:right-[0] md:bottom-9 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
+                <div className="absolute inset-x-4 bottom-5 rounded-2xl border border-white/15 bg-black/50 px-4 py-3 text-center text-sm font-bold text-white backdrop-blur-md md:left-[4%] md:right-[5%] md:bottom-9 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
                   <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:flex">
                     <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
