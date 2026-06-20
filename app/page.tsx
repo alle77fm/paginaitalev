@@ -152,7 +152,7 @@ export default function HomePage() {
               ))}
             </div>
 
-            <div className="relative z-20 grid min-h-[760px] grid-cols-1 gap-10 md:min-h-[580px] md:grid-cols-[1fr_1.1fr] md:items-center md:gap-10 lg:gap-14">
+            <div className="relative z-20 grid min-h-[760px] grid-cols-1 gap-10 md:min-h-[520px] md:grid-cols-[0.52fr_0.48fr] md:items-center md:gap-10 lg:gap-14">
               <div className="max-w-[650px] text-center md:text-left">
                 <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/25 px-4 py-2 text-primary-container backdrop-blur-sm">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -172,7 +172,7 @@ export default function HomePage() {
                   <span className="hidden text-[48px] leading-[1.06] md:block lg:text-[56px] xl:text-[62px]">
                     Criamos o app do seu comércio <br />
                     <span className="text-primary-container">para vender online</span> <br />
-                    <span className="text-primary-container">sem pagar comissão por pedido.</span>
+                    <span>sem pagar comissão por pedido.</span>
                   </span>
                 </h1>
 
@@ -222,8 +222,8 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="relative mx-auto h-[430px] w-full max-w-[520px] md:h-[600px] md:max-w-none">
-                <div className="absolute bottom-10 left-[4%] right-[4%] top-0 rounded-[120px_120px_32px_32px] border border-primary-container/40 bg-[radial-gradient(circle_at_52%_38%,rgba(255,90,0,0.40),transparent_45%),linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.14))] md:bottom-16" aria-hidden="true" />
+              <div className="relative mx-auto h-[430px] w-full max-w-[520px] md:h-[560px] md:max-w-none">
+                <div className="absolute bottom-10 left-[4%] right-[4%] top-0 rounded-[120px_120px_32px_32px] border border-primary-container/35 bg-[radial-gradient(circle_at_52%_30%,rgba(255,90,0,0.24),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.14))] md:bottom-16" aria-hidden="true" />
                 <Image
                   src="/gina-mobile.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
@@ -240,7 +240,7 @@ export default function HomePage() {
                   height={941}
                   priority
                   sizes="44vw"
-                  className="absolute inset-0 hidden h-full w-full object-cover object-[50%_8%] md:block"
+                  className="absolute inset-0 hidden h-full w-full object-cover object-[52%_50%] md:block"
                 />
 
                 <div className="absolute left-0 top-[118px] max-w-[235px] rounded-2xl border border-white/15 bg-black/52 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-70px] md:top-[180px] md:max-w-[275px] md:p-5">
@@ -256,7 +256,7 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="absolute inset-x-0 bottom-0 rounded-2xl border border-white/15 bg-black/52 px-4 py-3 text-center text-sm font-bold text-white shadow-[0_18px_50px_rgba(0,0,0,0.32)] backdrop-blur-md md:left-0 md:right-0 md:bottom-4 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
+                <div className="absolute inset-x-0 bottom-0 rounded-2xl border border-white/15 bg-black/52 px-4 py-3 text-center text-sm font-bold text-white shadow-[0_18px_50px_rgba(0,0,0,0.32)] backdrop-blur-md md:left-[-10%] md:right-[-4%] md:bottom-2 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
                   <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:flex">
                     <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
