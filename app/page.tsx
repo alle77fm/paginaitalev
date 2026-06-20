@@ -183,12 +183,12 @@ export default function HomePage() {
               <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
                 <span className="block text-3xl sm:text-4xl md:hidden">
                   Criamos o app do seu comércio <br />
-                  para vender online
+                  <span className="text-primary-container">para vender online</span>
                   <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
                 </span>
                 <span className="hidden text-[44px] leading-[1.06] md:block lg:text-[54px] xl:text-[60px]">
                   Criamos o app do seu comércio <br />
-                  para vender online <br />
+                  <span className="text-primary-container">para vender online</span> <br />
                   <span className="text-primary-container">sem pagar comissão por pedido.</span>
                 </span>
               </h1>
