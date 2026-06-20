@@ -5,8 +5,10 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import PricingCards from '@/components/ui/PricingCards';
+import FaqAccordion from '@/components/content/FaqAccordion';
 import { italev } from '@/lib/entities';
-import { serviceSchema } from '@/lib/schema';
+import { serviceSchema, faqPageSchema } from '@/lib/schema';
+import { duvidasFrequentesHome } from '@/content/faq/duvidas-frequentes';
 
 export const metadata: Metadata = {
   title: 'App de delivery e e-commerce para comércios locais | Italev Sistemas',
@@ -134,6 +136,7 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={serviceSchema()} />
+      <JsonLd data={faqPageSchema(duvidasFrequentesHome)} />
 
       <Header />
 
@@ -463,6 +466,36 @@ export default function HomePage() {
 
         <DemoCta className="-mt-8 mb-section-gap-mobile md:-mt-24 md:mb-section-gap-desktop" />
 
+        {/* ── DÚVIDAS FREQUENTES ───────────────────────────── */}
+        <section
+          aria-label="Dúvidas frequentes sobre o aplicativo próprio da Italev Sistemas"
+          className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
+        >
+          <div className="mx-auto max-w-3xl text-center mb-10">
+            <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
+              Dúvidas frequentes
+            </span>
+            <h2 className="text-headline-xl text-on-surface mb-4">
+              Dúvidas frequentes
+            </h2>
+            <p className="text-on-secondary-container text-body-lg">
+              Veja as principais dúvidas de lojistas sobre o aplicativo próprio da Italev Sistemas.
+            </p>
+          </div>
+
+          <div className="mx-auto max-w-3xl">
+            <FaqAccordion items={duvidasFrequentesHome} />
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link
+              href="/duvidas-frequentes"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 px-6 py-3 text-sm font-bold text-white transition-all hover:border-primary-container hover:bg-primary-container/10"
+            >
+              Ver todas as dúvidas frequentes
+            </Link>
+          </div>
+        </section>
         {/* ── CTA FINAL ─────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
           <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
