@@ -162,7 +162,7 @@ export default function HomePage() {
             height={941}
             priority
             sizes="64vw"
-            className="absolute bottom-0 right-[12%] z-0 hidden h-full w-[50%] object-cover object-center brightness-[1.9] md:block"
+            className="absolute bottom-0 right-[20%] z-0 hidden h-full w-[48%] object-cover object-center brightness-[1.9] md:block"
           />
 
           <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,#030304_0%,rgba(3,3,4,0.72)_24%,rgba(3,3,4,0.08)_58%,#030304_100%)] md:bg-[linear-gradient(90deg,#030304_0%,#030304_34%,rgba(3,3,4,0.72)_46%,transparent_62%,transparent_100%)]" aria-hidden="true" />
