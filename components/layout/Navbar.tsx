@@ -9,6 +9,7 @@ const navLinks = [
   { href: '/servicos', label: 'Serviços' },
   { href: '/sobre-nos', label: 'Sobre' },
   { href: '/planos', label: 'Planos' },
+  { href: '/duvidas-frequentes', label: 'Dúvidas' },
   { href: '/contato', label: 'Contato' },
 ];
 
@@ -47,8 +48,8 @@ export default function Navbar() {
               width={916}
               height={272}
               priority
-              className="h-8 w-auto md:h-9"
-              sizes="(max-width: 768px) 120px, 140px"
+              className="h-9 w-auto md:h-9"
+              sizes="(max-width: 768px) 132px, 140px"
             />
           </Link>
 

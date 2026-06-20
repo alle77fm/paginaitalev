@@ -6,6 +6,7 @@ const navLinks = [
   { href: '/servicos', label: 'Serviços' },
   { href: '/sobre-nos', label: 'Sobre' },
   { href: '/planos', label: 'Planos' },
+  { href: '/duvidas-frequentes', label: 'Dúvidas' },
   { href: '/contato', label: 'Contato' },
 ];
 
@@ -54,8 +55,8 @@ export default function Header() {
             width={916}
             height={272}
             priority
-            className="h-7 w-auto md:h-9"
-            sizes="(max-width: 768px) 104px, 140px"
+            className="h-8 w-auto md:h-9"
+            sizes="(max-width: 768px) 120px, 140px"
           />
         </Link>
 
