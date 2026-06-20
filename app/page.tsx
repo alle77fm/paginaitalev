@@ -143,13 +143,19 @@ export default function HomePage() {
       <main className="relative pt-32 md:pt-40">
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
-          <div className="relative overflow-hidden rounded-[36px] border border-white/10 bg-[radial-gradient(circle_at_78%_44%,rgba(255,90,0,0.22),transparent_30%),linear-gradient(135deg,#050811_0%,#080c15_48%,#120a07_100%)] px-5 pb-0 pt-8 shadow-[0_28px_100px_rgba(0,0,0,0.38)] md:px-10 md:py-10 lg:px-14 lg:py-12">
-            <div className="absolute -left-24 bottom-16 h-[320px] w-[320px] rounded-full border border-primary-container/25 md:left-auto md:right-12 md:bottom-20 md:h-[440px] md:w-[440px]" />
-            <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-black/70 to-transparent md:hidden" />
+          <div className="relative overflow-hidden rounded-[34px] border border-white/10 bg-[radial-gradient(circle_at_76%_44%,rgba(255,90,0,0.2),transparent_31%),linear-gradient(135deg,#050811_0%,#080c15_48%,#120a07_100%)] px-5 pb-0 pt-8 shadow-[0_28px_100px_rgba(0,0,0,0.38)] md:rounded-[40px] md:px-12 md:py-14 lg:px-16">
+            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.04)_0%,transparent_38%,rgba(255,90,0,0.06)_100%)]" />
+            <div className="absolute -left-24 bottom-20 h-[320px] w-[320px] rounded-full border border-primary-container/20 md:left-auto md:right-14 md:bottom-24 md:h-[470px] md:w-[470px]" />
+            <div className="absolute right-20 top-40 hidden grid-cols-5 gap-2 opacity-70 md:grid" aria-hidden="true">
+              {Array.from({ length: 25 }).map((_, i) => (
+                <span key={i} className="h-1 w-1 rounded-full bg-primary-container/70" />
+              ))}
+            </div>
+            <div className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-t from-black/78 to-transparent md:hidden" />
 
-            <div className="relative z-10 grid min-h-[760px] grid-cols-1 md:min-h-[560px] md:grid-cols-[0.92fr_1.08fr] md:items-center md:gap-10">
-              <div className="relative z-20 pb-[430px] md:pb-0">
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/50 bg-black/25 px-4 py-2 text-primary-container backdrop-blur-sm">
+            <div className="relative z-10 grid min-h-[780px] grid-cols-1 md:min-h-[610px] md:grid-cols-[0.94fr_1.06fr] md:items-center md:gap-10 lg:gap-14">
+              <div className="relative z-20 pb-[440px] md:flex md:min-h-[520px] md:flex-col md:justify-center md:pb-0">
+                <div className="mb-6 inline-flex w-fit items-center gap-2 rounded-full border border-primary-container/60 bg-black/25 px-4 py-2 text-primary-container backdrop-blur-sm">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                   </svg>
@@ -158,23 +164,21 @@ export default function HomePage() {
                   </span>
                 </div>
 
-                <h1 className="mb-6 max-w-[620px] font-sora text-[32px] font-black leading-[1.06] text-on-surface min-[390px]:text-[36px] md:text-[54px] md:leading-[1.04] lg:text-[60px]">
+                <h1 className="mb-6 max-w-[700px] font-sora text-[31px] font-black leading-[1.07] text-on-surface min-[390px]:text-[35px] md:text-[49px] md:leading-[1.08] lg:text-[56px]">
                   <span className="block md:hidden">
-                    Tenha seu próprio app de delivery
+                    Tenha seu app próprio
                     <span className="mt-2 block text-primary-container">
-                      para vender sem pagar comissão por pedido
+                      para vender sem pagar comissão
                     </span>
                   </span>
-                  <span className="hidden md:block text-balance">
-                    Tenha seu próprio app de delivery
-                    <span className="block text-primary-container">
-                      para vender sem pagar
-                    </span>
-                    comissão por pedido
+                  <span className="hidden md:block">
+                    <span className="block whitespace-nowrap">Tenha seu próprio app</span>
+                    <span className="block whitespace-nowrap text-primary-container">para vender sem pagar</span>
+                    <span className="block whitespace-nowrap">comissão por pedido</span>
                   </span>
                 </h1>
 
-                <p className="mb-8 max-w-lg text-base leading-relaxed text-on-secondary-container min-[390px]:text-lg md:text-xl">
+                <p className="mb-8 max-w-[540px] text-base leading-relaxed text-on-secondary-container min-[390px]:text-lg md:text-xl">
                   Receba pedidos pelo WhatsApp e fortaleça seu negócio sem depender de marketplaces.
                 </p>
 
@@ -183,7 +187,7 @@ export default function HomePage() {
                     href={demoHref}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center justify-center gap-3 rounded-xl bg-primary-container px-5 py-4 text-base font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all active:scale-[0.98] md:px-8"
+                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-5 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all active:scale-[0.98] min-[390px]:text-base md:min-w-[310px] md:px-8"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -193,7 +197,7 @@ export default function HomePage() {
                   </a>
                   <Link
                     href="/contato"
-                    className="inline-flex items-center justify-center gap-3 rounded-xl border border-white/30 bg-black/10 px-5 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/5 md:px-8"
+                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/30 bg-black/10 px-5 py-4 text-base font-bold text-white backdrop-blur-sm transition-all hover:bg-white/5 md:min-w-[240px] md:px-8"
                   >
                     <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
@@ -201,9 +205,27 @@ export default function HomePage() {
                     Ver como funciona
                   </Link>
                 </div>
+
+                <div className="mt-8 hidden max-w-[640px] grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-black/20 backdrop-blur-sm md:grid">
+                  {[
+                    { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
+                    { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
+                    { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
+                  ].map((item, index) => (
+                    <div key={item.label} className={`flex items-center gap-3 px-5 py-4 ${index > 0 ? 'border-l border-white/10' : ''}`}>
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+                        <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                        </svg>
+                      </span>
+                      <span className="text-sm font-semibold leading-snug text-on-surface">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[470px] md:relative md:inset-auto md:h-[560px] md:min-h-[560px]">
+              <div className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-[470px] md:relative md:inset-auto md:h-[610px] md:min-h-[610px]">
+                <div className="absolute bottom-10 left-[10%] right-[6%] top-4 hidden rounded-[110px_110px_42px_42px] border border-primary-container/35 bg-[radial-gradient(circle_at_58%_26%,rgba(255,90,0,0.25),transparent_36%),linear-gradient(180deg,rgba(255,255,255,0.04),rgba(0,0,0,0.12))] md:block" />
                 <Image
                   src="/gina-mobile.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
@@ -220,24 +242,29 @@ export default function HomePage() {
                   height={941}
                   priority
                   sizes="52vw"
-                  className="absolute inset-0 hidden h-full w-full object-cover object-center md:block"
+                  className="absolute inset-0 hidden h-full w-full scale-110 object-cover object-[55%_50%] md:block"
                 />
 
-                <div className="absolute left-4 top-20 max-w-[220px] rounded-2xl border border-white/15 bg-black/45 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-4 md:top-auto md:bottom-24">
+                <div className="absolute left-4 top-20 max-w-[220px] rounded-2xl border border-white/15 bg-black/45 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-18px] md:top-[170px] md:max-w-[275px] md:p-5">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:h-12 md:w-12">
                       <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
                       </svg>
                     </span>
-                    <p className="text-sm font-semibold leading-snug text-white md:text-base">
+                    <p className="text-sm font-semibold leading-snug text-white md:text-lg">
                       Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
                     </p>
                   </div>
                 </div>
 
-                <div className="absolute inset-x-4 bottom-5 rounded-2xl border border-white/15 bg-black/50 px-4 py-3 text-center text-sm font-bold text-white backdrop-blur-md md:text-base">
-                  Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span>
+                <div className="absolute inset-x-4 bottom-5 rounded-2xl border border-white/15 bg-black/50 px-4 py-3 text-center text-sm font-bold text-white backdrop-blur-md md:left-[8%] md:right-[0] md:bottom-9 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
+                  <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:flex">
+                    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
+                    </svg>
+                  </span>
+                  <span>Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span></span>
                 </div>
               </div>
             </div>
