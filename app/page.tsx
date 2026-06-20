@@ -137,7 +137,7 @@ export default function HomePage() {
 
       <Header />
 
-      <main className="relative pt-12 md:pt-16">
+      <main className="relative pt-32 md:pt-40">
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop relative overflow-hidden">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] ambient-glow pointer-events-none" />
