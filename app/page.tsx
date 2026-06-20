@@ -5,10 +5,8 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import PricingCards from '@/components/ui/PricingCards';
-import UpsellCountdownBanner from '@/components/ui/UpsellCountdownBanner';
 import { italev } from '@/lib/entities';
-import { serviceSchema, faqPageSchema } from '@/lib/schema';
-import { faqInstitucional } from '@/content/faq/institucional';
+import { serviceSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
   title: 'App de delivery e e-commerce para comércios locais | Italev Sistemas',
@@ -136,10 +134,8 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={serviceSchema()} />
-      <JsonLd data={faqPageSchema(faqInstitucional)} />
 
       <Header />
-      <UpsellCountdownBanner />
 
       <main className="relative pt-12 md:pt-16">
         {/* ── HERO ─────────────────────────────────────────── */}

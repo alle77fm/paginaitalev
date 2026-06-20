@@ -98,7 +98,6 @@ export function serviceSchema() {
     availableChannel: {
       '@type': 'ServiceChannel',
       serviceUrl: italev.domain,
-      contactOption: 'TollFree',
     },
   };
 }
