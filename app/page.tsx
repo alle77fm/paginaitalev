@@ -162,11 +162,11 @@ export default function HomePage() {
             height={941}
             priority
             sizes="64vw"
-            className="absolute bottom-0 right-[2%] z-0 hidden h-full w-[62%] object-cover object-center brightness-[1.35] md:block"
+            className="absolute bottom-0 right-[6%] z-0 hidden h-full w-[55%] object-cover object-center brightness-[1.5] md:block"
           />
 
-          <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,#030304_0%,rgba(3,3,4,0.72)_24%,rgba(3,3,4,0.08)_58%,#030304_100%)] md:bg-[linear-gradient(90deg,#030304_0%,#030304_34%,rgba(3,3,4,0.78)_48%,rgba(3,3,4,0.16)_66%,rgba(3,3,4,0.72)_100%)]" aria-hidden="true" />
-          <div className="absolute inset-x-0 bottom-0 z-10 h-64 bg-gradient-to-t from-[#030304] via-[#030304]/80 to-transparent" aria-hidden="true" />
+          <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,#030304_0%,rgba(3,3,4,0.72)_24%,rgba(3,3,4,0.08)_58%,#030304_100%)] md:bg-[linear-gradient(90deg,#030304_0%,#030304_34%,rgba(3,3,4,0.78)_48%,rgba(3,3,4,0.05)_66%,rgba(3,3,4,0.25)_100%)]" aria-hidden="true" />
+          <div className="absolute inset-x-0 bottom-0 z-10 h-64 bg-gradient-to-t from-[#030304]/60 via-[#030304]/30 to-transparent" aria-hidden="true" />
           <div className="absolute left-0 top-0 z-10 hidden h-full w-2/3 bg-[linear-gradient(90deg,#030304_0%,rgba(3,3,4,0.94)_52%,transparent_100%)] md:block" aria-hidden="true" />
 
           <div className="relative z-20 mx-auto flex min-h-[800px] max-w-[1440px] flex-col px-margin-mobile pb-[350px] md:min-h-[720px] md:justify-center md:px-gutter md:pb-28">
