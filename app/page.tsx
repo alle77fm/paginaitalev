@@ -142,130 +142,145 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile px-margin-mobile pt-28 md:mb-section-gap-desktop md:px-gutter md:pt-36">
-          <div className="relative mx-auto min-h-[820px] max-w-[1480px] overflow-hidden rounded-[32px] border border-white/10 bg-[radial-gradient(circle_at_76%_42%,rgba(255,90,0,0.18),transparent_30%),linear-gradient(135deg,#05080c_0%,#030405_52%,#0d0603_100%)] px-5 pb-8 pt-10 shadow-[0_34px_120px_rgba(0,0,0,0.42)] md:min-h-[680px] md:rounded-[40px] md:px-20 md:py-20">
-            <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.045)_0%,transparent_38%,rgba(255,90,0,0.07)_100%)]" aria-hidden="true" />
-            <div className="absolute right-[12%] top-[23%] hidden h-[430px] w-[430px] rounded-full border border-primary-container/25 md:block" aria-hidden="true" />
-            <div className="absolute right-[11%] top-[23%] hidden grid-cols-5 gap-2 opacity-70 md:grid" aria-hidden="true">
-              {Array.from({ length: 25 }).map((_, i) => (
-                <span key={i} className="h-1 w-1 rounded-full bg-primary-container/70" />
-              ))}
-            </div>
+        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden min-h-[780px] md:min-h-[720px] bg-[#07080c]">
+          {/* Background image — mobile */}
+          <Image
+            src="/gina-mobile.png"
+            alt=""
+            aria-hidden="true"
+            width={1122}
+            height={1402}
+            priority
+            sizes="100vw"
+            className="absolute inset-0 h-full w-full object-cover object-[62%_top] md:hidden"
+          />
+          {/* Background image — desktop */}
+          <Image
+            src="/gina-desktop.png"
+            alt=""
+            aria-hidden="true"
+            width={1672}
+            height={941}
+            priority
+            sizes="100vw"
+            className="absolute inset-0 hidden h-full w-full object-cover object-right md:block"
+          />
 
-            <div className="relative z-20 grid min-h-[760px] grid-cols-1 gap-10 md:min-h-[520px] md:grid-cols-[0.52fr_0.48fr] md:items-center md:gap-10 lg:gap-14">
-              <div className="max-w-[650px] text-center md:text-left">
-                <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/25 px-4 py-2 text-primary-container backdrop-blur-sm">
-                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-                  </svg>
-                  <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
-                    APP PARA COMÉRCIO LOCAL
-                  </span>
-                </div>
+          {/* Gradient overlay — desktop: dark left → transparent right */}
+          <div
+            className="absolute inset-0 hidden md:block"
+            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.95) 0%, rgba(7,11,20,0.7) 40%, transparent 70%)' }}
+            aria-hidden="true"
+          />
+          {/* Gradient overlay — mobile */}
+          <div
+            className="absolute inset-0 md:hidden"
+            style={{ background: 'linear-gradient(to bottom, rgba(7,11,20,0.85) 0%, rgba(7,11,20,0.78) 55%, rgba(7,11,20,0.95) 100%)' }}
+            aria-hidden="true"
+          />
 
-                <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
-                  <span className="block text-[34px] sm:text-[40px] md:hidden">
-                    Criamos o app do seu comércio <br />
-                    <span className="text-primary-container">para vender online</span>
-                    <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
-                  </span>
-                  <span className="hidden text-[48px] leading-[1.06] md:block lg:text-[56px] xl:text-[62px]">
-                    Criamos o app do seu comércio <br />
-                    <span className="text-primary-container">para vender online</span> <br />
-                    <span>sem pagar comissão por pedido.</span>
-                  </span>
-                </h1>
-
-                <p className="mx-auto mb-8 max-w-[560px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
-                  Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
-                </p>
-
-                <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
-                  <a
-                    href={demoHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base md:min-w-[310px]"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                    </svg>
-                    Solicitar demonstração gratuita
-                  </a>
-                  <Link
-                    href="/contato"
-                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/25 bg-black/10 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base md:min-w-[240px]"
-                  >
-                    <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
-                    </svg>
-                    Ver como funciona
-                  </Link>
-                </div>
-
-                <div className="mt-10 hidden w-full max-w-[610px] grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-black/22 backdrop-blur-sm md:grid">
-                  {[
-                    { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
-                    { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
-                    { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
-                  ].map((item, index) => (
-                    <div key={item.label} className={index > 0 ? 'flex items-center gap-3 border-l border-white/10 px-5 py-4' : 'flex items-center gap-3 px-5 py-4'}>
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container/70 text-primary-container">
-                        <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                        </svg>
-                      </span>
-                      <span className="text-sm font-semibold leading-snug text-on-surface">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+          {/* Content */}
+          <div className="relative z-10 mx-auto flex min-h-[780px] max-w-[1440px] flex-col justify-center px-margin-mobile py-28 md:min-h-[720px] md:px-gutter md:py-36">
+            <div className="w-full text-center md:max-w-[560px] md:text-left">
+              {/* Badge */}
+              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                </svg>
+                <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
+                  APP PARA COMÉRCIO LOCAL
+                </span>
               </div>
 
-              <div className="relative mx-auto h-[430px] w-full max-w-[520px] md:h-[560px] md:max-w-none">
-                <div className="absolute bottom-10 left-[4%] right-[4%] top-0 rounded-[120px_120px_32px_32px] border border-primary-container/35 bg-[radial-gradient(circle_at_52%_30%,rgba(255,90,0,0.24),transparent_38%),linear-gradient(180deg,rgba(255,255,255,0.035),rgba(0,0,0,0.14))] md:bottom-16" aria-hidden="true" />
-                <Image
-                  src="/gina-mobile.png"
-                  alt="Gina, assistente virtual comercial da Italev Sistemas"
-                  width={1122}
-                  height={1402}
-                  priority
-                  sizes="(max-width: 768px) 92vw, 44vw"
-                  className="absolute inset-x-0 bottom-0 h-full w-full object-cover object-[54%_0%] md:hidden"
-                />
-                <Image
-                  src="/gina-desktop.png"
-                  alt="Gina, assistente virtual comercial da Italev Sistemas"
-                  width={1672}
-                  height={941}
-                  priority
-                  sizes="44vw"
-                  className="absolute inset-0 hidden h-full w-full object-cover object-[48%_35%] brightness-[1.4] md:block"
-                />
+              {/* H1 */}
+              <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
+                <span className="block text-[34px] sm:text-[40px] md:hidden">
+                  Criamos o app do seu comércio <br />
+                  <span className="text-primary-container">para vender online</span>
+                  <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
+                </span>
+                <span className="hidden text-[48px] leading-[1.06] md:block lg:text-[54px] xl:text-[60px]">
+                  Criamos o app do<br />
+                  seu comércio <span className="text-primary-container">para</span><br />
+                  <span className="text-primary-container">vender online</span> sem<br />
+                  pagar comissão.
+                </span>
+              </h1>
 
-                <div className="absolute left-0 top-[118px] max-w-[235px] rounded-2xl border border-white/15 bg-black/52 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-70px] md:top-[180px] md:max-w-[275px] md:p-5">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:h-12 md:w-12">
-                      <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
+              {/* Subtitle */}
+              <p className="mx-auto mb-8 max-w-[520px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
+                Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
+              </p>
+
+              {/* CTAs */}
+              <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
+                <a
+                  href={demoHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                  </svg>
+                  Solicitar demonstração gratuita
+                </a>
+                <Link
+                  href="/contato"
+                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/25 bg-black/20 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base"
+                >
+                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
+                  </svg>
+                  Ver como funciona
+                </Link>
+              </div>
+
+              {/* Mini-features — desktop only */}
+              <div className="mt-10 hidden w-full max-w-[540px] grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm md:grid">
+                {[
+                  { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
+                  { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
+                  { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
+                ].map((item, index) => (
+                  <div key={item.label} className={index > 0 ? 'flex items-center gap-3 border-l border-white/10 px-4 py-4' : 'flex items-center gap-3 px-4 py-4'}>
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container/70 text-primary-container">
+                      <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
                       </svg>
                     </span>
-                    <p className="text-sm font-semibold leading-snug text-white md:text-lg">
-                      Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
-                    </p>
+                    <span className="text-xs font-semibold leading-snug text-on-surface">{item.label}</span>
                   </div>
-                </div>
-
-                <div className="absolute inset-x-0 bottom-0 rounded-2xl border border-white/15 bg-black/52 px-4 py-3 text-center text-sm font-bold text-white shadow-[0_18px_50px_rgba(0,0,0,0.32)] backdrop-blur-md md:left-[-10%] md:right-[-4%] md:bottom-2 md:flex md:min-h-[88px] md:items-center md:justify-center md:gap-5 md:px-8 md:text-xl">
-                  <span className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container md:flex">
-                    <svg className="h-8 w-8" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
-                    </svg>
-                  </span>
-                  <span>Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span></span>
-                </div>
+                ))}
               </div>
             </div>
+          </div>
+
+          {/* Floating card: Gina — desktop only */}
+          <div className="absolute right-[5%] top-[20%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
+            <div className="flex items-center gap-3">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
+                </svg>
+              </span>
+              <p className="text-base font-semibold leading-snug text-white">
+                Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
+              </p>
+            </div>
+          </div>
+
+          {/* Floating card: Mais vendas — desktop only */}
+          <div className="absolute bottom-[7%] right-[5%] hidden max-w-[360px] rounded-2xl border border-white/15 bg-black/55 px-6 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:flex md:items-center md:gap-4" aria-hidden="true">
+            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+              <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
+              </svg>
+            </span>
+            <span className="text-lg font-bold text-white">
+              Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span>
+            </span>
           </div>
         </section>
         {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
