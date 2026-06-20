@@ -142,156 +142,127 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative w-full overflow-hidden bg-[#07080a] border-b border-white/5 pt-32 pb-16 md:pt-40 md:pb-24 lg:pt-44 mb-section-gap-mobile md:mb-section-gap-desktop">
-          {/* Efeitos de gradiente ambientais de fundo */}
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_-20%,rgba(255,90,0,0.08),transparent_50%)] pointer-events-none" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_120%,rgba(79,124,255,0.02),transparent_40%)] pointer-events-none" />
-          
-          <div className="mx-auto max-w-[1440px] px-margin-mobile md:px-gutter relative z-10">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 lg:gap-16 items-center">
-              
-              {/* Coluna Esquerda: Informações e Ações */}
-              <div className="flex flex-col items-center md:items-start text-center md:text-left z-20">
-                {/* Selo Pequeno */}
-                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/40 bg-primary-container/10 px-4 py-2 text-primary-container">
-                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+        <section className="relative mb-section-gap-mobile min-h-[900px] w-full overflow-hidden border-b border-white/5 bg-[#030304] pt-32 md:mb-section-gap-desktop md:min-h-[720px] md:pt-40 lg:pt-44">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_34%,rgba(255,90,0,0.22),transparent_30%),radial-gradient(circle_at_24%_92%,rgba(255,90,0,0.08),transparent_34%),linear-gradient(135deg,#030304_0%,#050505_48%,#0d0603_100%)]" aria-hidden="true" />
+          <div className="absolute inset-y-0 right-0 hidden w-[68%] bg-[radial-gradient(circle_at_58%_42%,rgba(255,90,0,0.18),transparent_36%)] md:block" aria-hidden="true" />
+
+          <Image
+            src="/gina-mobile.png"
+            alt="Gina, assistente virtual comercial da Italev Sistemas"
+            width={1122}
+            height={1402}
+            priority
+            sizes="100vw"
+            className="absolute inset-x-0 bottom-0 z-0 h-[520px] w-full object-cover object-[55%_0%] md:hidden"
+          />
+          <Image
+            src="/gina-desktop.png"
+            alt="Gina, assistente virtual comercial da Italev Sistemas"
+            width={1672}
+            height={941}
+            priority
+            sizes="64vw"
+            className="absolute bottom-0 right-0 z-0 hidden h-full w-[66%] object-cover object-[52%_50%] md:block"
+          />
+
+          <div className="absolute inset-0 z-10 bg-[linear-gradient(180deg,#030304_0%,rgba(3,3,4,0.72)_24%,rgba(3,3,4,0.08)_58%,#030304_100%)] md:bg-[linear-gradient(90deg,#030304_0%,#030304_34%,rgba(3,3,4,0.78)_48%,rgba(3,3,4,0.22)_68%,rgba(3,3,4,0.72)_100%)]" aria-hidden="true" />
+          <div className="absolute inset-x-0 bottom-0 z-10 h-64 bg-gradient-to-t from-[#030304] via-[#030304]/80 to-transparent" aria-hidden="true" />
+          <div className="absolute left-0 top-0 z-10 hidden h-full w-2/3 bg-[linear-gradient(90deg,#030304_0%,rgba(3,3,4,0.94)_52%,transparent_100%)] md:block" aria-hidden="true" />
+
+          <div className="relative z-20 mx-auto flex min-h-[900px] max-w-[1440px] flex-col px-margin-mobile pb-[455px] md:min-h-[720px] md:justify-center md:px-gutter md:pb-28">
+            <div className="max-w-[690px] text-center md:text-left">
+              <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/40 bg-black/35 px-4 py-2 text-primary-container backdrop-blur-sm">
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
+                </svg>
+                <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
+                  ASSISTENTE VIRTUAL COMERCIAL
+                </span>
+              </div>
+
+              <h1 className="mb-6 font-sora font-black leading-[1.1] tracking-tight text-on-surface text-balance">
+                <span className="block text-3xl sm:text-4xl md:hidden">
+                  Tenha seu app próprio <br />
+                  <span className="text-primary-container">para vender sem pagar</span> comissão
+                </span>
+                <span className="hidden text-[44px] leading-[1.08] md:block lg:text-[54px] xl:text-[60px]">
+                  Tenha seu próprio app <br />
+                  <span className="text-primary-container">para vender sem pagar</span> <br />
+                  comissão por pedido
+                </span>
+              </h1>
+
+              <p className="mx-auto mb-8 max-w-[540px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
+                Receba pedidos pelo WhatsApp e fortaleça seu negócio sem depender de marketplaces.
+              </p>
+
+              <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
+                <a
+                  href={demoHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.22)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base md:min-w-[280px]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
                   </svg>
-                  <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
-                    ASSISTENTE VIRTUAL COMERCIAL
-                  </span>
-                </div>
-
-                {/* Título Forte e Equilibrado */}
-                <h1 className="mb-6 font-sora text-on-surface font-black leading-[1.1] tracking-tight text-balance">
-                  {/* Mobile Layout */}
-                  <span className="block md:hidden text-3xl sm:text-4xl">
-                    Tenha seu app próprio <br />
-                    <span className="text-primary-container">para vender sem pagar</span> comissão
-                  </span>
-                  {/* Desktop Layout */}
-                  <span className="hidden md:block text-[44px] lg:text-[54px] xl:text-[60px] leading-[1.08]">
-                    Tenha seu próprio app <br />
-                    <span className="text-primary-container">para vender sem pagar</span> <br />
-                    comissão por pedido
-                  </span>
-                </h1>
-
-                {/* Subtítulo */}
-                <p className="mb-8 max-w-[540px] text-base leading-relaxed text-on-secondary-container sm:text-lg md:text-xl text-balance">
-                  Receba pedidos pelo WhatsApp e fortaleça seu negócio sem depender de marketplaces.
-                </p>
-
-                {/* Botões de Ação */}
-                <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  <a
-                    href={demoHref}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.22)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base md:min-w-[280px]"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
-                    </svg>
-                    Solicitar demonstração gratuita
-                  </a>
-                  <Link
-                    href="/contato"
-                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/5 px-6 py-4 text-sm font-bold text-white hover:bg-white/10 active:scale-[0.98] sm:text-base md:min-w-[200px]"
-                  >
-                    <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
-                    </svg>
-                    Ver como funciona
-                  </Link>
-                </div>
-
-                {/* Barra de Benefícios (Apenas Desktop) */}
-                <div className="mt-12 hidden w-full max-w-[560px] grid-cols-3 overflow-hidden rounded-2xl border border-white/5 bg-white/[0.02] backdrop-blur-sm md:grid">
-                  {[
-                    { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
-                    { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
-                    { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
-                  ].map((item, index) => (
-                    <div key={item.label} className={`flex items-center gap-3 px-4 py-4 ${index > 0 ? 'border-l border-white/5' : ''}`}>
-                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-container/60 text-primary-container">
-                        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                        </svg>
-                      </span>
-                      <span className="text-xs font-semibold leading-snug text-on-surface">{item.label}</span>
-                    </div>
-                  ))}
-                </div>
+                  Solicitar demonstração gratuita
+                </a>
+                <Link
+                  href="/contato"
+                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/20 bg-white/5 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base md:min-w-[200px]"
+                >
+                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
+                  </svg>
+                  Ver como funciona
+                </Link>
               </div>
 
-              {/* Coluna Direita: Composição Visual da Gina */}
-              <div className="relative w-full flex flex-col items-center md:items-end justify-center z-10 mt-12 md:mt-0">
-                {/* Glow de fundo e efeitos de luz laranja da marca */}
-                <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_50%_50%,rgba(255,90,0,0.12),transparent_60%)] filter blur-2xl pointer-events-none md:scale-125" />
-                <div className="absolute right-0 top-1/4 -z-10 h-[400px] w-[400px] rounded-full bg-primary-container/5 blur-[100px] pointer-events-none" />
-                
-                {/* Container de Imagem brutalista controlado */}
-                <div className="relative w-full max-w-[500px] md:max-w-none h-[400px] sm:h-[500px] md:h-[550px] lg:h-[650px] overflow-hidden rounded-[30px] border border-white/10 bg-gradient-to-b from-white/5 to-transparent">
-                  {/* Gradiente inferior para mesclar imagem com fundo escuro */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#07080a] via-transparent to-transparent z-10" />
-                  
-                  {/* Imagem Mobile */}
-                  <Image
-                    src="/gina-mobile.png"
-                    alt="Gina, assistente virtual comercial da Italev Sistemas"
-                    width={1122}
-                    height={1402}
-                    priority
-                    sizes="(max-width: 768px) 90vw, 40vw"
-                    className="absolute inset-x-0 bottom-0 h-full w-full object-cover object-[58%_10%] md:hidden transition-all duration-500 hover:scale-[1.03]"
-                  />
-                  
-                  {/* Imagem Desktop */}
-                  <Image
-                    src="/gina-desktop.png"
-                    alt="Gina, assistente virtual comercial da Italev Sistemas"
-                    width={1672}
-                    height={941}
-                    priority
-                    sizes="(min-width: 769px) 45vw, 10vw"
-                    className="absolute inset-0 hidden h-full w-full object-cover object-[62%_50%] md:block transition-all duration-500 hover:scale-[1.03]"
-                  />
-
-                  {/* Card da Gina sobreposto */}
-                  <div className="absolute left-4 top-4 z-20 max-w-[210px] rounded-2xl border border-white/10 bg-black/60 p-3 shadow-lg backdrop-blur-md sm:left-6 sm:top-6 md:left-8 md:top-8 md:max-w-[240px] md:p-4">
-                    <div className="flex items-center gap-2.5">
-                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container bg-primary-container/10 text-primary-container md:h-11 md:w-11">
-                        <svg className="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
-                        </svg>
-                      </span>
-                      <p className="text-xs font-semibold leading-snug text-white sm:text-sm md:text-base">
-                        Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
-                      </p>
-                    </div>
+              <div className="mt-12 hidden w-full max-w-[560px] grid-cols-3 overflow-hidden rounded-2xl border border-white/5 bg-black/25 backdrop-blur-sm md:grid">
+                {[
+                  { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
+                  { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
+                  { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
+                ].map((item, index) => (
+                  <div key={item.label} className={index > 0 ? 'flex items-center gap-3 border-l border-white/5 px-4 py-4' : 'flex items-center gap-3 px-4 py-4'}>
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-container/60 text-primary-container">
+                      <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                      </svg>
+                    </span>
+                    <span className="text-xs font-semibold leading-snug text-on-surface">{item.label}</span>
                   </div>
-
-                  {/* Faixa inferior */}
-                  <div className="absolute inset-x-4 bottom-4 z-20 rounded-xl border border-white/10 bg-black/60 px-4 py-3 text-center text-xs font-bold text-white shadow-lg backdrop-blur-md sm:bottom-6 sm:px-6 sm:text-sm md:bottom-8 md:left-8 md:right-8 md:py-4 md:text-base lg:text-lg">
-                    <div className="flex items-center justify-center gap-2 md:gap-3">
-                      <span className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container sm:flex">
-                        <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
-                        </svg>
-                      </span>
-                      <span>Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span></span>
-                    </div>
-                  </div>
-                </div>
-
+                ))}
               </div>
+            </div>
+          </div>
 
+          <div className="pointer-events-none absolute left-5 top-[610px] z-30 max-w-[210px] rounded-2xl border border-white/10 bg-black/55 p-3 shadow-lg backdrop-blur-md sm:left-8 sm:top-[650px] md:left-[54%] md:top-[320px] md:max-w-[240px] md:p-4">
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container bg-primary-container/10 text-primary-container md:h-11 md:w-11">
+                <svg className="h-5 w-5 md:h-6 md:w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
+                </svg>
+              </span>
+              <p className="text-xs font-semibold leading-snug text-white sm:text-sm md:text-base">
+                Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
+              </p>
+            </div>
+          </div>
+
+          <div className="absolute inset-x-5 bottom-7 z-30 rounded-xl border border-white/10 bg-black/55 px-4 py-3 text-center text-xs font-bold text-white shadow-lg backdrop-blur-md sm:bottom-9 sm:px-6 sm:text-sm md:left-auto md:right-[7%] md:w-[520px] md:py-4 md:text-base lg:text-lg">
+            <div className="flex items-center justify-center gap-2 md:gap-3">
+              <span className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container sm:flex">
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
+                </svg>
+              </span>
+              <span>Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span></span>
             </div>
           </div>
         </section>
-
         {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
         <section
           aria-label="Soluções para o comércio local"
