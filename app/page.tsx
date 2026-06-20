@@ -176,23 +176,25 @@ export default function HomePage() {
                   <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                 </svg>
                 <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
-                  APPS PARA COMÉRCIOS LOCAIS
+                  APP PARA COMÉRCIO LOCAL
                 </span>
               </div>
 
               <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
                 <span className="block text-3xl sm:text-4xl md:hidden">
-                  A Italev cria o app da sua loja
-                  <span className="mt-2 block text-primary-container">para vender online sem comissão</span>
+                  Criamos o app do seu comércio <br />
+                  para vender online
+                  <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
                 </span>
                 <span className="hidden text-[44px] leading-[1.06] md:block lg:text-[54px] xl:text-[60px]">
-                  A Italev cria o app da sua loja
-                  <span className="mt-3 block text-primary-container">para vender online sem comissão</span>
+                  Criamos o app do seu comércio <br />
+                  para vender online <br />
+                  <span className="text-primary-container">sem pagar comissão por pedido.</span>
                 </span>
               </h1>
 
               <p className="mx-auto mb-8 max-w-[560px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
-                Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca sem depender só de marketplaces.
+                Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
               </p>
 
               <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
