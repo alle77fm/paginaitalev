@@ -240,7 +240,7 @@ export default function HomePage() {
                   height={941}
                   priority
                   sizes="44vw"
-                  className="absolute inset-0 hidden h-full w-full object-cover object-center brightness-125 md:block"
+                  className="absolute inset-0 hidden h-full w-full object-cover object-[52%_50%] md:block"
                 />
 
                 <div className="absolute left-0 top-[118px] max-w-[235px] rounded-2xl border border-white/15 bg-black/52 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.35)] backdrop-blur-md md:left-[-70px] md:top-[180px] md:max-w-[275px] md:p-5">
