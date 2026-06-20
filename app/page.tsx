@@ -154,22 +154,22 @@ export default function HomePage() {
             sizes="100vw"
             className="absolute inset-0 h-full w-full object-cover object-[62%_top] md:hidden"
           />
-          {/* Background image — desktop */}
-          <Image
-            src="/gina-desktop.png"
-            alt=""
-            aria-hidden="true"
-            width={1672}
-            height={941}
-            priority
-            sizes="100vw"
-            className="absolute inset-0 hidden h-full w-full object-cover object-right md:block"
-          />
+          {/* Background image — desktop: ocupa só a metade direita para Gina não dominar */}
+          <div className="absolute inset-y-0 right-0 hidden w-[62%] md:block" aria-hidden="true">
+            <Image
+              src="/gina-desktop.png"
+              alt=""
+              fill
+              priority
+              sizes="62vw"
+              className="object-cover object-[center_28%]"
+            />
+          </div>
 
-          {/* Gradient overlay — desktop: dark left → transparent right */}
+          {/* Gradient overlay — desktop: transição da área escura à esquerda até a foto */}
           <div
             className="absolute inset-0 hidden md:block"
-            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.95) 0%, rgba(7,11,20,0.7) 40%, transparent 70%)' }}
+            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.97) 0%, rgba(7,11,20,0.95) 36%, rgba(7,11,20,0.55) 52%, transparent 68%)' }}
             aria-hidden="true"
           />
           {/* Gradient overlay — mobile */}
