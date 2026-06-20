@@ -154,22 +154,22 @@ export default function HomePage() {
             sizes="100vw"
             className="absolute inset-0 h-full w-full object-cover object-[62%_top] md:hidden"
           />
-          {/* Background image — desktop: ocupa só a metade direita para Gina não dominar */}
-          <div className="absolute inset-y-0 right-0 hidden w-[62%] md:block" aria-hidden="true">
+          {/* Background image — desktop: inteira (object-contain), menor, ancorada à direita-baixo */}
+          <div className="absolute inset-y-0 right-0 hidden w-[55%] md:block" aria-hidden="true">
             <Image
               src="/gina-desktop.png"
               alt=""
               fill
               priority
-              sizes="62vw"
-              className="object-cover object-[center_28%]"
+              sizes="55vw"
+              className="object-contain object-right-bottom"
             />
           </div>
 
-          {/* Gradient overlay — desktop: transição da área escura à esquerda até a foto */}
+          {/* Gradient overlay — desktop */}
           <div
             className="absolute inset-0 hidden md:block"
-            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.97) 0%, rgba(7,11,20,0.95) 36%, rgba(7,11,20,0.55) 52%, transparent 68%)' }}
+            style={{ background: 'linear-gradient(to right, rgba(7,11,20,0.97) 0%, rgba(7,11,20,0.93) 42%, rgba(7,11,20,0.35) 58%, rgba(7,11,20,0.08) 72%, transparent 82%)' }}
             aria-hidden="true"
           />
           {/* Gradient overlay — mobile */}
@@ -258,7 +258,7 @@ export default function HomePage() {
           </div>
 
           {/* Floating card: Gina — desktop only */}
-          <div className="absolute right-[5%] top-[20%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
+          <div className="absolute right-[6%] top-[58%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
             <div className="flex items-center gap-3">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
                 <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
