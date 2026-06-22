@@ -142,46 +142,46 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden min-h-[780px] md:min-h-[720px] bg-[#07080c]">
-          {/* Background image — mobile */}
+        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden min-h-[640px] md:min-h-[90vh] bg-[#07080c]">
+
+          {/* z-0 — background mobile */}
           <Image
             src="/gina-mobile.png"
             alt=""
             aria-hidden="true"
-            width={1122}
-            height={1402}
+            fill
             priority
             sizes="100vw"
-            className="absolute inset-0 h-full w-full object-cover object-[62%_top] md:hidden"
+            className="object-cover object-[62%_top] md:hidden"
           />
-          {/* Background image — desktop: metade direita, object-cover */}
-          <div className="absolute inset-y-0 right-0 hidden w-[50%] md:block" aria-hidden="true">
-            <Image
-              src="/gina-desktop.png"
-              alt=""
-              fill
-              priority
-              sizes="50vw"
-              className="object-cover object-center"
-            />
-          </div>
+          {/* z-0 — background desktop: imagem cobre 100% da seção */}
+          <Image
+            src="/gina-desktop.png"
+            alt=""
+            aria-hidden="true"
+            fill
+            priority
+            sizes="100vw"
+            className="hidden object-cover object-[right_center] md:block"
+          />
 
-          {/* Gradient overlay — desktop */}
+          {/* z-1 — overlay desktop */}
           <div
             className="absolute inset-0 hidden md:block"
-            style={{ background: 'linear-gradient(to right, #07080c 0%, #07080c 40%, transparent 60%)' }}
+            style={{ background: 'linear-gradient(to right, rgba(7,8,12,0.95) 0%, rgba(7,8,12,0.85) 35%, rgba(7,8,12,0.4) 60%, rgba(7,8,12,0.1) 100%)' }}
             aria-hidden="true"
           />
-          {/* Gradient overlay — mobile */}
+          {/* z-1 — overlay mobile */}
           <div
             className="absolute inset-0 md:hidden"
-            style={{ background: 'linear-gradient(to bottom, rgba(7,11,20,0.85) 0%, rgba(7,11,20,0.78) 55%, rgba(7,11,20,0.95) 100%)' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(7,8,12,0.92) 0%, rgba(7,8,12,0.75) 50%, rgba(7,8,12,0.92) 100%)' }}
             aria-hidden="true"
           />
 
-          {/* Content */}
-          <div className="relative z-10 mx-auto flex min-h-[780px] max-w-[1440px] flex-col justify-center px-margin-mobile py-28 md:min-h-[720px] md:px-gutter md:py-36">
-            <div className="w-full text-center md:max-w-[560px] md:text-left">
+          {/* z-2 — conteúdo à esquerda */}
+          <div className="relative z-10 mx-auto flex min-h-[640px] max-w-[1440px] flex-col justify-center px-margin-mobile py-28 md:min-h-[90vh] md:px-gutter md:py-36">
+            <div className="w-full text-center md:max-w-[600px] md:text-left">
+
               {/* Badge */}
               <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
                 <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -257,28 +257,28 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Floating card: Gina — desktop only */}
-          <div className="absolute right-[6%] top-[8%] hidden max-w-[270px] rounded-2xl border border-white/15 bg-black/55 p-5 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:block" aria-hidden="true">
+          {/* z-2 — card Gina: canto superior direito, acima do rosto */}
+          <div className="absolute right-[4%] top-[12%] hidden max-w-[260px] rounded-2xl border border-white/15 bg-black/60 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-md md:block" aria-hidden="true">
             <div className="flex items-center gap-3">
-              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
-                <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
                 </svg>
               </span>
-              <p className="text-base font-semibold leading-snug text-white">
+              <p className="text-sm font-semibold leading-snug text-white">
                 Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
               </p>
             </div>
           </div>
 
-          {/* Floating card: Mais vendas — desktop only */}
-          <div className="absolute bottom-[7%] right-[5%] hidden max-w-[360px] rounded-2xl border border-white/15 bg-black/55 px-6 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.4)] backdrop-blur-md md:flex md:items-center md:gap-4" aria-hidden="true">
-            <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
-              <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+          {/* z-2 — card Mais vendas: rodapé direito */}
+          <div className="absolute bottom-[8%] right-[4%] hidden max-w-[340px] rounded-2xl border border-white/15 bg-black/60 px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-md md:flex md:items-center md:gap-4" aria-hidden="true">
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
+              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
               </svg>
             </span>
-            <span className="text-lg font-bold text-white">
+            <span className="text-base font-bold text-white">
               Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span>
             </span>
           </div>
