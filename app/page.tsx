@@ -142,116 +142,122 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden min-h-[640px] md:min-h-[90vh] bg-[#07080c]">
+        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden bg-[#07080c]">
+          <div className="mx-auto max-w-[1440px] px-margin-mobile py-28 md:px-gutter md:py-20">
+            <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
-          {/* background mobile */}
-          <Image
-            src="/gina-mobile.png"
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover object-[62%_top] md:hidden"
-          />
-          {/* background desktop: container 65% direita — Gina em escala menor */}
-          <div className="absolute inset-y-0 right-0 hidden w-[65%] md:block" aria-hidden="true">
-            <Image
-              src="/gina-desktop.png"
-              alt=""
-              fill
-              priority
-              sizes="65vw"
-              className="object-cover object-right"
-            />
-          </div>
+              {/* ── Coluna esquerda: texto ── */}
+              <div className="text-center md:text-left">
 
-          {/* overlay mobile mínimo — só para legibilidade do texto */}
-          <div
-            className="absolute inset-0 md:hidden"
-            style={{ background: 'linear-gradient(to bottom, rgba(7,8,12,0.8) 0%, rgba(7,8,12,0.55) 45%, rgba(7,8,12,0.85) 100%)' }}
-            aria-hidden="true"
-          />
-
-          {/* z-2 — conteúdo à esquerda */}
-          <div className="relative z-10 mx-auto flex min-h-[640px] max-w-[1440px] flex-col justify-center px-margin-mobile py-28 md:min-h-[90vh] md:px-gutter md:py-36">
-            <div className="w-full text-center md:max-w-[600px] md:text-left">
-
-              {/* Badge */}
-              <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
-                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
-                </svg>
-                <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
-                  APP PARA COMÉRCIO LOCAL
-                </span>
-              </div>
-
-              {/* H1 */}
-              <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
-                <span className="block text-[34px] sm:text-[40px] md:hidden">
-                  Criamos o app do seu comércio <br />
-                  <span className="text-primary-container">para vender online</span>
-                  <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
-                </span>
-                <span className="hidden text-[48px] leading-[1.06] md:block lg:text-[54px] xl:text-[60px]">
-                  Criamos o app do<br />
-                  seu comércio <span className="text-primary-container">para</span><br />
-                  <span className="text-primary-container">vender online</span> sem<br />
-                  pagar comissão.
-                </span>
-              </h1>
-
-              {/* Subtitle */}
-              <p className="mx-auto mb-8 max-w-[520px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
-                Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
-                <a
-                  href={demoHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
-                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                {/* Badge */}
+                <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
+                  <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                   </svg>
-                  Solicitar demonstração gratuita
-                </a>
-                <Link
-                  href="/contato"
-                  className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/25 bg-black/20 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base"
-                >
-                  <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
-                  </svg>
-                  Ver como funciona
-                </Link>
+                  <span className="text-[11px] font-black uppercase tracking-[0.15em] md:text-xs">
+                    APP PARA COMÉRCIO LOCAL
+                  </span>
+                </div>
+
+                {/* H1 */}
+                <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
+                  <span className="block text-[34px] sm:text-[40px] md:hidden">
+                    Criamos o app do seu comércio <br />
+                    <span className="text-primary-container">para vender online</span>
+                    <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
+                  </span>
+                  <span className="hidden text-[46px] leading-[1.06] md:block lg:text-[52px] xl:text-[58px]">
+                    Criamos o app do seu<br />
+                    comércio <span className="text-primary-container">para vender</span><br />
+                    <span className="text-primary-container">online</span> sem pagar<br />
+                    comissão por pedido.
+                  </span>
+                </h1>
+
+                {/* Subtitle */}
+                <p className="mx-auto mb-8 max-w-[520px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
+                  Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
+                </p>
+
+                {/* CTAs */}
+                <div className="flex w-full flex-col gap-4 sm:flex-row md:w-auto">
+                  <a
+                    href={demoHref}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl bg-primary-container px-6 py-4 text-sm font-bold text-white shadow-[0_18px_40px_rgba(255,90,0,0.28)] transition-all hover:bg-primary-container/90 active:scale-[0.98] sm:text-base"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0" aria-hidden="true">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                    </svg>
+                    Solicitar demonstração gratuita
+                  </a>
+                  <Link
+                    href="/contato"
+                    className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/25 bg-black/20 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base"
+                  >
+                    <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
+                    </svg>
+                    Ver como funciona
+                  </Link>
+                </div>
+
+                {/* Mini-features */}
+                <div className="mt-10 hidden w-full max-w-[520px] grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm md:grid">
+                  {[
+                    { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
+                    { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
+                    { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
+                  ].map((item, index) => (
+                    <div key={item.label} className={index > 0 ? 'flex items-center gap-3 border-l border-white/10 px-4 py-4' : 'flex items-center gap-3 px-4 py-4'}>
+                      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container/70 text-primary-container">
+                        <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
+                        </svg>
+                      </span>
+                      <span className="text-xs font-semibold leading-snug text-on-surface">{item.label}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Mini-features — desktop only */}
-              <div className="mt-10 hidden w-full max-w-[540px] grid-cols-3 overflow-hidden rounded-2xl border border-white/10 bg-black/30 backdrop-blur-sm md:grid">
-                {[
-                  { label: 'Pedidos pelo WhatsApp', icon: 'M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z' },
-                  { label: 'Sem taxa por pedido', icon: 'M12 6v12m-3-3.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 11.219 12.768 11 12 11c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182 1.106-.879 2.9-.879 4.006 0l.415.33' },
-                  { label: 'Mais lucro e autonomia', icon: 'M3 17l6-6 4 4 7-7m0 0h-5m5 0v5' },
-                ].map((item, index) => (
-                  <div key={item.label} className={index > 0 ? 'flex items-center gap-3 border-l border-white/10 px-4 py-4' : 'flex items-center gap-3 px-4 py-4'}>
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-primary-container/70 text-primary-container">
-                      <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
-                        <path strokeLinecap="round" strokeLinejoin="round" d={item.icon} />
-                      </svg>
-                    </span>
-                    <span className="text-xs font-semibold leading-snug text-on-surface">{item.label}</span>
-                  </div>
-                ))}
+              {/* ── Coluna direita: imagem com glow laranja ── */}
+              <div className="relative flex items-center justify-center">
+                {/* Glow laranja — atrás da Gina */}
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+                  <div
+                    className="h-[520px] w-[420px] rounded-full opacity-30"
+                    style={{ background: 'radial-gradient(ellipse, #FF5A00 0%, transparent 68%)', filter: 'blur(72px)' }}
+                  />
+                </div>
+
+                {/* Desktop — gina-800x1000.png */}
+                <Image
+                  src="/gina-800x1000.png"
+                  alt="Gina, assistente virtual comercial da Italev Sistemas"
+                  width={800}
+                  height={1000}
+                  priority
+                  sizes="(max-width: 768px) 90vw, 44vw"
+                  className="relative z-10 hidden w-full max-w-[440px] object-contain md:block"
+                />
+
+                {/* Mobile — gina-700x525.png */}
+                <Image
+                  src="/gina-700x525.png"
+                  alt="Gina, assistente virtual comercial da Italev Sistemas"
+                  width={700}
+                  height={525}
+                  priority
+                  sizes="90vw"
+                  className="relative z-10 w-full max-w-[380px] object-contain md:hidden"
+                />
               </div>
+
             </div>
           </div>
-
         </section>
         {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
         <section
