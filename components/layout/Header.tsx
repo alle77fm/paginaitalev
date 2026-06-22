@@ -19,38 +19,12 @@ export default function Header() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-2 md:p-4">
-      <div className="max-w-container mx-auto md:px-gutter relative grid w-full grid-cols-[1fr_auto_1fr] items-center rounded-full border border-white/10 bg-surface/40 px-3 py-2 backdrop-blur-xl glass-nav md:flex md:justify-between md:py-4">
+      <div className="max-w-container mx-auto md:px-gutter relative flex w-full items-center justify-between rounded-full border border-white/10 bg-surface/40 px-3 py-2 backdrop-blur-xl glass-nav md:py-4">
 
-        {/* Hambúrguer — mobile RIGHT (order-3), desktop hidden */}
-        <button
-          className="order-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 text-on-surface transition-colors hover:border-primary-container hover:text-primary-container justify-self-end md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
-          aria-expanded={isOpen}
-        >
-          {isOpen ? (
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
-            </svg>
-          )}
-        </button>
-
-        {/* CTA "Ver planos" — mobile CENTER (order-2), desktop RIGHT */}
-        <Link
-          href="/planos"
-          className="order-2 justify-self-center rounded-full border border-primary-container/70 bg-transparent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-primary-container transition-all hover:bg-primary-container/10 active:scale-95 md:order-none md:justify-self-auto md:px-5 md:py-2 md:text-label-caps md:tracking-widest"
-        >
-          Ver planos
-        </Link>
-
-        {/* Logo — mobile LEFT (order-1), desktop LEFT */}
+        {/* Logo — LEFT */}
         <Link
           href="/"
-          className="order-1 justify-self-start md:order-none md:justify-self-start"
+          className="shrink-0"
           aria-label={`${italev.brandName} — página inicial`}
         >
           <Image
@@ -75,6 +49,34 @@ export default function Header() {
               {link.label}
             </Link>
           ))}
+        </div>
+
+        {/* RIGHT: Ver planos + Hambúrguer (mobile) / Ver planos só (desktop) */}
+        <div className="flex items-center gap-2">
+          <Link
+            href="/planos"
+            className="rounded-full border border-primary-container/70 bg-transparent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-primary-container transition-all hover:bg-primary-container/10 active:scale-95 md:px-5 md:py-2 md:text-label-caps md:tracking-widest"
+          >
+            Ver planos
+          </Link>
+
+          {/* Hambúrguer — mobile only */}
+          <button
+            className="flex h-9 w-9 cursor-pointer items-center justify-center rounded-full border border-white/10 text-on-surface transition-colors hover:border-primary-container hover:text-primary-container md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
+            aria-expanded={isOpen}
+          >
+            {isOpen ? (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+            )}
+          </button>
         </div>
 
         {/* Dropdown mobile */}
