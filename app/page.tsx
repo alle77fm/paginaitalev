@@ -233,23 +233,23 @@ export default function HomePage() {
                   />
                 </div>
 
-                {/* Desktop — gina-800x1000.png */}
-                <Image
-                  src="/gina-800x1000.png"
-                  alt="Gina, assistente virtual comercial da Italev Sistemas"
-                  width={800}
-                  height={1000}
-                  priority
-                  sizes="(max-width: 768px) 90vw, 44vw"
-                  className="relative z-10 hidden w-full max-w-[440px] object-contain md:block"
-                />
-
-                {/* Mobile — gina-700x525.png */}
+                {/* Desktop — gina-700x525.png */}
                 <Image
                   src="/gina-700x525.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
                   width={700}
                   height={525}
+                  priority
+                  sizes="(max-width: 768px) 90vw, 44vw"
+                  className="relative z-10 hidden w-full max-w-[440px] object-contain md:block"
+                />
+
+                {/* Mobile — gina-800x1000.png */}
+                <Image
+                  src="/gina-800x1000.png"
+                  alt="Gina, assistente virtual comercial da Italev Sistemas"
+                  width={800}
+                  height={1000}
                   priority
                   sizes="90vw"
                   className="relative z-10 w-full max-w-[380px] object-contain md:hidden"
