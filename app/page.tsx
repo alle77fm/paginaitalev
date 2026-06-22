@@ -143,7 +143,7 @@ export default function HomePage() {
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080c] pt-24 md:mb-section-gap-desktop md:pt-32">
-          <div className="mx-auto max-w-[1440px] px-margin-mobile py-28 md:px-gutter md:py-20">
+          <div className="mx-auto max-w-[1440px] px-margin-mobile pb-10 pt-4 md:px-gutter md:pb-16 md:pt-6">
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
               {/* ── Coluna esquerda: texto ── */}
@@ -161,12 +161,12 @@ export default function HomePage() {
 
                 {/* H1 */}
                 <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
-                  <span className="block text-[34px] sm:text-[40px] md:hidden">
+                  <span className="block text-[30px] sm:text-[36px] md:hidden">
                     Criamos o app do seu comércio <br />
                     <span className="text-primary-container">para vender online</span>
                     <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
                   </span>
-                  <span className="hidden text-[46px] leading-[1.06] md:block lg:text-[52px] xl:text-[58px]">
+                  <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">
                     Criamos o app do seu<br />
                     comércio <span className="text-primary-container">para vender</span><br />
                     <span className="text-primary-container">online</span> sem pagar<br />
@@ -241,7 +241,7 @@ export default function HomePage() {
                   height={525}
                   priority
                   sizes="(max-width: 768px) 90vw, 52vw"
-                  className="relative z-10 hidden w-[112%] max-w-none object-contain md:-mr-8 md:block lg:w-[122%] xl:w-[128%]"
+                  className="relative z-10 hidden w-full max-w-[520px] object-contain md:block"
                 />
 
                 {/* Mobile — gina-800x1000.png */}
