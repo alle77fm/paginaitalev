@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { italev } from '@/lib/entities';
 
 const navLinks = [
+  { href: '/', label: 'Início' },
   { href: '/servicos', label: 'Serviços' },
   { href: '/sobre-nos', label: 'Sobre' },
   { href: '/planos', label: 'Planos' },
