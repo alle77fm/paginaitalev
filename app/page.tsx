@@ -224,7 +224,7 @@ export default function HomePage() {
               </div>
 
               {/* ── Coluna direita: imagem ── */}
-              <div className="relative flex items-center justify-center md:justify-end">
+              <div className="relative flex items-center justify-center">
                 {/* Glow laranja — atrás da Gina */}
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
                   <div
@@ -242,7 +242,7 @@ export default function HomePage() {
                   quality={90}
                   priority
                   sizes="(max-width: 768px) 100vw, 447px"
-                  className="relative z-10 hidden w-full max-w-[447px] object-contain md:block"
+                  className="relative z-10 hidden w-full max-w-[447px] -translate-x-8 object-contain md:block lg:-translate-x-10"
                 />
 
                 {/* Mobile — gina-mobile.png */}
