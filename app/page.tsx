@@ -144,7 +144,7 @@ export default function HomePage() {
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden min-h-[640px] md:min-h-[90vh] bg-[#07080c]">
 
-          {/* z-0 — background mobile */}
+          {/* background mobile */}
           <Image
             src="/gina-mobile.png"
             alt=""
@@ -154,27 +154,22 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover object-[62%_top] md:hidden"
           />
-          {/* z-0 — background desktop: imagem cobre 100% da seção */}
-          <Image
-            src="/gina-desktop.png"
-            alt=""
-            aria-hidden="true"
-            fill
-            priority
-            sizes="100vw"
-            className="hidden object-cover object-[right_center] md:block"
-          />
+          {/* background desktop: container 65% direita — Gina em escala menor */}
+          <div className="absolute inset-y-0 right-0 hidden w-[65%] md:block" aria-hidden="true">
+            <Image
+              src="/gina-desktop.png"
+              alt=""
+              fill
+              priority
+              sizes="65vw"
+              className="object-cover object-right"
+            />
+          </div>
 
-          {/* z-1 — overlay desktop */}
-          <div
-            className="absolute inset-0 hidden md:block"
-            style={{ background: 'linear-gradient(to right, rgba(7,8,12,0.95) 0%, rgba(7,8,12,0.85) 35%, rgba(7,8,12,0.4) 60%, rgba(7,8,12,0.1) 100%)' }}
-            aria-hidden="true"
-          />
-          {/* z-1 — overlay mobile */}
+          {/* overlay mobile mínimo — só para legibilidade do texto */}
           <div
             className="absolute inset-0 md:hidden"
-            style={{ background: 'linear-gradient(to bottom, rgba(7,8,12,0.92) 0%, rgba(7,8,12,0.75) 50%, rgba(7,8,12,0.92) 100%)' }}
+            style={{ background: 'linear-gradient(to bottom, rgba(7,8,12,0.8) 0%, rgba(7,8,12,0.55) 45%, rgba(7,8,12,0.85) 100%)' }}
             aria-hidden="true"
           />
 
@@ -257,31 +252,6 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* z-2 — card Gina: canto superior direito, acima do rosto */}
-          <div className="absolute right-[4%] top-[12%] hidden max-w-[260px] rounded-2xl border border-white/15 bg-black/60 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-md md:block" aria-hidden="true">
-            <div className="flex items-center gap-3">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
-                <svg className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.86 9.86 0 01-4.255-.949L3 20l1.395-3.72C3.511 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8Z" />
-                </svg>
-              </span>
-              <p className="text-sm font-semibold leading-snug text-white">
-                Gina, sua <span className="text-primary-container">assistente virtual</span> comercial
-              </p>
-            </div>
-          </div>
-
-          {/* z-2 — card Mais vendas: rodapé direito */}
-          <div className="absolute bottom-[8%] right-[4%] hidden max-w-[340px] rounded-2xl border border-white/15 bg-black/60 px-5 py-4 shadow-[0_18px_50px_rgba(0,0,0,0.45)] backdrop-blur-md md:flex md:items-center md:gap-4" aria-hidden="true">
-            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-primary-container text-primary-container">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M3 17l6-6 4 4 7-7m0 0h-5m5 0v5" />
-              </svg>
-            </span>
-            <span className="text-base font-bold text-white">
-              Mais vendas. Mais autonomia. <span className="text-primary-container">Mais crescimento.</span>
-            </span>
-          </div>
         </section>
         {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
         <section
