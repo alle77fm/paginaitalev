@@ -142,7 +142,7 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080c] pt-24 md:mb-section-gap-desktop md:pt-32">
+        <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080A] pt-24 md:mb-section-gap-desktop md:pt-32">
           <div className="mx-auto max-w-[1440px] px-margin-mobile pb-10 pt-4 md:px-gutter md:pb-16 md:pt-6">
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
@@ -228,7 +228,7 @@ export default function HomePage() {
                 {/* Glow laranja — atrás da Gina */}
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
                   <div
-                    className="h-[620px] w-[520px] rounded-full opacity-35"
+                    className="h-[620px] w-[520px] rounded-full opacity-35 md:-translate-x-8 lg:-translate-x-10"
                     style={{ background: 'radial-gradient(ellipse, #FF5A00 0%, transparent 68%)', filter: 'blur(72px)' }}
                   />
                 </div>
@@ -256,6 +256,19 @@ export default function HomePage() {
                   sizes="(max-width: 768px) 90vw, 380px"
                   className="relative z-10 w-full max-w-[380px] object-contain md:hidden"
                 />
+                <a
+                  href={demoHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Pedir uma demonstração gratuita pelo WhatsApp"
+                  className="absolute bottom-3 left-1/2 z-20 inline-flex min-h-[58px] w-[min(86%,340px)] -translate-x-1/2 items-center justify-center gap-3 rounded-2xl border border-white/10 bg-[#07080A]/70 px-5 py-3 text-sm font-bold text-white shadow-[0_18px_48px_rgba(0,0,0,0.38)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/85 active:translate-y-0 md:bottom-8 md:w-[320px] md:-translate-x-[calc(50%+2rem)] lg:-translate-x-[calc(50%+2.5rem)]"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 shrink-0 text-primary-container" aria-hidden="true">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                    <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
+                  </svg>
+                  Peça uma demonstração
+                </a>
               </div>
 
             </div>
