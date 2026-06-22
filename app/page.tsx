@@ -139,8 +139,8 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile bg-[#07080A] pt-24 md:mb-section-gap-desktop md:overflow-hidden md:pt-32">
-          <div className="mx-auto max-w-[1440px] px-margin-mobile pb-24 pt-4 md:px-gutter md:pb-16 md:pt-6">
+        <section className="relative z-10 mb-section-gap-mobile bg-[#07080A] pt-24 md:mb-section-gap-desktop md:overflow-hidden md:pt-32">
+          <div className="mx-auto max-w-[1440px] px-margin-mobile pb-10 pt-4 md:px-gutter md:pb-16 md:pt-6">
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
               {/* ── Coluna esquerda: texto ── */}
