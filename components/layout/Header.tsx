@@ -18,8 +18,8 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-3 md:p-4">
-      <div className="max-w-container mx-auto md:px-gutter relative grid w-full grid-cols-[1fr_auto_1fr] items-center rounded-full border border-white/10 bg-surface/40 px-3 py-3 backdrop-blur-xl glass-nav md:flex md:justify-between md:py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-2 md:p-4">
+      <div className="max-w-container mx-auto md:px-gutter relative grid w-full grid-cols-[1fr_auto_1fr] items-center rounded-full border border-white/10 bg-surface/40 px-3 py-2 backdrop-blur-xl glass-nav md:flex md:justify-between md:py-4">
 
         {/* Hambúrguer — mobile RIGHT (order-3), desktop hidden */}
         <button
@@ -42,7 +42,7 @@ export default function Header() {
         {/* CTA "Ver planos" — mobile CENTER (order-2), desktop RIGHT */}
         <Link
           href="/planos"
-          className="order-2 justify-self-center rounded-full bg-primary-container px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-white transition-all orange-glow active:scale-95 hover:bg-primary-container/90 md:order-none md:justify-self-auto md:px-6 md:text-label-caps md:tracking-widest"
+          className="order-2 justify-self-center rounded-full border border-primary-container/70 bg-transparent px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-primary-container transition-all hover:bg-primary-container/10 active:scale-95 md:order-none md:justify-self-auto md:px-5 md:py-2 md:text-label-caps md:tracking-widest"
         >
           Ver planos
         </Link>
