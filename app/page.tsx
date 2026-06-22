@@ -142,7 +142,7 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080c] pt-36 md:mb-section-gap-desktop md:pt-48">
+        <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080c] pt-24 md:mb-section-gap-desktop md:pt-32">
           <div className="mx-auto max-w-[1440px] px-margin-mobile py-28 md:px-gutter md:py-20">
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
