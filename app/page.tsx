@@ -258,7 +258,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Pedir uma demonstração gratuita pelo WhatsApp"
-                  className="absolute bottom-0 left-1/2 z-20 inline-flex min-h-[72px] w-[min(92%,390px)] -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-white/15 bg-[#07080A]/68 px-5 py-4 text-sm font-bold text-white shadow-[0_22px_56px_rgba(0,0,0,0.42)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/82 active:translate-y-0 md:bottom-0 md:w-[430px] md:-translate-x-[calc(50%+2rem)] lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
+                  className="absolute -bottom-9 left-1/2 z-20 inline-flex min-h-[72px] w-[min(92%,390px)] -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-white/15 bg-[#07080A]/68 px-5 py-4 text-sm font-bold text-white shadow-[0_22px_56px_rgba(0,0,0,0.42)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/82 active:translate-y-0 md:-bottom-9 md:w-[430px] md:-translate-x-[calc(50%+2rem)] lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#25D366]/65 bg-[#25D366]/10 text-[#25D366] shadow-[0_0_24px_rgba(37,211,102,0.16)]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
