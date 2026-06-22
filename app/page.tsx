@@ -235,22 +235,22 @@ export default function HomePage() {
 
                 {/* Desktop — gina-desktop.png */}
                 <Image
-                  src="/gina-desktop.png"
+                  src="/gina-800x1000Mob.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
-                  width={1672}
-                  height={941}
+                  width={447}
+                  height={559}
                   quality={90}
                   priority
-                  sizes="(max-width: 768px) 100vw, 680px"
-                  className="relative z-10 hidden w-full max-w-[680px] object-contain md:block"
+                  sizes="(max-width: 768px) 100vw, 447px"
+                  className="relative z-10 hidden w-full max-w-[447px] object-contain md:block"
                 />
 
                 {/* Mobile — gina-mobile.png */}
                 <Image
-                  src="/gina-mobile.png"
+                  src="/gina-800x1000Mob.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
-                  width={1122}
-                  height={1402}
+                  width={447}
+                  height={559}
                   quality={90}
                   priority
                   sizes="(max-width: 768px) 90vw, 380px"
