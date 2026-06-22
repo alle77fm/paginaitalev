@@ -142,7 +142,7 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative mb-section-gap-mobile md:mb-section-gap-desktop overflow-hidden bg-[#07080c]">
+        <section className="relative mb-section-gap-mobile overflow-hidden bg-[#07080c] pt-36 md:mb-section-gap-desktop md:pt-48">
           <div className="mx-auto max-w-[1440px] px-margin-mobile py-28 md:px-gutter md:py-20">
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
 
@@ -224,11 +224,11 @@ export default function HomePage() {
               </div>
 
               {/* ── Coluna direita: imagem com glow laranja ── */}
-              <div className="relative flex items-center justify-center">
+              <div className="relative flex items-center justify-center md:justify-end">
                 {/* Glow laranja — atrás da Gina */}
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
                   <div
-                    className="h-[520px] w-[420px] rounded-full opacity-30"
+                    className="h-[620px] w-[520px] rounded-full opacity-35"
                     style={{ background: 'radial-gradient(ellipse, #FF5A00 0%, transparent 68%)', filter: 'blur(72px)' }}
                   />
                 </div>
@@ -240,8 +240,8 @@ export default function HomePage() {
                   width={700}
                   height={525}
                   priority
-                  sizes="(max-width: 768px) 90vw, 44vw"
-                  className="relative z-10 hidden w-full max-w-[440px] object-contain md:block"
+                  sizes="(max-width: 768px) 90vw, 52vw"
+                  className="relative z-10 hidden w-[112%] max-w-none object-contain md:-mr-8 md:block lg:w-[122%] xl:w-[128%]"
                 />
 
                 {/* Mobile — gina-800x1000.png */}
