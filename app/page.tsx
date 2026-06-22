@@ -234,7 +234,7 @@ export default function HomePage() {
                   height={525}
                   priority
                   sizes="(max-width: 768px) 90vw, 52vw"
-                  className="relative z-10 hidden w-full max-w-[520px] object-contain md:block"
+                  className="relative z-10 hidden w-full max-w-[680px] object-contain md:block"
                 />
 
                 {/* Mobile — gina-800x1000.png */}
