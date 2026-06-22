@@ -6,7 +6,7 @@
    primary  #FF5A00  → CTAs, badges, destaques, hover, check icons
    accent   #4F7CFF  → glows, borda card hover, profundidade
    accent-glow #6C8CFF → halos, sombras difusas
-   bg       #070B14  → background base
+   bg       #07080A  → background base
    text     #F8FAFC  → texto principal
    muted    #94A3B8  → texto secundário
    ──────────────────────────────────────────────────────────────── */
@@ -14,7 +14,7 @@
   --color-primary: #FF5A00;
   --color-accent: #4F7CFF;
   --color-accent-glow: #6C8CFF;
-  --color-bg: #070B14;
+  --color-bg: #07080A;
   --color-text: #F8FAFC;
   --color-muted: #94A3B8;
 }
@@ -27,9 +27,7 @@
   body {
     @apply font-inter overflow-x-hidden;
     color: #F8FAFC;
-    background: radial-gradient(ellipse at 20% 50%, rgba(79, 124, 255, 0.04) 0%, transparent 60%),
-      radial-gradient(ellipse at 80% 20%, rgba(108, 140, 255, 0.03) 0%, transparent 60%),
-      #070B14;
+    background: #07080A;
     min-height: 100vh;
   }
 
@@ -43,7 +41,7 @@
   }
 
   :focus-visible {
-    @apply outline-none ring-2 ring-[#4F7CFF] ring-offset-2 ring-offset-[#070B14];
+    @apply outline-none ring-2 ring-[#4F7CFF] ring-offset-2 ring-offset-[#07080A];
   }
 }
 
