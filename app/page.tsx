@@ -225,6 +225,13 @@ export default function HomePage() {
 
               {/* ── Coluna direita: imagem ── */}
               <div className="relative flex items-center justify-center md:justify-end">
+                {/* Glow laranja — atrás da Gina */}
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+                  <div
+                    className="h-[620px] w-[520px] rounded-full opacity-35"
+                    style={{ background: 'radial-gradient(ellipse, #FF5A00 0%, transparent 68%)', filter: 'blur(72px)' }}
+                  />
+                </div>
 
                 {/* Desktop — gina-700x525.png */}
                 <Image
