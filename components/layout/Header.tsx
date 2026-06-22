@@ -20,9 +20,9 @@ export default function Header() {
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-center p-3 md:p-4">
       <div className="max-w-container mx-auto md:px-gutter relative grid w-full grid-cols-[1fr_auto_1fr] items-center rounded-full border border-white/10 bg-surface/40 px-3 py-3 backdrop-blur-xl glass-nav md:flex md:justify-between md:py-4">
 
-        {/* Hambúrguer — mobile LEFT (order-1), desktop hidden */}
+        {/* Hambúrguer — mobile RIGHT (order-3), desktop hidden */}
         <button
-          className="order-1 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 text-on-surface transition-colors hover:border-primary-container hover:text-primary-container justify-self-start md:hidden"
+          className="order-3 flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-white/10 text-on-surface transition-colors hover:border-primary-container hover:text-primary-container justify-self-end md:hidden"
           onClick={() => setIsOpen(!isOpen)}
           aria-label={isOpen ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={isOpen}
@@ -46,10 +46,10 @@ export default function Header() {
           Ver planos
         </Link>
 
-        {/* Logo — mobile RIGHT (order-3), desktop LEFT */}
+        {/* Logo — mobile LEFT (order-1), desktop LEFT */}
         <Link
           href="/"
-          className="order-3 justify-self-end md:order-none md:justify-self-start"
+          className="order-1 justify-self-start md:order-none md:justify-self-start"
           aria-label={`${italev.brandName} — página inicial`}
         >
           <Image
