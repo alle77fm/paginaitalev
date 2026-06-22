@@ -7,12 +7,12 @@ interface PageHeroProps {
 export default function PageHero({ title, subtitle, badge }: PageHeroProps) {
   return (
     <section className="relative pt-40 pb-16 text-center overflow-hidden">
-      {/* Glow azul difuso */}
+      {/* Glow escuro/laranja difuso */}
       <div
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[500px] pointer-events-none"
         aria-hidden="true"
         style={{
-          background: 'radial-gradient(ellipse, rgba(79,124,255,0.1) 0%, transparent 70%)',
+          background: 'radial-gradient(ellipse, rgba(255,90,0,0.08) 0%, rgba(7,8,10,0) 70%)',
         }}
       />
       <div className="relative z-10 max-w-[760px] mx-auto px-6">

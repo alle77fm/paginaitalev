@@ -1,5 +1,4 @@
-﻿import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
+import type { Metadata } from 'next';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import FaqAccordion from '@/components/content/FaqAccordion';
@@ -33,8 +32,6 @@ export default function DuvidasFrequentesPage() {
         { name: 'Italev Sistemas', url: italev.domain },
         { name: 'Dúvidas frequentes', url: `${italev.domain}/duvidas-frequentes` },
       ])} />
-
-      <Header />
 
       <main className="relative pt-32 md:pt-40">
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">

@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import { italev } from '@/lib/entities';
@@ -18,7 +17,6 @@ export default function TermosECondicoesPage() {
         { name: 'Italev Sistemas', url: italev.domain },
         { name: 'Termos e condições', url: `${italev.domain}/termos-e-condicoes` },
       ])} />
-      <Header />
       <main>
         <article className="mx-auto max-w-3xl px-4 py-14">
           <h1 className="font-space-grotesk text-3xl font-black text-gray-900 mb-6">Termos e condições</h1>

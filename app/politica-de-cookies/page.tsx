@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import { italev } from '@/lib/entities';
@@ -18,7 +17,6 @@ export default function PoliticaDeCookiesPage() {
         { name: 'Italev Sistemas', url: italev.domain },
         { name: 'Política de cookies', url: `${italev.domain}/politica-de-cookies` },
       ])} />
-      <Header />
       <main>
         <article className="mx-auto max-w-3xl px-4 py-14">
           <h1 className="font-space-grotesk text-3xl font-black text-gray-900 mb-6">Política de cookies</h1>

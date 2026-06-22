@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Navbar from '@/components/layout/Navbar';
 import PageHero from '@/components/layout/PageHero';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
@@ -32,8 +31,6 @@ export default function ContatoPage() {
         { name: 'Italev Sistemas', url: italev.domain },
         { name: 'Contato', url: `${italev.domain}/contato` },
       ])} />
-
-      <Navbar />
 
       <main>
         <PageHero

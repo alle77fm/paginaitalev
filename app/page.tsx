@@ -1,7 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
 import PricingCards from '@/components/ui/PricingCards';
@@ -137,8 +136,6 @@ export default function HomePage() {
     <>
       <JsonLd data={serviceSchema()} />
       <JsonLd data={faqPageSchema(duvidasFrequentesHome)} />
-
-      <Header />
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
@@ -278,6 +275,7 @@ export default function HomePage() {
         </section>
         {/* ── SOLUÇÕES PARA O COMÉRCIO LOCAL (nichos) ───────── */}
         <section
+          id="servicos"
           aria-label="Soluções para o comércio local"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
@@ -318,6 +316,7 @@ export default function HomePage() {
 
         {/* ── SEU NEGÓCIO SE ENCAIXA? ───────────────────────── */}
         <section
+          id="sobre"
           aria-label="Seu negócio se encaixa?"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
@@ -512,7 +511,7 @@ export default function HomePage() {
         </section>
 
         {/* ── PRICING ───────────────────────────────────────── */}
-        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+        <section id="planos" className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="text-center mb-16">
             <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
               Nossos Planos
@@ -557,7 +556,7 @@ export default function HomePage() {
           </div>
         </section>
         {/* ── CTA FINAL ─────────────────────────────────────── */}
-        <section className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
+        <section id="contato" className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
           <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-balance">

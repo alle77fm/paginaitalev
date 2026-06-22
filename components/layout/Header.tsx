@@ -3,11 +3,11 @@ import Image from 'next/image';
 import { italev } from '@/lib/entities';
 
 const navLinks = [
-  { href: '/servicos', label: 'Serviços' },
-  { href: '/sobre-nos', label: 'Sobre' },
-  { href: '/planos', label: 'Planos' },
+  { href: '/#servicos', label: 'Serviços' },
+  { href: '/#sobre', label: 'Sobre' },
+  { href: '/#planos', label: 'Planos' },
   { href: '/duvidas-frequentes', label: 'Dúvidas' },
-  { href: '/contato', label: 'Contato' },
+  { href: '/#contato', label: 'Contato' },
 ];
 
 export default function Header() {
@@ -75,7 +75,7 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="/planos"
+          href="/#planos"
           className="rounded-full bg-primary-container px-3 py-2 text-[10px] font-bold uppercase tracking-wider text-white transition-all orange-glow active:scale-95 hover:bg-primary-container/90 md:px-6 md:text-label-caps md:tracking-widest"
         >
           Ver planos

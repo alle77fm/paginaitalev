@@ -8,6 +8,7 @@ import {
   webSiteSchema,
 } from '@/lib/schema';
 import JsonLd from '@/components/seo/JsonLd';
+import Header from '@/components/layout/Header';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -63,6 +64,7 @@ export default function RootLayout({
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={webSiteSchema()} />
 
+        <Header />
         {children}
       </body>
     </html>
