@@ -10,16 +10,16 @@ import { recursosComparativos } from '@/content/comparisons/planos';
 import { faqInstitucional } from '@/content/faq/institucional';
 
 const faqPlanos = faqInstitucional.filter((f) =>
-  ['diferenca-planos', 'cobra-comissao', 'tem-fidelidade', 'quanto-tempo-app-pronto', 'precisa-saber-programar', 'suporte'].includes(f.id),
+  ['diferenca-planos', 'custo-implantacao', 'ia-inclusa', 'cobra-comissao', 'tem-fidelidade', 'quanto-tempo-app-pronto', 'precisa-saber-programar', 'suporte'].includes(f.id),
 );
 
 export const metadata: Metadata = {
-  title: 'Planos e preços — Start, Pro e Scale',
+  title: 'Planos e preços — Start, Pro e Master',
   description:
-    'Conheça os planos da Italev Sistemas: Start R$149/mês, Pro R$219/mês e Scale R$379/mês. Assinatura fixa, sem comissão por venda. App de delivery e e-commerce próprio para seu comércio.',
+    'Conheça os planos da Italev Sistemas: Start R$149/mês, Pro R$219/mês e Master a partir de R$697/mês. Assinatura fixa, sem comissão por venda. App de delivery e e-commerce próprio para seu comércio.',
   alternates: { canonical: `${italev.domain}/planos` },
   openGraph: {
-    title: 'Planos Italev Sistemas — Start, Pro e Scale',
+    title: 'Planos Italev Sistemas — Start, Pro e Master',
     description: 'Assinatura fixa, sem comissão. App próprio com catálogo digital, WhatsApp e PIX.',
     url: `${italev.domain}/planos`,
   },
@@ -46,6 +46,10 @@ export default function PlanosPage() {
         <section aria-label="Comparativo de planos" className="section">
           <div className="mx-auto max-w-6xl px-6">
             <PricingCards cta="whatsapp" />
+            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-[#FF5A00]/20 bg-[#FF5A00]/5 p-5 text-sm leading-relaxed text-[#CBD5E1]">
+              <p><strong className="text-white">A implantação é cobrada uma única vez</strong> e varia conforme o plano. Ela inclui configuração inicial da loja, personalização básica, cadastro estrutural e orientação de uso.</p>
+              <p className="mt-2">No plano Master, a mensalidade e a implantação podem variar conforme o nível de configuração, suporte e acompanhamento necessário.</p>
+            </div>
             <p className="mt-8 text-center text-sm text-[#64748B]">
               Todos os planos incluem suporte de segunda a sexta, 9h às 18h.
               Dúvidas?{' '}
@@ -64,7 +68,7 @@ export default function PlanosPage() {
                 O que está incluído em cada plano
               </h2>
               <p className="text-[#94A3B8]">
-                Comparativo completo de recursos entre os planos Start, Pro e Scale.
+                Comparativo completo de recursos entre os planos Start, Pro e Master.
               </p>
             </div>
             <div
@@ -80,7 +84,7 @@ export default function PlanosPage() {
                     <th scope="col" className="px-4 py-3 text-left font-sora font-bold text-[#F8FAFC]">Recurso</th>
                     <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#F8FAFC]">Start</th>
                     <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#FF5A00]">Pro ⭐</th>
-                    <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#F8FAFC]">Scale</th>
+                    <th scope="col" className="px-4 py-3 text-center font-sora font-bold text-[#F8FAFC]">Master</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-white/[0.05]">
@@ -89,7 +93,7 @@ export default function PlanosPage() {
                       <td className="px-4 py-3 font-medium text-[#F8FAFC]">{r.nome}</td>
                       <td className="px-4 py-3 text-center">{r.start ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
                       <td className="px-4 py-3 text-center">{r.pro ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
-                      <td className="px-4 py-3 text-center">{r.scale ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
+                      <td className="px-4 py-3 text-center">{r.master ? <span className="text-[#FF5A00] font-bold">✓</span> : <span className="text-[#334155]">–</span>}</td>
                     </tr>
                   ))}
                 </tbody>

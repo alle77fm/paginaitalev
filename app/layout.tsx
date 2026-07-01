@@ -9,6 +9,7 @@ import {
 } from '@/lib/schema';
 import JsonLd from '@/components/seo/JsonLd';
 import Header from '@/components/layout/Header';
+import FloatingButton from '@/components/ui/FloatingButton';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
@@ -66,6 +67,7 @@ export default function RootLayout({
 
         <Header />
         {children}
+        <FloatingButton />
       </body>
     </html>
   );

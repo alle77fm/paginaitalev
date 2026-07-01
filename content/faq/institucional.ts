@@ -16,7 +16,7 @@ export const faqInstitucional: FaqItem[] = [
     id: 'app-proprio-vs-ifood',
     pergunta: 'Vale a pena ter um aplicativo próprio em vez do iFood?',
     resposta:
-      'Sim. Com um aplicativo próprio você não paga comissão por pedido, sua marca fica em destaque e o cadastro dos clientes é seu. No iFood você depende do algoritmo da plataforma e paga entre 12% e 27% por pedido. Com a Italev Sistemas, você paga uma mensalidade fixa e fica com 100% do valor de cada venda recebida via PIX.',
+      'Sim. Com um aplicativo próprio você não paga comissão por pedido, sua marca fica em destaque e o cadastro dos clientes é seu. Em marketplaces, o comércio fica sujeito às regras e cobranças da plataforma. Com a Italev Sistemas, você paga uma mensalidade fixa e fica com 100% do valor de cada venda recebida via PIX.',
   },
   {
     id: 'custo-app-supermercado',
@@ -86,9 +86,9 @@ export const faqInstitucional: FaqItem[] = [
   },
   {
     id: 'diferenca-planos',
-    pergunta: 'Qual a diferença entre os planos Start, Pro e Scale?',
+    pergunta: 'Qual a diferença entre os planos Start, Pro e Master?',
     resposta:
-      'O plano Start (R$149/mês) inclui app, catálogo digital, pedidos via WhatsApp, PIX e popup de vendas. O Pro (R$219/mês) adiciona marca e domínio próprios, relatórios, disparo de promoções, agendamento de entrega, cupons e tabloide de ofertas em PDF. O Scale (R$379/mês) inclui tudo do Pro com suporte prioritário e onboarding assistido.',
+      'O plano Start (R$149/mês) inclui app, catálogo digital, pedidos via WhatsApp, PIX e popup de vendas. O Pro (R$219/mês) adiciona marca e domínio próprios, relatórios, disparo de promoções, agendamento de entrega, cupons e tabloide de ofertas em PDF. O Master (a partir de R$697/mês) inclui tudo do Pro, suporte prioritário, implantação mais assistida, configuração avançada do catálogo e acompanhamento inicial próximo.',
   },
   {
     id: 'precisa-saber-programar',
@@ -118,13 +118,13 @@ export const faqInstitucional: FaqItem[] = [
     id: 'marca-propria',
     pergunta: 'O app vai ter a minha marca ou a marca da Italev?',
     resposta:
-      'No plano Pro e Scale, o aplicativo é entregue com a identidade visual e o domínio próprio do comércio — logo, nome e cores do estabelecimento. O cliente final vê a marca do lojista, não a da Italev.',
+      'No plano Pro e Master, o aplicativo é entregue com a identidade visual e o domínio próprio do comércio — logo, nome e cores do estabelecimento. O cliente final vê a marca do lojista, não a da Italev.',
   },
   {
     id: 'suporte',
     pergunta: 'Como funciona o suporte da Italev Sistemas?',
     resposta:
-      'O suporte é realizado de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. O plano Scale inclui suporte prioritário com tempo de resposta menor.',
+      'O suporte é realizado de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. O plano Master inclui suporte prioritário com tempo de resposta menor.',
   },
   {
     id: 'custo-app-supermercado',
@@ -160,6 +160,15 @@ export const faqInstitucional: FaqItem[] = [
     id: 'divulgar-promocoes',
     pergunta: 'Posso divulgar promoções e ofertas?',
     resposta:
-      'Sim. Os planos Pro e Scale incluem disparo de promoções automáticas e tabloide de ofertas em PDF. Você pode criar cupons de desconto, configurar popups de vendas e comunicar ofertas diretamente para seus clientes. Tudo pelo painel de administração, sem precisar de conhecimento técnico.',
+      'Sim. Os planos Pro e Master incluem disparo de promoções automáticas e tabloide de ofertas em PDF. Você pode criar cupons de desconto, configurar popups de vendas e comunicar ofertas diretamente para seus clientes. Tudo pelo painel de administração, sem precisar de conhecimento técnico.',
   },
-];
+  {
+    id: 'custo-implantacao',
+    pergunta: 'Existe custo de implantação?',
+    resposta: 'Sim. A implantação é cobrada uma única vez e varia conforme o plano escolhido. O plano Start tem implantação de R$497, o Pro de R$897 e o Master tem implantação a partir de R$1.497.',
+  },
+  {
+    id: 'ia-inclusa',
+    pergunta: 'O atendente virtual com IA está incluso nos planos?',
+    resposta: 'Não necessariamente. O atendente virtual para WhatsApp é uma solução complementar que pode ser contratada separadamente ou combinada com o catálogo online.',
+  },];

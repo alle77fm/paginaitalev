@@ -10,9 +10,9 @@ import { serviceSchema, faqPageSchema } from '@/lib/schema';
 import { duvidasFrequentesHome } from '@/content/faq/duvidas-frequentes';
 
 export const metadata: Metadata = {
-  title: 'App de delivery e e-commerce para comércios locais | Italev Sistemas',
+  title: 'Catálogo online com pedidos pelo WhatsApp | Italev Sistemas',
   description:
-    'Tenha seu próprio app de delivery para vender sem pagar comissão por pedido. A Italev Sistemas cria aplicativos de delivery e e-commerce como alternativa ao iFood.',
+    'Sua loja vendendo online pelo WhatsApp, com catálogo próprio e sem comissão por pedido. Conheça os planos da Italev Sistemas.',
   alternates: { canonical: italev.domain },
   openGraph: {
     title: 'Italev Sistemas — App de delivery próprio para seu comércio',
@@ -24,10 +24,10 @@ export const metadata: Metadata = {
 
 // Estatísticas
 const stats = [
-  { value: '+27%', label: 'Aumento médio nas vendas' },
-  { value: '-35%', label: 'Redução nos custos com taxas' },
-  { value: '+1.200', label: 'Apps entregues com sucesso' },
-  { value: '+98%', label: 'Satisfação dos clientes' },
+  { value: 'Sem comissão', label: 'por pedido' },
+  { value: 'Catálogo próprio', label: 'com a identidade da loja' },
+  { value: 'WhatsApp', label: 'pedidos direto para o comércio' },
+  { value: 'Suporte próximo', label: 'implantação assistida' },
 ];
 
 // Benefícios
@@ -79,7 +79,7 @@ const processo = [
   {
     numero: '03',
     titulo: 'Você começa a vender',
-    descricao: 'Divulgamos, recebemos pedidos e aumentamos suas vendas desde o primeiro dia.',
+    descricao: 'Você divulga sua loja, recebe pedidos direto no WhatsApp e acompanha tudo de forma mais organizada.',
   },
 ];
 
@@ -124,7 +124,7 @@ function DemoCta({ className = '' }: { className?: string }) {
           rel="noopener noreferrer"
           className="inline-flex w-full items-center justify-center whitespace-nowrap rounded-xl bg-primary-container px-5 py-3 text-sm font-bold text-white shadow-[0_10px_28px_rgba(255,102,0,0.22)] transition-all active:scale-[0.98] md:w-auto md:px-6 md:py-3 md:text-sm md:hover:bg-primary-container/90"
         >
-          Solicitar demonstração gratuita
+          Ver demonstração no WhatsApp
         </a>
       </div>
     </div>
@@ -158,22 +158,13 @@ export default function HomePage() {
 
                 {/* H1 */}
                 <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
-                  <span className="block text-[30px] sm:text-[36px] md:hidden">
-                    Criamos o app do seu comércio <br />
-                    <span className="text-primary-container">para vender online</span>
-                    <span className="mt-2 block text-primary-container">sem pagar comissão por pedido.</span>
-                  </span>
-                  <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">
-                    Criamos o app do seu<br />
-                    comércio <span className="text-primary-container">para vender</span><br />
-                    <span className="text-primary-container">online</span> sem pagar<br />
-                    comissão por pedido.
-                  </span>
+                  <span className="block text-[30px] sm:text-[36px] md:hidden">Sua loja vendendo online pelo WhatsApp, <span className="text-primary-container">com catálogo próprio e sem comissão por pedido.</span></span>
+                  <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">Sua loja vendendo online pelo WhatsApp, <span className="text-primary-container">com catálogo próprio e sem comissão por pedido.</span></span>
                 </h1>
 
                 {/* Subtitle */}
                 <p className="mx-auto mb-8 max-w-[520px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
-                  Receba pedidos pelo WhatsApp, divulgue ofertas e fortaleça sua marca com um aplicativo próprio.
+                  A Italev monta um catálogo online com a identidade do seu comércio para você divulgar ofertas, receber pedidos e vender de forma mais organizada pelo WhatsApp.
                 </p>
 
                 {/* CTAs */}
@@ -188,16 +179,16 @@ export default function HomePage() {
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
                     </svg>
-                    Solicitar demonstração gratuita
+                    Ver demonstração no WhatsApp
                   </a>
                   <Link
-                    href="/contato"
+                    href="/planos"
                     className="inline-flex min-h-[56px] items-center justify-center gap-3 rounded-xl border border-white/25 bg-black/20 px-6 py-4 text-sm font-bold text-white backdrop-blur-sm hover:bg-white/10 active:scale-[0.98] sm:text-base"
                   >
                     <svg className="h-5 w-5 shrink-0" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" d="M8 5.5v13l10-6.5-10-6.5Z" />
                     </svg>
-                    Ver como funciona
+                    Conhecer planos
                   </Link>
                 </div>
 
@@ -511,6 +502,15 @@ export default function HomePage() {
         </section>
 
         {/* ── PRICING ───────────────────────────────────────── */}
+        <section aria-label="Atendente virtual para WhatsApp" className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
+          <div className="rounded-3xl border border-primary-container/30 bg-surface-container-low p-7 md:p-12">
+            <span className="text-label-caps text-primary-container uppercase tracking-widest">Solução complementar</span>
+            <h2 className="mt-3 text-headline-xl text-on-surface">Atendente virtual para WhatsApp</h2>
+            <p className="mt-4 max-w-3xl text-body-lg text-on-secondary-container">Atendente virtual para WhatsApp que responde clientes, tira dúvidas, apresenta produtos e ajuda a organizar pedidos.</p>
+            <p className="mt-3 max-w-3xl text-on-secondary-container">Esse serviço pode ser contratado separadamente ou combinado com seu catálogo online, ajudando seu comércio a atender melhor mesmo quando a equipe está ocupada.</p>
+            <a href={`https://wa.me/${italev.whatsapp}?text=${encodeURIComponent('Olá! Quero conhecer o atendente virtual para WhatsApp da Italev.')}`} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-xl bg-primary-container px-6 py-3 font-bold text-white">Quero conhecer o atendente virtual</a>
+          </div>
+        </section>
         <section id="planos" className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="text-center mb-16">
             <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">

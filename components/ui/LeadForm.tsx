@@ -21,7 +21,7 @@ const SEGMENTOS = [
   'Outro',
 ];
 
-const PLANOS = ['Start', 'Pro', 'Scale', 'Ainda não sei'];
+const PLANOS = ['Start', 'Pro', 'Master', 'Ainda não sei'];
 
 const INITIAL_FORM: FormData = {
   nome: '',

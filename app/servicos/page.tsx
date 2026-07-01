@@ -102,13 +102,24 @@ export default function ServicosPage() {
               />
               <AnswerBlock
                 heading="Identidade visual e domínio próprios"
-                resposta="Nos planos Pro e Scale, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio — não a da Italev."
+                resposta="Nos planos Pro e Master, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio — não a da Italev."
                 headingLevel="h3"
               />
             </div>
           </div>
         </section>
 
+        <section aria-label="Atendente virtual para WhatsApp" className="section">
+          <div className="mx-auto max-w-4xl px-6">
+            <div className="rounded-3xl border border-[#FF5A00]/30 bg-white/[0.03] p-8 md:p-12">
+              <p className="text-sm font-bold uppercase tracking-widest text-[#FF5A00]">Serviço complementar</p>
+              <h2 className="mt-3 font-sora text-3xl font-bold text-[#F8FAFC] md:text-4xl">Atendente virtual para WhatsApp</h2>
+              <p className="mt-5 text-lg leading-relaxed text-[#CBD5E1]">Atendente virtual para WhatsApp que responde clientes, tira dúvidas, apresenta produtos e ajuda a organizar pedidos.</p>
+              <p className="mt-3 leading-relaxed text-[#94A3B8]">Esse serviço pode ser contratado separadamente ou combinado com seu catálogo online. Ele não está incluído automaticamente nos planos Start, Pro ou Master.</p>
+              <a href={`https://wa.me/${italev.whatsapp}?text=${encodeURIComponent('Olá! Quero conhecer o atendente virtual para WhatsApp da Italev.')}`} target="_blank" rel="noopener noreferrer" className="mt-7 inline-flex rounded-xl bg-[#FF5A00] px-6 py-3 font-bold text-white">Quero conhecer o atendente virtual</a>
+            </div>
+          </div>
+        </section>
         {/* CTA */}
         <section aria-label="Comece agora" className="section">
           <div className="mx-auto max-w-4xl px-6 text-center">

@@ -33,7 +33,8 @@ export default function PricingCard({ plano }: PricingCardProps) {
       {/* Nome e preço */}
       <div className="mb-4 mt-2">
         <h3 className="font-sora text-xl font-black text-[#F8FAFC]">{plano.nome}</h3>
-        <div className="mt-2 flex items-end gap-1">
+        {plano.precoPrefixo && <p className="mt-2 text-xs font-bold uppercase tracking-wider text-[#FF6600]">{plano.precoPrefixo}</p>}
+        <div className={`${plano.precoPrefixo ? 'mt-1' : 'mt-2'} flex items-end gap-1`}>
           <span className="font-sora text-4xl font-black text-[#F8FAFC]">
             R${plano.preco}
           </span>
@@ -43,6 +44,9 @@ export default function PricingCard({ plano }: PricingCardProps) {
           <p className="mt-1 text-xs font-semibold text-[#4F7CFF]">{plano.subTexto}</p>
         )}
         <p className="mt-2 text-sm text-[#94A3B8]">{plano.descricaoCurta}</p>
+        <p className="mt-4 rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm font-semibold text-[#F8FAFC]">
+          {plano.implantacaoPrefixo ? 'Implantação a partir de' : 'Implantação única'}: R${plano.implantacao.toLocaleString('pt-BR')}
+        </p>
       </div>
 
       {/* Recursos */}

@@ -86,9 +86,9 @@ export const solucoes: SolucaoCard[] = [
   },
   {
     id: 'ia-negocios',
-    titulo: 'IA aplicada a negócios locais',
+    titulo: 'Atendente virtual para WhatsApp',
     descricao:
-      'Recursos de inteligência aplicada para sugestão de produtos, análise de vendas e personalização de ofertas para o perfil de cada cliente.',
+      'Solução complementar que responde clientes, tira dúvidas, apresenta produtos e ajuda a organizar pedidos. Pode ser contratada separadamente dos planos.',
     icone: '🤖',
   },
 ];
@@ -120,8 +120,8 @@ export const beneficios: AnswerBlock[] = [
     id: 'aumento-vendas',
     heading: 'Mais vendas com promoções automáticas',
     resposta:
-      'Cupons, tabloides em PDF e disparo automático de promoções aumentam a frequência de compra sem exigir esforço manual do lojista.',
-    fato: 'Promoções segmentadas e automatizadas têm maior taxa de conversão do que anúncios genéricos em plataformas.',
+      'Cupons, tabloides em PDF e disparos de promoções ajudam o lojista a organizar a divulgação sem depender de processos manuais.',
+    fato: 'O lojista centraliza ofertas e canais de divulgação em uma rotina mais organizada.',
   },
   {
     id: 'escalabilidade',
@@ -144,7 +144,7 @@ export const comoFunciona: Passo[] = [
     numero: 1,
     titulo: 'Escolha o plano ideal para o seu comércio',
     descricao:
-      'Start, Pro ou Scale — cada plano tem recursos pensados para o estágio do negócio. O plano pode ser trocado a qualquer momento.',
+      'Start, Pro ou Master — cada plano tem recursos pensados para o estágio do negócio. O plano pode ser trocado a qualquer momento.',
   },
   {
     numero: 2,

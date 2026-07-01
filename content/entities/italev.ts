@@ -12,7 +12,7 @@ export const italev = {
   legalName: 'Italev Sistemas',
   category: 'software house',
   entityStatement:
-    'Italev Sistemas é uma software house que desenvolve aplicativos próprios de delivery e e-commerce para supermercados, restaurantes e comércios locais, com pedidos integrados ao WhatsApp e sem taxas sobre vendas.',
+    'Italev Sistemas é uma software house que ajuda pequenos negócios locais a vender online pelo WhatsApp, com catálogo próprio, organização de produtos e ofertas e sem comissão por pedido.',
   domain: 'https://italevsistemas.com',
   email: 'italevsistemas@gmail.com',
   phone: '+55 35 99749-3286',

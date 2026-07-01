@@ -28,7 +28,7 @@ export default function TermosECondicoesPage() {
             </p>
             <h2 className="font-space-grotesk text-xl font-bold text-gray-900 mt-8">1. Contratação</h2>
             <p>
-              A contratação dos planos da Italev Sistemas (Start, Pro ou Scale) é feita mediante
+              A contratação dos planos da Italev Sistemas (Start, Pro ou Master) é feita mediante
               adesão ao plano escolhido e pagamento da primeira mensalidade. A confirmação do
               contrato é enviada por e-mail.
             </p>

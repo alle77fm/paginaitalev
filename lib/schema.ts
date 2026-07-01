@@ -5,8 +5,9 @@
  * CNPJ/taxID/vatID: omitidos intencionalmente (ver CLAUDE.md §4.1).
  */
 import { italev, type Produto } from '@/lib/entities';
+import { planos } from '@/content/comparisons/planos';
 
-/** @id estável da Organization — âncora do grafo de entidades */
+/** @id estável da Organization — �ncora do grafo de entidades */
 const ORG_ID = `${italev.domain}/#organization`;
 
 // ---------------------------------------------------------------------------
@@ -19,7 +20,7 @@ export function organizationSchema() {
     '@id': ORG_ID,
     name: italev.brandName,
     legalName: italev.legalName,
-    description: 'Especialista em aplicativos para o comércio local brasileiro',
+    description: italev.entityStatement,
     url: italev.domain,
     email: italev.email,
     telephone: italev.phone,
@@ -121,7 +122,7 @@ export function faqPageSchema(faq: { pergunta: string; resposta: string }[]) {
 }
 
 // ---------------------------------------------------------------------------
-// OfferCatalog — planos Start, Pro, Scale
+// OfferCatalog — planos Start, Pro e Master
 // Fonte única: content/comparisons/planos.ts (criado na Etapa B)
 // Por ora, os dados estão inline para o schema estar disponível desde a Etapa A.
 // ---------------------------------------------------------------------------
@@ -132,63 +133,27 @@ export function offerCatalogSchema() {
     '@id': `${italev.domain}/#planos`,
     name: 'Planos Italev Sistemas',
     provider: { '@id': ORG_ID },
-    offerCount: 3,
-    itemListElement: [
-      {
-        '@type': 'Offer',
-        name: 'Start',
-        price: '149.00',
+    offerCount: planos.length,
+    itemListElement: planos.map((plano) => ({
+      '@type': 'Offer',
+      name: plano.nome,
+      price: plano.preco.toFixed(2),
+      priceCurrency: 'BRL',
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: plano.preco.toFixed(2),
         priceCurrency: 'BRL',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '149.00',
-          priceCurrency: 'BRL',
-          billingDuration: 'P1M',
-        },
-        description:
-          'App + catálogo digital + pedidos WhatsApp + PIX + popup de vendas.',
-        availability: 'https://schema.org/InStock',
-        seller: { '@id': ORG_ID },
+        billingDuration: 'P1M',
       },
-      {
-        '@type': 'Offer',
-        name: 'Pro',
-        price: '219.00',
-        priceCurrency: 'BRL',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '219.00',
-          priceCurrency: 'BRL',
-          billingDuration: 'P1M',
-        },
-        description:
-          'Tudo do Start + marca e domínio próprios + relatórios + disparo de promoções + agendamento de entrega + cupons + tabloide de ofertas PDF.',
-        availability: 'https://schema.org/InStock',
-        seller: { '@id': ORG_ID },
-      },
-      {
-        '@type': 'Offer',
-        name: 'Scale',
-        price: '379.00',
-        priceCurrency: 'BRL',
-        priceSpecification: {
-          '@type': 'UnitPriceSpecification',
-          price: '379.00',
-          priceCurrency: 'BRL',
-          billingDuration: 'P1M',
-        },
-        // multi-loja omitido do schema até estar disponível (não declarar InStock nem ComingSoon)
-        description:
-          'Tudo do Pro + suporte prioritário + onboarding assistido.',
-        availability: 'https://schema.org/InStock',
-        seller: { '@id': ORG_ID },
-      },
-    ],
+      description: `${plano.descricaoCurta} Implantação ${plano.implantacaoPrefixo ? 'a partir de ' : 'única de '}R${plano.implantacao.toLocaleString('pt-BR')}.`,
+      availability: 'https://schema.org/InStock',
+      seller: { '@id': ORG_ID },
+    })),
   };
 }
 
 // ---------------------------------------------------------------------------
-// SoftwareApplication — stub para produtos (usado quando as páginas existirem)
+// SoftwareApplication
 // ---------------------------------------------------------------------------
 export function softwareApplicationSchema(produto: Produto) {
   return {

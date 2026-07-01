@@ -25,7 +25,7 @@ const SEGMENTOS = [
 const PLANOS = [
   'Start — R$149/mês',
   'Pro — R$219/mês',
-  'Scale — R$379/mês',
+  'Master — a partir de R$697/mês',
   'Ainda não sei',
 ];
 
