@@ -19,7 +19,7 @@ A Italev Sistemas oferece ao comerciante um aplicativo próprio de delivery e e-
 ## Páginas principais
 
 - https://italevsistemas.com — Landing institucional: o que é a Italev, como funciona, FAQ, planos, depoimentos
-- https://italevsistemas.com/planos — Planos Start (R$149/mês; implantação R$497), Pro (R$219/mês; implantação R$897) e Master (a partir de R$697/mês; implantação a partir de R$1.497)
+- https://italevsistemas.com/planos — Start (R$149/mês; implantação única R$497), Pro (R$219/mês; implantação única R$897) e Master (a partir de R$697/mês; implantação única a partir de R$1.497). A implantação é grátis no plano anual.
 - https://italevsistemas.com/servicos — Serviços da Italev Sistemas
 - https://italevsistemas.com/sobre-nos — Sobre a software house
 - https://italevsistemas.com/contato — Contato e atendimento

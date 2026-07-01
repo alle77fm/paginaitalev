@@ -83,10 +83,10 @@ export default function FloatingButton() {
         onClick={() => setOpen(true)}
         aria-label="Ver demonstração — abrir formulário de demonstração"
         className="
-          fixed bottom-6 right-6 z-50
+          fixed bottom-4 right-4 z-50 sm:bottom-6 sm:right-6
           flex items-center gap-2
           rounded-full border-2 border-black
-          bg-[#FF5A00] px-5 py-3
+          bg-[#FF5A00] px-4 py-3 sm:px-5
           text-sm font-semibold text-white
           shadow-[3px_3px_0_#000]
           transition-all duration-150

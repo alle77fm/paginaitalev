@@ -47,6 +47,7 @@ export default function PricingCard({ plano }: PricingCardProps) {
         <p className="mt-4 rounded-lg border border-white/10 bg-black/20 px-3 py-2 text-sm font-semibold text-[#F8FAFC]">
           {plano.implantacaoPrefixo ? 'Implantação a partir de' : 'Implantação única'}: R${plano.implantacao.toLocaleString('pt-BR')}
         </p>
+        <span className="mt-2 inline-flex w-fit rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs font-bold text-emerald-300">Gr?tis no plano anual</span>
       </div>
 
       {/* Recursos */}

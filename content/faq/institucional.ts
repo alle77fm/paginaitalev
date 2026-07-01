@@ -130,7 +130,7 @@ export const faqInstitucional: FaqItem[] = [
     id: 'custo-app-supermercado',
     pergunta: 'Quanto custa criar um aplicativo para supermercado?',
     resposta:
-      'A Italev Sistemas oferece planos a partir de R$149 por mês, sem taxa sobre vendas. O lojista paga uma assinatura fixa e fica com 100% do valor de cada pedido recebido. Não há comissão por venda, diferente dos marketplaces tradicionais. O setup inicial é cobrado uma única vez e o aplicativo fica pronto em até 15 dias úteis.',
+      'A Italev Sistemas oferece planos a partir de R$149 por mês, sem taxa sobre vendas. O lojista paga uma assinatura fixa e fica com 100% do valor de cada pedido recebido. Não há comissão por venda, diferente dos marketplaces tradicionais. A implantação única é cobrada no plano mensal e fica grátis no plano anual.',
   },
   {
     id: 'pedidos-whatsapp',
@@ -165,7 +165,12 @@ export const faqInstitucional: FaqItem[] = [
   {
     id: 'custo-implantacao',
     pergunta: 'Existe custo de implantação?',
-    resposta: 'Sim. A implantação é cobrada uma única vez e varia conforme o plano escolhido. O plano Start tem implantação de R$497, o Pro de R$897 e o Master tem implantação a partir de R$1.497.',
+    resposta: 'Sim. A implantação única é cobrada apenas no plano mensal. Ela inclui a criação, configuração inicial da loja, personalização básica e orientação de uso. No plano anual, a implantação fica grátis.',
+  },
+  {
+    id: 'incluso-implantacao',
+    pergunta: 'O que está incluso na implantação única?',
+    resposta: 'A implantação inclui a configuração inicial da loja, ajustes básicos de identidade visual, estruturação do catálogo, orientação inicial de uso e preparação para receber pedidos pelo WhatsApp.',
   },
   {
     id: 'ia-inclusa',

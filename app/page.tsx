@@ -23,11 +23,11 @@ export const metadata: Metadata = {
 };
 
 // Estatísticas
-const stats = [
-  { value: 'Sem comissão', label: 'por pedido' },
-  { value: 'Catálogo próprio', label: 'com a identidade da loja' },
-  { value: 'WhatsApp', label: 'pedidos direto para o comércio' },
-  { value: 'Suporte próximo', label: 'implantação assistida' },
+const diferenciais = [
+  { titulo: 'Sem comissão por pedido', texto: 'Você paga uma mensalidade fixa e vende direto pelo WhatsApp, sem taxas sobre cada venda.' },
+  { titulo: 'Catálogo próprio', texto: 'Organize produtos, ofertas e informações da sua loja em uma página profissional.' },
+  { titulo: 'Pedidos pelo WhatsApp', texto: 'O cliente escolhe os produtos e envia o pedido diretamente para o WhatsApp da loja.' },
+  { titulo: 'Suporte próximo', texto: 'Acompanhamento inicial para sua loja começar com mais segurança e organização.' },
 ];
 
 // Benefícios
@@ -139,9 +139,9 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative z-10 mb-section-gap-mobile bg-[#07080A] pt-24 md:mb-section-gap-desktop md:overflow-hidden md:pt-32">
-          <div className="mx-auto max-w-[1440px] px-margin-mobile pb-10 pt-4 md:px-gutter md:pb-16 md:pt-6">
-            <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-8 lg:gap-14">
+        <section className="relative z-10 mb-16 bg-[#07080A] pt-24 md:mb-24 md:overflow-hidden md:pt-28">
+          <div className="mx-auto max-w-[1440px] px-margin-mobile pb-6 pt-2 md:px-gutter md:pb-10 md:pt-4">
+            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8 lg:gap-12">
 
               {/* ── Coluna esquerda: texto ── */}
               <div className="text-center md:text-left">
@@ -357,20 +357,18 @@ export default function HomePage() {
         </section>
 
         <DemoCta className="-mt-10 mb-section-gap-mobile md:-mt-16 md:mb-section-gap-desktop" />
-
-        {/* ── STATS ─────────────────────────────────────────── */}
-        <section className="bg-surface-container-lowest py-20 mb-section-gap-mobile md:mb-section-gap-desktop">
-          <div className="max-w-container mx-auto px-margin-mobile md:px-gutter grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
-            {stats.map((stat, i) => (
-              <div key={i} className="flex flex-col">
-                <span className="text-display-lg-mobile md:text-headline-xl text-primary-container mb-2">
-                  {stat.value}
-                </span>
-                <span className="text-label-caps uppercase tracking-widest text-on-secondary-container">
-                  {stat.label}
-                </span>
-              </div>
-            ))}
+        {/* Diferenciais */}
+        <section aria-labelledby="diferenciais-title" className="mb-section-gap-mobile bg-surface-container-lowest py-14 md:mb-section-gap-desktop md:py-16">
+          <div className="mx-auto max-w-6xl px-margin-mobile md:px-gutter">
+            <h2 id="diferenciais-title" className="mb-8 text-center text-2xl font-bold text-on-surface md:mb-10 md:text-3xl">Diferenciais para o comércio local</h2>
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+              {diferenciais.map((item) => (
+                <article key={item.titulo} className="min-w-0 rounded-2xl border border-white/10 bg-surface-container-low p-6">
+                  <h3 className="text-xl font-bold leading-tight text-on-surface md:text-2xl">{item.titulo}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-on-secondary-container md:text-base">{item.texto}</p>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 

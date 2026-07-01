@@ -145,7 +145,7 @@ export function offerCatalogSchema() {
         priceCurrency: 'BRL',
         billingDuration: 'P1M',
       },
-      description: `${plano.descricaoCurta} Implantação ${plano.implantacaoPrefixo ? 'a partir de ' : 'única de '}R${plano.implantacao.toLocaleString('pt-BR')}.`,
+      description: `${plano.descricaoCurta} Implantação ${plano.implantacaoPrefixo ? 'a partir de ' : 'única de '}R${plano.implantacao.toLocaleString('pt-BR')}. No plano anual, a implanta??o ? gr?tis.`,
       availability: 'https://schema.org/InStock',
       seller: { '@id': ORG_ID },
     })),

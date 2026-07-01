@@ -10,7 +10,7 @@ import { recursosComparativos } from '@/content/comparisons/planos';
 import { faqInstitucional } from '@/content/faq/institucional';
 
 const faqPlanos = faqInstitucional.filter((f) =>
-  ['diferenca-planos', 'custo-implantacao', 'ia-inclusa', 'cobra-comissao', 'tem-fidelidade', 'quanto-tempo-app-pronto', 'precisa-saber-programar', 'suporte'].includes(f.id),
+  ['diferenca-planos', 'custo-implantacao', 'incluso-implantacao', 'ia-inclusa', 'cobra-comissao', 'tem-fidelidade', 'quanto-tempo-app-pronto', 'precisa-saber-programar', 'suporte'].includes(f.id),
 );
 
 export const metadata: Metadata = {
@@ -46,10 +46,6 @@ export default function PlanosPage() {
         <section aria-label="Comparativo de planos" className="section">
           <div className="mx-auto max-w-6xl px-6">
             <PricingCards cta="whatsapp" />
-            <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-[#FF5A00]/20 bg-[#FF5A00]/5 p-5 text-sm leading-relaxed text-[#CBD5E1]">
-              <p><strong className="text-white">A implantação é cobrada uma única vez</strong> e varia conforme o plano. Ela inclui configuração inicial da loja, personalização básica, cadastro estrutural e orientação de uso.</p>
-              <p className="mt-2">No plano Master, a mensalidade e a implantação podem variar conforme o nível de configuração, suporte e acompanhamento necessário.</p>
-            </div>
             <p className="mt-8 text-center text-sm text-[#64748B]">
               Todos os planos incluem suporte de segunda a sexta, 9h às 18h.
               Dúvidas?{' '}
