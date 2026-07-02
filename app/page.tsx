@@ -159,10 +159,10 @@ export default function HomePage() {
                 {/* H1 */}
                 <h1 className="mb-5 font-sora font-black tracking-tight text-on-surface md:leading-[1.08]">
                   <span className="block text-[26px] leading-[1.3] sm:text-[32px] md:hidden">
-                    <span className="block">Sua loja vendendo online pelo WhatsApp,</span>
-                    <span className="mt-1 block text-primary-container">com catálogo próprio e sem comissão por pedido.</span>
+                    <span className="block">Tenha sua loja vendendo pelo WhatsApp,</span>
+                    <span className="mt-1 block text-primary-container">sem comissão por pedido.</span>
                   </span>
-                  <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">Sua loja vendendo online pelo WhatsApp, <span className="text-primary-container">com catálogo próprio e sem comissão por pedido.</span></span>
+                  <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">Tenha sua loja vendendo pelo WhatsApp, <span className="text-primary-container">sem comissão por pedido.</span></span>
                 </h1>
 
                 {/* Subtitle */}
@@ -252,10 +252,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Pedir uma demonstração gratuita pelo WhatsApp"
-                  className="hidden md:absolute md:-bottom-11 md:left-1/2 md:z-20 md:inline-flex md:min-h-[72px] md:w-[430px] md:-translate-x-[calc(50%+2rem)] md:items-center md:justify-center md:gap-4 md:rounded-2xl md:border md:border-white/15 md:bg-[#07080A]/68 md:px-5 md:py-4 md:text-sm md:font-bold md:text-white md:shadow-[0_22px_56px_rgba(0,0,0,0.42)] md:backdrop-blur-xl md:transition-all md:hover:-translate-y-0.5 md:hover:border-primary-container/45 md:hover:bg-[#07080A]/82 md:active:translate-y-0 lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
+                  className="absolute bottom-2 left-1/2 z-20 inline-flex min-h-[60px] w-[88%] max-w-[300px] -translate-x-1/2 items-center justify-center gap-3 rounded-2xl border border-white/15 bg-[#07080A]/78 px-4 py-3 text-xs font-bold text-white shadow-[0_18px_44px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/85 active:translate-y-0 md:-bottom-11 md:min-h-[72px] md:w-[430px] md:max-w-none md:-translate-x-[calc(50%+2rem)] md:gap-4 md:px-5 md:py-4 md:text-sm lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
                 >
-                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#25D366]/65 bg-[#25D366]/10 text-[#25D366] shadow-[0_0_24px_rgba(37,211,102,0.16)]">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-[#25D366]/65 bg-[#25D366]/10 text-[#25D366] shadow-[0_0_24px_rgba(37,211,102,0.16)] md:h-12 md:w-12">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5 md:h-6 md:w-6" aria-hidden="true">
                       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
                       <path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.852L.057 23.25a.75.75 0 0 0 .916.916l5.398-1.475A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.723 9.723 0 0 1-4.964-1.362l-.356-.212-3.695 1.009 1.01-3.695-.212-.356A9.723 9.723 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z" />
                     </svg>
@@ -379,7 +379,7 @@ export default function HomePage() {
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="text-left mb-8 md:text-center md:mb-16">
             <h2 className="md:mx-auto md:max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
-              O que muda com seu app próprio
+              O que muda com seu app próprio?
             </h2>
             <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg">
               Mais autonomia, profissionalismo e resultado para o seu negócio.
@@ -407,12 +407,12 @@ export default function HomePage() {
 
         {/* ── COMPARATIVO ───────────────────────────────────── */}
         <section
-          aria-label="Comparativo: app próprio vs marketplaces"
+          aria-label="Comparativo: app próprio vs iFood"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
           <div className="text-left mb-8 md:text-center md:mb-12">
             <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
-              Seu aplicativo vs marketplaces
+              Seu aplicativo vs iFood
             </h2>
           </div>
 
