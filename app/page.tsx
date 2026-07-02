@@ -270,14 +270,14 @@ export default function HomePage() {
           aria-label="Soluções para o comércio local"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-center mb-12">
+          <div className="text-left mb-8 md:text-center md:mb-12">
             <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
               Especialistas em aplicativos para o comércio local brasileiro
             </span>
-            <h2 className="text-headline-xl text-on-surface mb-4">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Soluções para o comércio local
             </h2>
-            <p className="text-on-secondary-container text-body-lg max-w-2xl mx-auto">
+            <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg md:max-w-2xl md:mx-auto">
               A Italev Sistemas desenvolve aplicativos para empresas que desejam vender
               online, divulgar promoções e receber pedidos de forma simples.
             </p>
@@ -287,19 +287,19 @@ export default function HomePage() {
             {nichos.map((nicho) => (
               <li
                 key={nicho}
-                className="flex flex-col items-center gap-3 bg-surface-container-low p-6 rounded-2xl ghost-border text-center"
+                className="flex flex-row items-center gap-2 bg-surface-container-low p-3 rounded-2xl ghost-border text-left sm:flex-col sm:items-center sm:gap-3 sm:p-6 sm:text-center"
               >
-                <span className="w-10 h-10 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+                <span className="w-8 h-8 shrink-0 rounded-lg bg-primary-container/10 flex items-center justify-center text-primary-container sm:w-10 sm:h-10">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 21v-7.5a.75.75 0 0 1 .75-.75h3a.75.75 0 0 1 .75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349M3.75 21V9.349m0 0a3.001 3.001 0 0 0 3.75-.615A2.993 2.993 0 0 0 9.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 0 0 2.25 1.016c.896 0 1.7-.393 2.25-1.015a3.001 3.001 0 0 0 3.75.614m-16.5 0a3.004 3.004 0 0 1-.621-4.72l1.189-1.19A1.5 1.5 0 0 1 5.378 3h13.243a1.5 1.5 0 0 1 1.06.44l1.19 1.189a3 3 0 0 1-.621 4.72M6.75 18h3.75a.75.75 0 0 0 .75-.75V13.5a.75.75 0 0 0-.75-.75H6.75a.75.75 0 0 0-.75.75v3.75c0 .414.336.75.75.75Z" />
                   </svg>
                 </span>
-                <span className="text-body-md text-on-surface font-medium">{nicho}</span>
+                <span className="min-w-0 flex-1 break-words text-xs font-medium leading-snug text-on-surface sm:text-body-md">{nicho}</span>
               </li>
             ))}
           </ul>
 
-          <p className="text-on-secondary-container text-body-lg text-center mt-10 max-w-3xl mx-auto">
+          <p className="text-on-secondary-container text-sm leading-relaxed text-left mt-8 md:text-body-lg md:text-center md:mt-10 md:max-w-3xl md:mx-auto">
             Ideal para supermercados, açougues, padarias, lanchonetes, marmitarias,
             cafeterias e pequenos negócios que desejam vender online e fidelizar clientes.
           </p>
@@ -311,11 +311,11 @@ export default function HomePage() {
           aria-label="Seu negócio se encaixa?"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="bg-surface-container-low rounded-2xl ghost-border p-8 md:p-12 max-w-3xl mx-auto text-center">
-            <h2 className="text-headline-xl text-on-surface mb-4">
+          <div className="bg-surface-container-low rounded-2xl ghost-border p-6 md:p-12 max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Seu negócio se encaixa?
             </h2>
-            <p className="text-on-secondary-container text-body-lg leading-relaxed">
+            <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg">
               Nossa plataforma foi desenvolvida para atender diferentes tipos de comércio
               local. Seja um supermercado, açougue, padaria, lanchonete, cafeteria ou
               loja especializada, o aplicativo pode ser adaptado para a realidade da sua
@@ -329,8 +329,8 @@ export default function HomePage() {
           aria-label="Como funciona um aplicativo próprio para comércio local"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-center mb-12">
-            <h2 className="mx-auto max-w-3xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
+          <div className="text-left mb-8 md:text-center md:mb-12">
+            <h2 className="md:mx-auto md:max-w-3xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Como funciona um aplicativo próprio para comércio local?
             </h2>
           </div>
@@ -349,7 +349,7 @@ export default function HomePage() {
             ))}
           </ol>
 
-          <p className="text-on-secondary-container text-body-lg text-center mt-10 max-w-3xl mx-auto">
+          <p className="text-on-secondary-container text-sm leading-relaxed text-left mt-8 md:text-body-lg md:text-center md:mt-10 md:max-w-3xl md:mx-auto">
             Esse processo reduz os atritos da compra, deixa o atendimento mais ágil e
             facilita a fidelização dos clientes — que voltam a comprar direto com você,
             sem intermediários.
@@ -360,7 +360,7 @@ export default function HomePage() {
         {/* Diferenciais */}
         <section aria-labelledby="diferenciais-title" className="mb-section-gap-mobile bg-surface-container-lowest py-14 md:mb-section-gap-desktop md:py-16">
           <div className="mx-auto max-w-6xl px-margin-mobile md:px-gutter">
-            <h2 id="diferenciais-title" className="mb-8 text-center text-2xl font-bold leading-snug text-on-surface md:mb-10 md:text-4xl md:leading-[1.15]">Diferenciais para o comércio local</h2>
+            <h2 id="diferenciais-title" className="mb-6 text-left text-2xl font-bold leading-snug text-on-surface md:mb-10 md:text-center md:text-4xl md:leading-[1.15]">Diferenciais para o comércio local</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {diferenciais.map((item) => (
                 <article key={item.titulo} className="min-w-0 rounded-2xl border border-white/10 bg-surface-container-low p-6">
@@ -374,11 +374,11 @@ export default function HomePage() {
 
         {/* ── BENEFÍCIOS BENTO GRID ─────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
-          <div className="text-center mb-16">
-            <h2 className="mx-auto max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
+          <div className="text-left mb-8 md:text-center md:mb-16">
+            <h2 className="md:mx-auto md:max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               O que muda com seu app próprio
             </h2>
-            <p className="text-on-secondary-container text-body-lg">
+            <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg">
               Mais autonomia, profissionalismo e resultado para o seu negócio.
             </p>
           </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
             {beneficios.map((b, i) => (
               <div
                 key={i}
-                className="bg-surface-container-low p-8 rounded-2xl ghost-border hover:bg-surface-container transition-all group"
+                className="bg-surface-container-low p-6 rounded-2xl ghost-border hover:bg-surface-container transition-all group md:p-8"
               >
                 <div className="w-12 h-12 rounded-lg bg-primary-container/10 flex items-center justify-center mb-6 text-primary-container group-hover:bg-primary-container group-hover:text-white transition-all">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
@@ -394,7 +394,7 @@ export default function HomePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold leading-snug mb-4 text-on-surface md:text-2xl">{b.title}</h3>
-                <p className="text-on-secondary-container">{b.descricao}</p>
+                <p className="text-sm leading-relaxed text-on-secondary-container md:text-base">{b.descricao}</p>
               </div>
             ))}
           </div>
@@ -407,8 +407,8 @@ export default function HomePage() {
           aria-label="Comparativo: app próprio vs marketplaces"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-center mb-12">
-            <h2 className="text-headline-xl text-on-surface mb-4">
+          <div className="text-left mb-8 md:text-center md:mb-12">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Seu aplicativo vs marketplaces
             </h2>
           </div>
@@ -482,17 +482,17 @@ export default function HomePage() {
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="bg-surface-container-high rounded-[40px] p-8 md:p-24 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full ambient-glow opacity-20 pointer-events-none" />
-            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-16 text-center md:text-4xl md:leading-[1.15]">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-8 text-left md:mb-16 md:text-center md:text-4xl md:leading-[1.15]">
               Como funciona
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 relative">
               {processo.map((p, i) => (
-                <div key={i} className="text-center">
+                <div key={i} className="text-left md:text-center">
                   <div className="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">
                     {p.numero}
                   </div>
                   <h3 className="text-xl font-bold leading-snug mb-4 text-on-surface md:text-2xl">{p.titulo}</h3>
-                  <p className="text-on-secondary-container">{p.descricao}</p>
+                  <p className="text-sm leading-relaxed text-on-secondary-container md:text-base">{p.descricao}</p>
                 </div>
               ))}
             </div>
@@ -503,9 +503,9 @@ export default function HomePage() {
         <section aria-label="Atendente virtual para WhatsApp" className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="rounded-3xl border border-primary-container/30 bg-surface-container-low p-7 md:p-12">
             <span className="text-label-caps text-primary-container uppercase tracking-widest">Solução complementar</span>
-            <h2 className="mt-3 text-headline-xl text-on-surface">Atendente virtual para WhatsApp</h2>
-            <p className="mt-4 max-w-3xl text-body-lg text-on-secondary-container">Atendente virtual para WhatsApp que responde clientes, tira dúvidas, apresenta produtos e ajuda a organizar pedidos.</p>
-            <p className="mt-3 max-w-3xl text-on-secondary-container">Esse serviço pode ser contratado separadamente ou combinado com seu catálogo online, ajudando seu comércio a atender melhor mesmo quando a equipe está ocupada.</p>
+            <h2 className="mt-3 text-2xl font-bold leading-snug text-on-surface md:text-4xl md:leading-[1.15]">Atendente virtual para WhatsApp</h2>
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-on-secondary-container md:text-body-lg">Atendente virtual para WhatsApp que responde clientes, tira dúvidas, apresenta produtos e ajuda a organizar pedidos.</p>
+            <p className="mt-3 max-w-3xl text-sm leading-relaxed text-on-secondary-container md:text-body-lg">Esse serviço pode ser contratado separadamente ou combinado com seu catálogo online, ajudando seu comércio a atender melhor mesmo quando a equipe está ocupada.</p>
             <a href={`https://wa.me/${italev.whatsapp}?text=${encodeURIComponent('Olá! Quero conhecer o atendente virtual para WhatsApp da Italev.')}`} target="_blank" rel="noopener noreferrer" className="mt-6 inline-flex rounded-xl bg-primary-container px-6 py-3 font-bold text-white">Quero conhecer o atendente virtual</a>
           </div>
         </section>
