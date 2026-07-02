@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'Sua loja vendendo online pelo WhatsApp, com catálogo próprio e sem comissão por pedido. Conheça os planos da Italev Sistemas.',
   alternates: { canonical: italev.domain },
   openGraph: {
-    title: 'Italev Sistemas — App de delivery próprio para seu comércio',
+    title: 'Italev Sistemas , App de delivery próprio para seu comércio',
     description:
       'Venda online com app próprio, marca própria e controle dos clientes. Uma alternativa ao iFood para supermercados, restaurantes, açougues e conveniências.',
     url: italev.domain,
@@ -216,7 +216,7 @@ export default function HomePage() {
 
               {/* ── Coluna direita: imagem ── */}
               <div className="relative flex items-center justify-center">
-                {/* Glow laranja — atrás da Gina */}
+                {/* Glow laranja , atrás da Gina */}
                 <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
                   <div
                     className="h-[620px] w-[520px] rounded-full opacity-35 md:-translate-x-8 lg:-translate-x-10"
@@ -224,7 +224,7 @@ export default function HomePage() {
                   />
                 </div>
 
-                {/* Desktop — gina-desktop.png */}
+                {/* Desktop , gina-desktop.png */}
                 <Image
                   src="/gina-800x1000Mob.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"
@@ -236,7 +236,7 @@ export default function HomePage() {
                   className="relative z-10 hidden w-full max-w-[447px] -translate-x-8 object-contain md:block lg:-translate-x-10"
                 />
 
-                {/* Mobile — gina-mobile.png */}
+                {/* Mobile , gina-mobile.png */}
                 <Image
                   src="/gina-800x1000Mob.png"
                   alt="Gina, assistente virtual comercial da Italev Sistemas"

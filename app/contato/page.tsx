@@ -8,12 +8,12 @@ import { italev } from '@/lib/entities';
 import { localBusinessSchema, breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Contato — Fale com a Italev Sistemas',
+  title: 'Contato , Fale com a Italev Sistemas',
   description:
     'Entre em contato com a Italev Sistemas. Atendimento de segunda a sexta, das 9h às 18h, via WhatsApp e e-mail. Tire dúvidas sobre planos e funcionamento.',
   alternates: { canonical: `${italev.domain}/contato` },
   openGraph: {
-    title: 'Contato — Italev Sistemas',
+    title: 'Contato , Italev Sistemas',
     description: 'Fale com nossa equipe. Segunda a sexta, 9h às 18h.',
     url: `${italev.domain}/contato`,
   },
@@ -45,7 +45,7 @@ export default function ContatoPage() {
               {/* WhatsApp */}
               <Card as="article">
                 <h2 className="font-sora font-bold text-[#F8FAFC] mb-1">WhatsApp</h2>
-                <p className="text-sm text-[#94A3B8] mb-5">Resposta mais rápida — canal preferencial.</p>
+                <p className="text-sm text-[#94A3B8] mb-5">Resposta mais rápida, canal preferencial.</p>
                 <Button
                   variant="whatsapp"
                   href={`https://wa.me/${italev.whatsapp}?text=${waMsg}`}

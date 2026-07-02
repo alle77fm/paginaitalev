@@ -31,7 +31,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Italev Sistemas — App de delivery e e-commerce para comércios locais',
+    default: 'Italev Sistemas , App de delivery e e-commerce para comércios locais',
     template: '%s | Italev Sistemas',
   },
   description: italev.entityStatement,
@@ -60,7 +60,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${sora.variable} ${inter.variable} dark`}
     >
       <body className="font-inter antialiased">
-        {/* JSON-LD da entidade — presente em todas as páginas */}
+        {/* JSON-LD da entidade , presente em todas as páginas */}
         <JsonLd data={organizationSchema()} />
         <JsonLd data={localBusinessSchema()} />
         <JsonLd data={webSiteSchema()} />

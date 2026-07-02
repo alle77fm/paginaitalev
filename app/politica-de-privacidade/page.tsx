@@ -25,7 +25,7 @@ export default function PoliticaDePrivacidadePage() {
             <p>
               A <strong>Italev Sistemas</strong> valoriza a privacidade dos seus usuários e está
               comprometida com a proteção de dados pessoais em conformidade com a{' '}
-              <strong>Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018)</strong>.
+              <strong>Lei Geral de Proteção de Dados (LGPD , Lei nº 13.709/2018)</strong>.
             </p>
 
             <h2 className="font-space-grotesk text-xl font-bold text-gray-900 mt-8">1. Dados coletados</h2>
@@ -41,7 +41,7 @@ export default function PoliticaDePrivacidadePage() {
               Não compartilhamos dados pessoais com terceiros para fins de marketing sem consentimento.
             </p>
 
-            <h2 className="font-space-grotesk text-xl font-bold text-gray-900 mt-8">3. LGPD — Direitos do titular</h2>
+            <h2 className="font-space-grotesk text-xl font-bold text-gray-900 mt-8">3. LGPD , Direitos do titular</h2>
             <p>Nos termos da LGPD, você tem direito a:</p>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
               <li>Confirmar a existência de tratamento de seus dados</li>

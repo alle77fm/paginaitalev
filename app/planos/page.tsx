@@ -14,12 +14,12 @@ const faqPlanos = faqInstitucional.filter((f) =>
 );
 
 export const metadata: Metadata = {
-  title: 'Planos e preços — Start, Pro e Master',
+  title: 'Planos e preços , Start, Pro e Master',
   description:
     'Conheça os planos da Italev Sistemas: Start R$149/mês, Pro R$219/mês e Master a partir de R$697/mês. Assinatura fixa, sem comissão por venda. App de delivery e e-commerce próprio para seu comércio.',
   alternates: { canonical: `${italev.domain}/planos` },
   openGraph: {
-    title: 'Planos Italev Sistemas — Start, Pro e Master',
+    title: 'Planos Italev Sistemas , Start, Pro e Master',
     description: 'Assinatura fixa, sem comissão. App próprio com catálogo digital, WhatsApp e PIX.',
     url: `${italev.domain}/planos`,
   },
@@ -38,7 +38,7 @@ export default function PlanosPage() {
       <main>
         <PageHero
           title="Planos e preços da Italev Sistemas"
-          subtitle="Assinatura mensal fixa — sem comissão por venda. Você fica com 100% de cada pedido recebido via PIX."
+          subtitle="Assinatura mensal fixa , sem comissão por venda. Você fica com 100% de cada pedido recebido via PIX."
           badge="Planos"
         />
 

@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import PageHero from '@/components/layout/PageHero';
 import Footer from '@/components/layout/Footer';
 import JsonLd from '@/components/seo/JsonLd';
@@ -9,13 +9,13 @@ import { italev } from '@/lib/entities';
 import { organizationSchema, breadcrumbSchema } from '@/lib/schema';
 
 export const metadata: Metadata = {
-  title: 'Sobre a Italev Sistemas — Software house de apps para comércios locais',
+  title: 'Sobre a Italev Sistemas â€” Software house de apps para comÃ©rcios locais',
   description:
-    'Italev Sistemas é uma software house brasileira com sede em Itajubá-MG. Desenvolve aplicativos próprios de delivery e e-commerce para supermercados, restaurantes e comércios locais.',
+    'Italev Sistemas Ã© uma software house brasileira com sede em ItajubÃ¡-MG. Desenvolve aplicativos prÃ³prios de delivery e e-commerce para supermercados, restaurantes e comÃ©rcios locais.',
   alternates: { canonical: `${italev.domain}/sobre-nos` },
   openGraph: {
     title: 'Sobre a Italev Sistemas',
-    description: 'Software house brasileira de apps de delivery e e-commerce para comércios locais.',
+    description: 'Software house brasileira de apps de delivery e e-commerce para comÃ©rcios locais.',
     url: `${italev.domain}/sobre-nos`,
   },
 };
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
 const valores = [
   {
     titulo: 'Autonomia para o comerciante',
-    texto: 'Acreditamos que o comerciante local não deveria depender de marketplace para vender online. Com app próprio, ele controla os dados, os clientes e o crescimento do negócio.',
+    texto: 'Acreditamos que o comerciante local nÃ£o deveria depender de marketplace para vender online. Com app prÃ³prio, ele controla os dados, os clientes e o crescimento do negÃ³cio.',
   },
   {
-    titulo: 'Tecnologia acessível',
-    texto: 'Tecnologia de ponta não é exclusividade de grandes redes. A Italev entrega em até 15 dias um app completo, com identidade visual e domínio próprios, por uma assinatura mensal fixa.',
+    titulo: 'Tecnologia acessÃ­vel',
+    texto: 'Tecnologia de ponta nÃ£o Ã© exclusividade de grandes redes. A Italev entrega em atÃ© 15 dias um app completo, com identidade visual e domÃ­nio prÃ³prios, por uma assinatura mensal fixa.',
   },
   {
-    titulo: 'Zero comissão por venda',
-    texto: 'O modelo de assinatura fixa garante que 100% de cada venda fique com o lojista — sem percentual descontado por pedido, independentemente do volume de vendas.',
+    titulo: 'Zero comissÃ£o por venda',
+    texto: 'O modelo de assinatura fixa garante que 100% de cada venda fique com o lojista, sem percentual descontado por pedido, independentemente do volume de vendas.',
   },
 ];
 
@@ -41,17 +41,17 @@ export default function SobreNosPage() {
       <JsonLd data={organizationSchema()} />
       <JsonLd data={breadcrumbSchema([
         { name: 'Italev Sistemas', url: italev.domain },
-        { name: 'Sobre nós', url: `${italev.domain}/sobre-nos` },
+        { name: 'Sobre nÃ³s', url: `${italev.domain}/sobre-nos` },
       ])} />
 
       <main>
         <PageHero
           title="Sobre a Italev Sistemas"
-          subtitle="Software house brasileira especializada em apps de delivery e e-commerce para comércios locais."
-          badge="Sobre nós"
+          subtitle="Software house brasileira especializada em apps de delivery e e-commerce para comÃ©rcios locais."
+          badge="Sobre nÃ³s"
         />
 
-        {/* Definição + sobre */}
+        {/* DefiniÃ§Ã£o + sobre */}
         <section aria-label="Sobre a Italev Sistemas" className="section">
           <div className="mx-auto max-w-3xl px-6 space-y-8">
             <DefinitionBlock
@@ -59,19 +59,19 @@ export default function SobreNosPage() {
               definicao={italev.entityStatement}
             />
             <p className="text-[#94A3B8] leading-relaxed">
-              A Italev Sistemas nasceu com um propósito claro: dar ao comerciante local o mesmo
-              poder digital que grandes redes têm — com app próprio, marca própria e sem pagar
-              comissão para plataformas de terceiros.
+              A Italev Sistemas nasceu com um propÃ³sito claro: dar ao comerciante local o mesmo
+              poder digital que grandes redes tÃªm, com app prÃ³prio, marca prÃ³pria e sem pagar
+              comissÃ£o para plataformas de terceiros.
             </p>
             <p className="text-[#94A3B8] leading-relaxed">
-              Com base em Itajubá-MG, a Italev atende comércios em todo o Brasil de forma remota.
-              O onboarding, o suporte e as atualizações são realizados online, com atendimento de
-              segunda a sexta, das 9h às 18h.
+              Com base em ItajubÃ¡-MG, a Italev atende comÃ©rcios em todo o Brasil de forma remota.
+              O onboarding, o suporte e as atualizaÃ§Ãµes sÃ£o realizados online, com atendimento de
+              segunda a sexta, das 9h Ã s 18h.
             </p>
             <p className="text-[#94A3B8] leading-relaxed">
               Os aplicativos desenvolvidos pela Italev colocam a marca do estabelecimento
-              diretamente no celular do cliente — com catálogo digital, pedidos via WhatsApp,
-              pagamento por PIX e ferramentas de promoção e fidelização.
+              diretamente no celular do cliente â€” com catÃ¡logo digital, pedidos via WhatsApp,
+              pagamento por PIX e ferramentas de promoÃ§Ã£o e fidelizaÃ§Ã£o.
             </p>
           </div>
         </section>
@@ -80,13 +80,13 @@ export default function SobreNosPage() {
         <section aria-label="Nossa especialidade" className="section">
           <div className="mx-auto max-w-3xl px-6 space-y-4">
             <span className="text-sm font-semibold uppercase tracking-widest text-[#FF5A00]">
-              Especialistas em aplicativos para o comércio local brasileiro
+              Especialistas em aplicativos para o comÃ©rcio local brasileiro
             </span>
             <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC]">
               Nossa especialidade
             </h2>
             <p className="text-[#94A3B8] leading-relaxed">
-              Somos especializados em criar aplicativos para o comércio local brasileiro,
+              Somos especializados em criar aplicativos para o comÃ©rcio local brasileiro,
               ajudando empresas a vender online, divulgar ofertas e fortalecer o
               relacionamento com seus clientes.
             </p>
@@ -114,7 +114,7 @@ export default function SobreNosPage() {
         <section aria-label="O que dizem nossos clientes" className="section">
           <div className="mx-auto max-w-6xl px-6">
             <h2 className="font-sora text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-10 text-center">
-              O que dizem os comércios que usam a Italev
+              O que dizem os comÃ©rcios que usam a Italev
             </h2>
             <Testimonials />
           </div>
@@ -125,3 +125,4 @@ export default function SobreNosPage() {
     </>
   );
 }
+

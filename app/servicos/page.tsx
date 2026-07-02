@@ -11,12 +11,12 @@ import { serviceSchema, breadcrumbSchema } from '@/lib/schema';
 import { solucoes } from '@/content/answer-blocks/mercado';
 
 export const metadata: Metadata = {
-  title: 'Serviços — Desenvolvimento de apps de delivery e e-commerce',
+  title: 'Serviços , Desenvolvimento de apps de delivery e e-commerce',
   description:
     'A Italev Sistemas desenvolve aplicativos próprios de delivery, catálogo digital e e-commerce para supermercados, restaurantes e comércios locais. Conheça os serviços.',
   alternates: { canonical: `${italev.domain}/servicos` },
   openGraph: {
-    title: 'Serviços da Italev Sistemas — Apps de delivery e e-commerce',
+    title: 'Serviços da Italev Sistemas , Apps de delivery e e-commerce',
     description: 'Software house especializada em apps próprios para comércios locais. Sem comissão por venda.',
     url: `${italev.domain}/servicos`,
   },
@@ -34,12 +34,12 @@ export default function ServicosPage() {
       <main>
         <PageHero
           title="O que a Italev Sistemas desenvolve para o seu comércio"
-          subtitle="Aplicativos próprios de delivery, catálogo digital e e-commerce — sem dependência de marketplace."
+          subtitle="Aplicativos próprios de delivery, catálogo digital e e-commerce sem dependência de marketplace."
           badge="Serviços"
         />
 
         {/* Definição da entidade */}
-        <section aria-label="Definição — Italev Sistemas" className="section">
+        <section aria-label="Definição , Italev Sistemas" className="section">
           <div className="mx-auto max-w-3xl px-6">
             <DefinitionBlock
               termo="Italev Sistemas"
@@ -64,7 +64,7 @@ export default function ServicosPage() {
                 Soluções desenvolvidas pela Italev Sistemas
               </h2>
               <p className="text-[#94A3B8] max-w-2xl mx-auto">
-                Cada solução é desenvolvida sob a marca do comércio — sem dependência de marketplace.
+                Cada solução é desenvolvida sob a marca do comércio, sem dependência de marketplace.
               </p>
             </div>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -84,25 +84,25 @@ export default function ServicosPage() {
             <div className="grid gap-5 sm:grid-cols-2 max-w-3xl mx-auto">
               <AnswerBlock
                 heading="App pronto em até 15 dias úteis"
-                resposta="A Italev Sistemas cuida de toda a configuração: catálogo, identidade visual, domínio e integração com WhatsApp. O comerciante não precisa de conhecimento técnico — apenas fornece as informações do negócio."
+                resposta="A Italev Sistemas cuida de toda a configuração: catálogo, identidade visual, domínio e integração com WhatsApp. O comerciante não precisa de conhecimento técnico, apenas fornece as informações do negócio."
                 fato="Entrega rápida sem abrir mão da personalização da marca."
                 headingLevel="h3"
               />
               <AnswerBlock
                 heading="Suporte técnico incluso na assinatura"
                 resposta="Todos os planos incluem suporte de segunda a sexta, das 9h às 18h. A equipe da Italev Sistemas atende por WhatsApp e e-mail para resolver dúvidas e ajustes no sistema."
-                fato="Sem custo adicional de suporte — está incluído na assinatura mensal."
+                fato="Sem custo adicional de suporte, está incluído na assinatura mensal."
                 headingLevel="h3"
               />
               <AnswerBlock
                 heading="Atualizações e manutenção automáticas"
-                resposta="A plataforma da Italev Sistemas é SaaS — o comerciante não precisa gerenciar servidores, hospedagem ou atualizações. Tudo é mantido pela Italev como parte do serviço."
+                resposta="A plataforma da Italev Sistemas é SaaS, o comerciante não precisa gerenciar servidores, hospedagem ou atualizações. Tudo é mantido pela Italev como parte do serviço."
                 fato="Infraestrutura gerenciada = zero preocupação técnica para o lojista."
                 headingLevel="h3"
               />
               <AnswerBlock
                 heading="Identidade visual e domínio próprios"
-                resposta="Nos planos Pro e Master, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio — não a da Italev."
+                resposta="Nos planos Pro e Master, o aplicativo é entregue com a marca, as cores e o domínio do estabelecimento. O cliente final vê a marca do comércio, não a da Italev."
                 headingLevel="h3"
               />
             </div>
