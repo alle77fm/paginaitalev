@@ -275,14 +275,15 @@ export default function HomePage() {
         >
           <div className="text-left mb-8 md:text-center md:mb-12">
             <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
-              Especialistas em aplicativos para o comércio local brasileiro
+              Para quem é
             </span>
             <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
-              Soluções para o comércio local
+              Seu comércio também pode vender online
             </h2>
             <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg md:max-w-2xl md:mx-auto">
-              A Italev Sistemas desenvolve aplicativos para empresas que desejam vender
-              online, divulgar promoções e receber pedidos de forma simples.
+              A Italev monta um catálogo online com a identidade da sua loja, para você
+              divulgar ofertas, receber pedidos pelo WhatsApp e vender de forma mais
+              organizada.
             </p>
           </div>
 
