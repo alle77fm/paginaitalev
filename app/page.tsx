@@ -330,7 +330,7 @@ export default function HomePage() {
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
           <div className="text-center mb-12">
-            <h2 className="text-headline-xl text-on-surface mb-4">
+            <h2 className="mx-auto max-w-3xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Como funciona um aplicativo próprio para comércio local?
             </h2>
           </div>
@@ -360,11 +360,11 @@ export default function HomePage() {
         {/* Diferenciais */}
         <section aria-labelledby="diferenciais-title" className="mb-section-gap-mobile bg-surface-container-lowest py-14 md:mb-section-gap-desktop md:py-16">
           <div className="mx-auto max-w-6xl px-margin-mobile md:px-gutter">
-            <h2 id="diferenciais-title" className="mb-8 text-center text-2xl font-bold text-on-surface md:mb-10 md:text-3xl">Diferenciais para o comércio local</h2>
+            <h2 id="diferenciais-title" className="mb-8 text-center text-2xl font-bold leading-snug text-on-surface md:mb-10 md:text-4xl md:leading-[1.15]">Diferenciais para o comércio local</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {diferenciais.map((item) => (
                 <article key={item.titulo} className="min-w-0 rounded-2xl border border-white/10 bg-surface-container-low p-6">
-                  <h3 className="text-xl font-bold leading-tight text-on-surface md:text-2xl">{item.titulo}</h3>
+                  <h3 className="text-lg font-bold leading-snug text-on-surface md:text-xl">{item.titulo}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-on-secondary-container md:text-base">{item.texto}</p>
                 </article>
               ))}
@@ -375,7 +375,7 @@ export default function HomePage() {
         {/* ── BENEFÍCIOS BENTO GRID ─────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="text-center mb-16">
-            <h2 className="text-headline-xl text-on-surface mb-4">
+            <h2 className="mx-auto max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               O que muda com seu app próprio
             </h2>
             <p className="text-on-secondary-container text-body-lg">
@@ -393,7 +393,7 @@ export default function HomePage() {
                     <path strokeLinecap="round" strokeLinejoin="round" d={b.icon} />
                   </svg>
                 </div>
-                <h3 className="text-headline-lg mb-4 text-on-surface">{b.title}</h3>
+                <h3 className="text-xl font-bold leading-snug mb-4 text-on-surface md:text-2xl">{b.title}</h3>
                 <p className="text-on-secondary-container">{b.descricao}</p>
               </div>
             ))}
@@ -482,7 +482,7 @@ export default function HomePage() {
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="bg-surface-container-high rounded-[40px] p-8 md:p-24 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full ambient-glow opacity-20 pointer-events-none" />
-            <h2 className="text-headline-xl text-on-surface mb-16 text-center">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-16 text-center md:text-4xl md:leading-[1.15]">
               Como funciona
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
@@ -491,7 +491,7 @@ export default function HomePage() {
                   <div className="text-primary-container text-[80px] font-bold opacity-10 leading-none mb-[-40px]">
                     {p.numero}
                   </div>
-                  <h3 className="text-headline-lg mb-4 text-on-surface">{p.titulo}</h3>
+                  <h3 className="text-xl font-bold leading-snug mb-4 text-on-surface md:text-2xl">{p.titulo}</h3>
                   <p className="text-on-secondary-container">{p.descricao}</p>
                 </div>
               ))}
