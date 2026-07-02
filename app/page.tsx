@@ -139,12 +139,12 @@ export default function HomePage() {
 
       <main className="relative pt-0">
         {/* ── HERO ─────────────────────────────────────────── */}
-        <section className="relative z-10 mb-16 bg-[#07080A] pt-24 md:mb-24 md:overflow-hidden md:pt-28">
+        <section className="relative z-10 mb-16 bg-[#07080A] pt-24 md:mb-24 md:pt-28">
           <div className="mx-auto max-w-[1440px] px-margin-mobile pb-6 pt-2 md:px-gutter md:pb-10 md:pt-4">
             <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8 lg:gap-12">
 
               {/* ── Coluna esquerda: texto ── */}
-              <div className="text-center md:text-left">
+              <div className="text-left">
 
                 {/* Badge */}
                 <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
@@ -166,7 +166,7 @@ export default function HomePage() {
                 </h1>
 
                 {/* Subtitle */}
-                <p className="mx-auto mb-6 max-w-[420px] text-sm leading-relaxed text-on-secondary-container sm:text-lg md:mx-0 md:mb-8 md:max-w-[520px] md:text-xl">
+                <p className="mb-6 max-w-[420px] text-sm leading-relaxed text-on-secondary-container sm:text-lg md:mb-8 md:max-w-[520px] md:text-xl">
                   A Italev monta um catálogo online com a identidade do seu comércio para você divulgar ofertas, receber pedidos e vender de forma mais organizada pelo WhatsApp.
                 </p>
 
@@ -217,7 +217,7 @@ export default function HomePage() {
               {/* ── Coluna direita: imagem ── */}
               <div className="relative flex items-center justify-center">
                 {/* Glow laranja — atrás da Gina */}
-                <div className="pointer-events-none absolute inset-0 flex items-center justify-center" aria-hidden="true">
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden" aria-hidden="true">
                   <div
                     className="h-[620px] w-[520px] rounded-full opacity-35 md:-translate-x-8 lg:-translate-x-10"
                     style={{ background: 'radial-gradient(ellipse, #FF5A00 0%, transparent 68%)', filter: 'blur(72px)' }}
@@ -252,7 +252,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Pedir uma demonstração gratuita pelo WhatsApp"
-                  className="absolute -bottom-[52px] left-1/2 z-20 inline-flex min-h-[72px] w-[min(92%,390px)] -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-white/15 bg-[#07080A]/78 px-5 py-4 text-sm font-bold text-white shadow-[0_18px_44px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/85 active:translate-y-0 md:-bottom-11 md:w-[430px] md:-translate-x-[calc(50%+2rem)] lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
+                  className="absolute -bottom-[52px] left-1/2 z-30 inline-flex min-h-[72px] w-[min(92%,390px)] -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-white/15 bg-[#07080A]/78 px-5 py-4 text-sm font-bold text-white shadow-[0_18px_44px_rgba(0,0,0,0.45)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/85 active:translate-y-0 md:-bottom-11 md:w-[430px] md:-translate-x-[calc(50%+2rem)] lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#25D366]/65 bg-[#25D366]/10 text-[#25D366] shadow-[0_0_24px_rgba(37,211,102,0.16)]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
@@ -273,14 +273,11 @@ export default function HomePage() {
           aria-label="Soluções para o comércio local"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-left mb-8 md:text-center md:mb-12">
-            <span className="text-label-caps text-primary-container mb-4 block uppercase tracking-widest">
-              Para quem é
-            </span>
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Seu comércio também pode vender online
             </h2>
-            <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg md:max-w-2xl md:mx-auto">
+            <p className="mx-auto max-w-[340px] text-on-secondary-container text-sm leading-relaxed md:max-w-2xl md:text-body-lg">
               A Italev monta um catálogo online com a identidade da sua loja, para você
               divulgar ofertas, receber pedidos pelo WhatsApp e vender de forma mais
               organizada.
@@ -303,7 +300,7 @@ export default function HomePage() {
             ))}
           </ul>
 
-          <p className="text-on-secondary-container text-sm leading-relaxed text-left mt-8 md:text-body-lg md:text-center md:mt-10 md:max-w-3xl md:mx-auto">
+          <p className="mx-auto max-w-[340px] text-on-secondary-container text-sm leading-relaxed text-center mt-8 md:max-w-3xl md:text-body-lg md:mt-10">
             Ideal para supermercados, açougues, padarias, lanchonetes, marmitarias,
             cafeterias e pequenos negócios que desejam vender online e fidelizar clientes.
           </p>
@@ -333,8 +330,8 @@ export default function HomePage() {
           aria-label="Como funciona um aplicativo próprio para comércio local"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-left mb-8 md:text-center md:mb-12">
-            <h2 className="md:mx-auto md:max-w-3xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="mx-auto max-w-3xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Como funciona um aplicativo próprio para comércio local?
             </h2>
           </div>
@@ -353,9 +350,9 @@ export default function HomePage() {
             ))}
           </ol>
 
-          <p className="text-on-secondary-container text-sm leading-relaxed text-left mt-8 md:text-body-lg md:text-center md:mt-10 md:max-w-3xl md:mx-auto">
+          <p className="mx-auto max-w-[340px] text-on-secondary-container text-sm leading-relaxed text-center mt-8 md:max-w-3xl md:text-body-lg md:mt-10">
             Esse processo reduz os atritos da compra, deixa o atendimento mais ágil e
-            facilita a fidelização dos clientes — que voltam a comprar direto com você,
+            facilita a fidelização dos clientes, que voltam a comprar direto com você,
             sem intermediários.
           </p>
         </section>
@@ -364,7 +361,7 @@ export default function HomePage() {
         {/* Diferenciais */}
         <section aria-labelledby="diferenciais-title" className="mb-section-gap-mobile bg-surface-container-lowest py-14 md:mb-section-gap-desktop md:py-16">
           <div className="mx-auto max-w-6xl px-margin-mobile md:px-gutter">
-            <h2 id="diferenciais-title" className="mb-6 text-left text-2xl font-bold leading-snug text-on-surface md:mb-10 md:text-center md:text-4xl md:leading-[1.15]">Diferenciais para o comércio local</h2>
+            <h2 id="diferenciais-title" className="mb-6 text-center text-2xl font-bold leading-snug text-on-surface md:mb-10 md:text-4xl md:leading-[1.15]">Diferenciais para o comércio local</h2>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
               {diferenciais.map((item) => (
                 <article key={item.titulo} className="min-w-0 rounded-2xl border border-white/10 bg-surface-container-low p-6">
@@ -378,11 +375,11 @@ export default function HomePage() {
 
         {/* ── BENEFÍCIOS BENTO GRID ─────────────────────────── */}
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
-          <div className="text-left mb-8 md:text-center md:mb-16">
-            <h2 className="md:mx-auto md:max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
+          <div className="text-center mb-8 md:mb-16">
+            <h2 className="mx-auto max-w-2xl text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               O que muda com seu app próprio?
             </h2>
-            <p className="text-on-secondary-container text-sm leading-relaxed md:text-body-lg">
+            <p className="mx-auto max-w-[340px] text-on-secondary-container text-sm leading-relaxed md:max-w-none md:text-body-lg">
               Mais autonomia, profissionalismo e resultado para o seu negócio.
             </p>
           </div>
@@ -411,7 +408,7 @@ export default function HomePage() {
           aria-label="Comparativo: app próprio vs iFood"
           className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop"
         >
-          <div className="text-left mb-8 md:text-center md:mb-12">
+          <div className="text-center mb-8 md:mb-12">
             <h2 className="text-2xl font-bold leading-snug text-on-surface mb-4 md:text-4xl md:leading-[1.15]">
               Seu aplicativo vs iFood
             </h2>
@@ -474,7 +471,7 @@ export default function HomePage() {
                 <p className="px-6 py-6 border-t border-white/10 text-on-secondary-container text-body-md leading-relaxed">
                   Com um aplicativo próprio, você recebe os pedidos diretamente dos seus clientes,
                   sem pagar comissão para marketplaces. O cadastro dos clientes fica com você,
-                  a marca é a sua e o pagamento cai direto na sua conta via PIX — uma alternativa
+                  a marca é a sua e o pagamento cai direto na sua conta via PIX, uma alternativa
                   real ao iFood para comércios locais que querem mais autonomia.
                 </p>
               </div>
@@ -486,7 +483,7 @@ export default function HomePage() {
         <section className="max-w-container mx-auto px-margin-mobile md:px-gutter mb-section-gap-mobile md:mb-section-gap-desktop">
           <div className="bg-surface-container-high rounded-[40px] p-8 md:p-24 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-1/3 h-full ambient-glow opacity-20 pointer-events-none" />
-            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-8 text-left md:mb-16 md:text-center md:text-4xl md:leading-[1.15]">
+            <h2 className="text-2xl font-bold leading-snug text-on-surface mb-8 text-center md:mb-16 md:text-4xl md:leading-[1.15]">
               Como funciona
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 relative">
@@ -559,12 +556,12 @@ export default function HomePage() {
         </section>
         {/* ── CTA FINAL ─────────────────────────────────────── */}
         <section id="contato" className="max-w-container mx-auto px-margin-mobile md:px-gutter pb-section-gap-mobile md:pb-section-gap-desktop">
-          <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-3xl p-8 md:p-16 text-center text-white relative overflow-hidden">
+          <div className="bg-gradient-to-br from-primary-container to-[#b34700] rounded-3xl p-8 md:p-16 text-left md:text-center text-white relative overflow-hidden">
             <div className="relative z-10">
               <h2 className="text-2xl md:text-4xl font-bold mb-4 text-balance">
                 Pronto para transformar seu comércio?
               </h2>
-              <p className="text-base md:text-lg mb-8 max-w-xl mx-auto opacity-90">
+              <p className="text-base md:text-lg mb-8 max-w-xl md:mx-auto opacity-90">
                 App próprio, sua marca, sem taxas. Dê o próximo passo hoje.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 justify-center">
