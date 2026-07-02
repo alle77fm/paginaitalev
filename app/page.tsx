@@ -99,11 +99,11 @@ const nichos = [
 
 // Fluxo do pedido (como funciona o app para o cliente final)
 const fluxoPedido = [
-  'O cliente acessa seu catálogo online',
-  'Escolhe os produtos',
-  'Finaliza o pedido',
-  'O pedido chega diretamente no WhatsApp da empresa',
-  'Você confirma a venda e realiza a entrega',
+  'O cliente acessa seu catálogo online.',
+  'Escolhe os produtos.',
+  'Finaliza o pedido.',
+  'O pedido chega diretamente no WhatsApp da empresa.',
+  'Você confirma a venda e realiza a entrega.',
 ];
 
 const demoMessage =
@@ -141,13 +141,13 @@ export default function HomePage() {
         {/* ── HERO ─────────────────────────────────────────── */}
         <section className="relative z-10 mb-16 bg-[#07080A] pt-24 md:mb-24 md:overflow-hidden md:pt-28">
           <div className="mx-auto max-w-[1440px] px-margin-mobile pb-6 pt-2 md:px-gutter md:pb-10 md:pt-4">
-            <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 items-center gap-6 md:grid-cols-2 md:gap-8 lg:gap-12">
 
               {/* ── Coluna esquerda: texto ── */}
               <div className="text-center md:text-left">
 
                 {/* Badge */}
-                <div className="mb-8 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
+                <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-primary-container/60 bg-black/30 px-4 py-2 text-primary-container backdrop-blur-sm">
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.847.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456z" />
                   </svg>
@@ -157,13 +157,16 @@ export default function HomePage() {
                 </div>
 
                 {/* H1 */}
-                <h1 className="mb-6 font-sora font-black leading-[1.08] tracking-tight text-on-surface text-balance">
-                  <span className="block text-[30px] sm:text-[36px] md:hidden">Sua loja vendendo online pelo WhatsApp, <span className="text-primary-container">com catálogo próprio e sem comissão por pedido.</span></span>
+                <h1 className="mb-5 font-sora font-black tracking-tight text-on-surface md:leading-[1.08]">
+                  <span className="block text-[26px] leading-[1.3] sm:text-[32px] md:hidden">
+                    <span className="block">Sua loja vendendo online pelo WhatsApp,</span>
+                    <span className="mt-1 block text-primary-container">com catálogo próprio e sem comissão por pedido.</span>
+                  </span>
                   <span className="hidden text-[40px] leading-[1.06] md:block lg:text-[46px] xl:text-[52px]">Sua loja vendendo online pelo WhatsApp, <span className="text-primary-container">com catálogo próprio e sem comissão por pedido.</span></span>
                 </h1>
 
                 {/* Subtitle */}
-                <p className="mx-auto mb-8 max-w-[520px] text-base leading-relaxed text-on-secondary-container text-balance sm:text-lg md:mx-0 md:text-xl">
+                <p className="mx-auto mb-6 max-w-[420px] text-sm leading-relaxed text-on-secondary-container sm:text-lg md:mx-0 md:mb-8 md:max-w-[520px] md:text-xl">
                   A Italev monta um catálogo online com a identidade do seu comércio para você divulgar ofertas, receber pedidos e vender de forma mais organizada pelo WhatsApp.
                 </p>
 
@@ -249,7 +252,7 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Pedir uma demonstração gratuita pelo WhatsApp"
-                  className="absolute -bottom-11 left-1/2 z-20 inline-flex min-h-[72px] w-[min(92%,390px)] -translate-x-1/2 items-center justify-center gap-4 rounded-2xl border border-white/15 bg-[#07080A]/68 px-5 py-4 text-sm font-bold text-white shadow-[0_22px_56px_rgba(0,0,0,0.42)] backdrop-blur-xl transition-all hover:-translate-y-0.5 hover:border-primary-container/45 hover:bg-[#07080A]/82 active:translate-y-0 md:-bottom-11 md:w-[430px] md:-translate-x-[calc(50%+2rem)] lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
+                  className="hidden md:absolute md:-bottom-11 md:left-1/2 md:z-20 md:inline-flex md:min-h-[72px] md:w-[430px] md:-translate-x-[calc(50%+2rem)] md:items-center md:justify-center md:gap-4 md:rounded-2xl md:border md:border-white/15 md:bg-[#07080A]/68 md:px-5 md:py-4 md:text-sm md:font-bold md:text-white md:shadow-[0_22px_56px_rgba(0,0,0,0.42)] md:backdrop-blur-xl md:transition-all md:hover:-translate-y-0.5 md:hover:border-primary-container/45 md:hover:bg-[#07080A]/82 md:active:translate-y-0 lg:w-[460px] lg:-translate-x-[calc(50%+2.5rem)]"
                 >
                   <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#25D366]/65 bg-[#25D366]/10 text-[#25D366] shadow-[0_0_24px_rgba(37,211,102,0.16)]">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="h-6 w-6" aria-hidden="true">
@@ -344,7 +347,7 @@ export default function HomePage() {
                 <span className="w-9 h-9 rounded-full bg-primary-container text-white font-bold flex items-center justify-center">
                   {i + 1}
                 </span>
-                <span className="text-body-md text-on-surface">{passo}</span>
+                <span className="text-sm leading-relaxed text-on-surface md:text-body-md">{passo}</span>
               </li>
             ))}
           </ol>
